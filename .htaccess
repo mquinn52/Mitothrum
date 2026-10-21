@@ -1,0 +1,24 @@
+# mitothrum.com — this folder (public_html) also contains the
+# waterdamagegwinnett.com folder, so every rewrite here is limited to
+# mitothrum hostnames. That site has its own .htaccess.
+RewriteEngine On
+
+# One canonical address: https://mitothrum.com
+RewriteCond %{HTTP_HOST} ^www\.mitothrum\.com$ [NC]
+RewriteRule ^(.*)$ https://mitothrum.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^mitothrum\.com$ [NC]
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://mitothrum.com/$1 [R=301,L]
+
+# Pages and feeds must be revalidated, so a deploy shows up immediately
+# instead of an old cached copy. Images keep normal caching.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|xml|txt)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
+
+# Notes files in the repository are never public
+<FilesMatch "^(CHANGES|RULES|README)\.md$">
+  Require all denied
+</FilesMatch>
