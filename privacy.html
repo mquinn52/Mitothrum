@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Analytics 4 — loads only if the visitor has not opted out
+     (Global Privacy Control signal or the opt-out on privacy.html). -->
+<script>
+  (function () {
+    var optedOut = false;
+    try { optedOut = localStorage.getItem('mt_analytics_optout') === '1'; } catch (e) {}
+    if (navigator.globalPrivacyControl === true || optedOut) {
+      window.gtag = function () {};
+      return;
+    }
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-WT5J9GGNLF';
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', 'G-WT5J9GGNLF');
+  })();
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Mitothrum</title>
+  <meta name="description" content="Mitothrum's privacy policy: what we collect, what we don't, and how to reach us.">
+  <link rel="canonical" href="https://mitothrum.com/privacy.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="media/logo/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="media/logo/favicon-64.png">
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="wordmark" href="index.html" aria-label="Mitothrum home">
+        <img class="wordmark-mark" src="media/logo/mitothrum-mark-amber.svg" alt="" width="42" height="42">
+        <span class="wordmark-text">
+          <span class="wordmark-name">Mitothrum</span>
+          <span class="wordmark-tag">the hum of your mitochondria</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="index.html#rituals">Rituals</a>
+        <a href="index.html#science">Science</a>
+        <a href="index.html#episodes">Episodes</a>
+        <a href="index.html#about">About</a>
+      </nav>
+      <a class="btn btn-gold btn-small" href="index.html#concierge">Ask the concierge</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="wrap" style="max-width: 46rem;">
+        <p class="eyebrow">Privacy</p>
+        <h1>Privacy Policy</h1>
+        <p class="section-sub">Last updated: October 20, 2026. Plain language first, legal precision where it counts.</p>
+
+        <h2>What we collect</h2>
+        <p><strong>Website analytics.</strong> We use Google Analytics 4 to understand how many people visit, which pages they read, and which product links they click. Google Analytics sets cookies and collects information such as pages viewed, approximate location (city or region, derived from IP address), device and browser type, and referring site. We also record when someone clicks an affiliate link, logging only the retailer and product page &mdash; not who you are. Google processes this data under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">its own privacy policy</a>. We use it only to improve the site; we don't use it for ads or build advertising profiles.</p>
+        <p><strong>Email addresses (coming soon).</strong> Our notify list isn't live yet, so the sign-up box doesn't store anything today. When it launches, we'll store your email address only to send updates about new episodes, comparisons and picks; every email will include an unsubscribe link, and you can also unsubscribe by writing to <a href="mailto:hello@mitothrum.com">hello@mitothrum.com</a>. We'll update this policy to name the email provider we use.</p>
+        <p><strong>Messages you send us.</strong> If you email us, we keep the correspondence to answer you.</p>
+
+        <h2>What we don't collect</h2>
+        <p><strong>No ad pixels, no data sales.</strong> We run no advertising pixels or retargeting trackers. We don't sell personal information, we don't share it for cross-context behavioral advertising, and we don't share it with data brokers.</p>
+        <p><strong>The concierge chat stays in your browser.</strong> Our on-page concierge answers from a fixed set of editorial answers using JavaScript that runs entirely on your device. Your questions are never sent to our servers.</p>
+
+        <h2 id="choices">Your choices: turning off analytics</h2>
+        <p>If your browser sends a <a href="https://globalprivacycontrol.org/" target="_blank" rel="noopener">Global Privacy Control</a> signal, we treat it as an opt-out and don't load Google Analytics at all. You can also opt out on this browser with the button below, or use Google's <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">opt-out browser add-on</a>.</p>
+        <p><button type="button" class="btn btn-gold btn-small" id="analyticsToggle">Turn off analytics on this browser</button></p>
+        <p class="email-msg" id="analyticsStatus" role="status"></p>
+
+        <h2>Affiliate links</h2>
+        <p>Product links on this site may be affiliate links, including Amazon Associates links. When you click through and buy, the retailer may set its own cookies and process the purchase under its own privacy policy. We receive only aggregate commission reports &mdash; never your name, address, or payment details.</p>
+
+        <h2>Health information</h2>
+        <p>Mitothrum publishes educational wellness content, not medical advice. Please don't enter personal health details into the concierge chat or our email forms &mdash; we're a shopping guide, not a medical advisor.</p>
+
+        <h2>Your rights</h2>
+        <p>You can ask us what personal information we hold about you, ask us to correct it, or ask us to delete it, at <a href="mailto:hello@mitothrum.com">hello@mitothrum.com</a>. We'll respond within 30 days and won't treat you differently for asking. Depending on where you live (for example, California or the EU), you may have additional rights under local law; write to us and we'll honor them.</p>
+
+        <h2>How long we keep data</h2>
+        <p>Google Analytics keeps user-level data for the retention period set in our Analytics account; aggregate reports may be kept longer. Email correspondence is kept as long as needed to answer you.</p>
+
+        <h2>Children</h2>
+        <p>This site is not directed at children under 13, and we do not knowingly collect their information.</p>
+
+        <h2>Changes</h2>
+        <p>If this policy changes materially, we'll update the date above and note the change here for 30 days.</p>
+
+        <h2>Contact</h2>
+        <p>Questions about privacy: <a href="mailto:hello@mitothrum.com">hello@mitothrum.com</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <p class="wordmark-name">Mitothrum</p>
+        <p class="footer-tag">the hum of your mitochondria</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html#rituals">Rituals</a>
+        <a href="index.html#science">Science</a>
+        <a href="index.html#episodes">Episodes</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#concierge">Ask the concierge</a>
+        <a href="methodology.html">How we choose</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+      <div class="footer-contact">
+        <p>Contact: <a href="mailto:hello@mitothrum.com">hello@mitothrum.com</a></p>
+        <p>Follow: <a href="https://www.youtube.com/channel/UCDR4wFZ13u6q9YlQx64u39Q" target="_blank" rel="noopener">YouTube</a> &middot; <a href="https://www.instagram.com/mitothrum/" target="_blank" rel="noopener">Instagram</a> &middot; <a href="https://www.facebook.com/profile.php?id=61595777690292" target="_blank" rel="noopener">Facebook</a> &middot; <a href="https://www.tiktok.com/@mitothrum" target="_blank" rel="noopener">TikTok</a></p>
+      </div>
+    </div>
+    <div class="wrap">
+      <p class="disclosure"><strong>Affiliate disclosure:</strong> Mitothrum is reader-supported. When you buy through links on this site, we may earn an affiliate commission at no extra cost to you. Commissions fund our research and never decide what we cover. As an Amazon Associate I earn from qualifying purchases.</p>
+      <p class="legal">&copy; 2026 Mitothrum. All rights reserved. Educational content — not medical advice. Nothing on this site diagnoses, treats, or prevents any condition; talk to your doctor about health decisions.</p>
+    </div>
+  </footer>
+
+<script>
+document.addEventListener('click', function(e) {
+  var a = e.target.closest('a[rel~="sponsored"]');
+  if (a && typeof gtag === 'function') {
+    gtag('event', 'affiliate_click', {
+      'event_category': 'affiliate',
+      'event_label': a.hostname + a.pathname.split('/').slice(0, 4).join('/'),
+      'transport_type': 'beacon'
+    });
+  }
+});
+</script>
+<script>
+(function () {
+  var btn = document.getElementById('analyticsToggle');
+  var status = document.getElementById('analyticsStatus');
+  if (!btn) return;
+  function get() { try { return localStorage.getItem('mt_analytics_optout') === '1'; } catch (e) { return false; } }
+  function render() {
+    if (navigator.globalPrivacyControl === true) {
+      btn.disabled = true;
+      status.textContent = 'Your browser is sending a Global Privacy Control signal, so analytics is already off.';
+      return;
+    }
+    var off = get();
+    btn.textContent = off ? 'Turn analytics back on' : 'Turn off analytics on this browser';
+    status.textContent = off ? 'Analytics is off on this browser.' : '';
+  }
+  btn.addEventListener('click', function () {
+    try {
+      if (get()) { localStorage.removeItem('mt_analytics_optout'); }
+      else { localStorage.setItem('mt_analytics_optout', '1'); }
+    } catch (e) { status.textContent = 'Your browser blocked saving this choice; try Google\u2019s opt-out add-on instead.'; return; }
+    render();
+    if (get()) { status.textContent = 'Analytics is off on this browser. It stops from your next page load.'; }
+  });
+  render();
+})();
+</script>
+</body>
+</html>

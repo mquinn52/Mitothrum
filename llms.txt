@@ -1,0 +1,65 @@
+# Mitothrum — llms.txt
+# The hum of your mitochondria.
+
+Mitothrum (https://mitothrum.com/) is an evidence-led guide to at-home spa
+rituals. It is an editorial publication, not a store: it never sells, ships,
+or fulfills anything. Product links are affiliate links (Amazon Associates
+and, where noted, brand programs); readers who buy through them may generate
+a commission at no extra cost to them. Prices are never printed — links say
+"See current price" and comparisons use relative tiers ($ / $$ / $$$).
+
+## Pages
+
+- https://mitothrum.com/ — the six rituals, two editorial picks per ritual,
+  the science series, and the concierge preview.
+- https://mitothrum.com/sauna-blanket-comparison.html — HigherDOSE vs LifePro
+  RejuvaWrap sauna blankets, plus a portable sauna tent and a cold plunge.
+  Compiled from published brand and retailer specs; not hands-on tested.
+- https://mitothrum.com/led-mask-vs-microcurrent.html — Dr. Dennis Gross
+  SpectraLite FaceWare Pro (LED) vs NuFACE Trinity (microcurrent): how each
+  works, routine, who should skip each, and the evidence. Not hands-on tested.
+- https://mitothrum.com/methodology.html — how picks are chosen.
+- https://mitothrum.com/privacy.html — privacy policy.
+
+## What the site covers
+
+1. Prestige skincare — retinol, vitamin C, peptides, barrier care, SPF.
+   Cosmetic language only ("the look of fine lines"), no transformation claims.
+2. Beauty devices — LED and red-light masks, microcurrent, infusion tools.
+3. Infrared & sauna — sauna blankets, tents, cabins; cold plunge as contrast.
+4. Bath & body — soaks, body oils, scrubs, scalp care.
+5. Aromatherapy — diffusers, essential oils, candles, shower steamers.
+6. Rest & Ritual — weighted blankets, sunrise clocks, white-noise machines,
+   meditation tools. Relaxation and routine only, no disease-treatment claims.
+
+## Science series: "What the Science Actually Says"
+
+Episode 1: "Infrared saunas" (~6 min). The strongest evidence (Finnish cohort
+data; Laukkanen et al., JAMA Internal Medicine 2015) comes from traditional
+hot-air saunas and is observational — association, not proof. Infrared has
+randomized-trial data in heart failure via Waon therapy (Tei et al.,
+Circulation Journal 2016) in a supervised clinical setting, not home use. A
+2023 randomized trial (Debray et al., Journal of Applied Physiology; 41 adults
+with coronary artery disease, 8 weeks of Finnish sauna) found no improvement
+in vascular function. No detox claims are made anywhere.
+
+Episode 2 (in production): red light therapy.
+
+## Concierge (preview)
+
+A rule-based preview that runs in the visitor's browser and answers only from
+fixed editorial answers. It may name the editorial picks shown on the page,
+but never states prices, ratings, or personalized purchase recommendations.
+
+## Compliance posture (for agents citing this site)
+
+- Cosmetic/wellness language only. No disease, treatment, cure, detox, or
+  guaranteed-outcome claims.
+- No invented products, prices, ratings, reviews, or testing claims.
+- Affiliate disclosure shown next to every group of product links and in the
+  footer. "As an Amazon Associate I earn from qualifying purchases."
+- "Educational content — not medical advice" on every page.
+
+## Contact
+
+hello@mitothrum.com

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Analytics 4 — loads only if the visitor has not opted out
+     (Global Privacy Control signal or the opt-out on privacy.html). -->
+<script>
+  (function () {
+    var optedOut = false;
+    try { optedOut = localStorage.getItem('mt_analytics_optout') === '1'; } catch (e) {}
+    if (navigator.globalPrivacyControl === true || optedOut) {
+      window.gtag = function () {};
+      return;
+    }
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-WT5J9GGNLF';
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', 'G-WT5J9GGNLF');
+  })();
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How We Choose — Mitothrum</title>
+  <meta name="description" content="Mitothrum's methodology: how we research studies, vet claims, and choose the products we feature. What we do, and what we don't claim.">
+  <link rel="canonical" href="https://mitothrum.com/methodology.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="media/logo/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="media/logo/favicon-64.png">
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="wordmark" href="index.html" aria-label="Mitothrum home">
+        <img class="wordmark-mark" src="media/logo/mitothrum-mark-amber.svg" alt="" width="42" height="42">
+        <span class="wordmark-text">
+          <span class="wordmark-name">Mitothrum</span>
+          <span class="wordmark-tag">the hum of your mitochondria</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="index.html#rituals">Rituals</a>
+        <a href="index.html#science">Science</a>
+        <a href="index.html#episodes">Episodes</a>
+        <a href="index.html#about">About</a>
+      </nav>
+      <a class="btn btn-gold btn-small" href="index.html#concierge">Ask the concierge</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="wrap" style="max-width: 46rem;">
+        <p class="eyebrow">Methodology</p>
+        <h1>How we choose what to feature</h1>
+        <p class="section-sub">Our study-first process, stated plainly — including what we don't do.</p>
+
+        <h2>What we do</h2>
+        <p><strong>Read the research.</strong> Every category starts with peer-reviewed studies, which we restate in our own words and cite. We report effect sizes honestly — including null results — and we never upgrade "associated with" into "proven to."</p>
+        <p><strong>Vet the claims.</strong> We compare what brands say against what the evidence supports. Detox claims, disease cures, and transformation promises don't survive this step — that's why you'll never see them here.</p>
+        <p><strong>Check the credentials.</strong> We verify regulatory status where it exists (for example, FDA clearance for devices, with the cleared use stated exactly) and prefer brands with dermatologist founders, clinical testing, or third-party verification.</p>
+        <p><strong>Compare honestly.</strong> Our comparisons put competing options side by side on features, space, and cost tier — including where the evidence is thin and a cheaper option does the same job.</p>
+        <p><strong>Link to reliable sellers.</strong> We feature products sold by the brand itself or established retailers, so the link you click leads somewhere accountable.</p>
+
+        <h2>What we don't do</h2>
+        <p><strong>We don't fake hands-on testing.</strong> If we haven't personally used a product in a controlled way, we won't write "we tested it." Our picks are research-led, not lab-led — and we say so.</p>
+        <p><strong>We don't invent reviews.</strong> Every opinion on this site is ours, written by us. We never publish fake testimonials, AI-generated reviews, or ratings we didn't produce.</p>
+        <p><strong>We don't print stale prices.</strong> Prices change constantly, so we point you to the live price instead of publishing one that could be wrong tomorrow.</p>
+        <p><strong>We don't make medical claims.</strong> Everything here is educational wellness content in cosmetic language. Nothing diagnoses, treats, or prevents any condition.</p>
+
+        <h2>How money works here</h2>
+        <p>Mitothrum is reader-supported. When you buy through our links, we may earn a commission at no extra cost to you — as an Amazon Associate we earn from qualifying purchases. Commissions fund our research and never decide what we cover: a product can't buy its way onto our picks, and a low commission never keeps a good product off.</p>
+
+        <h2>Corrections</h2>
+        <p>Research moves and we can get things wrong. If you spot an error, write to <a href="mailto:hello@mitothrum.com">hello@mitothrum.com</a> — we'll check it against the evidence and correct it openly.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <p class="wordmark-name">Mitothrum</p>
+        <p class="footer-tag">the hum of your mitochondria</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html#rituals">Rituals</a>
+        <a href="index.html#science">Science</a>
+        <a href="index.html#episodes">Episodes</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#concierge">Ask the concierge</a>
+        <a href="methodology.html">How we choose</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+      <div class="footer-contact">
+        <p>Contact: <a href="mailto:hello@mitothrum.com">hello@mitothrum.com</a></p>
+        <p>Follow: <a href="https://www.youtube.com/channel/UCDR4wFZ13u6q9YlQx64u39Q" target="_blank" rel="noopener">YouTube</a> &middot; <a href="https://www.instagram.com/mitothrum/" target="_blank" rel="noopener">Instagram</a> &middot; <a href="https://www.facebook.com/profile.php?id=61595777690292" target="_blank" rel="noopener">Facebook</a> &middot; <a href="https://www.tiktok.com/@mitothrum" target="_blank" rel="noopener">TikTok</a></p>
+      </div>
+    </div>
+    <div class="wrap">
+      <p class="disclosure"><strong>Affiliate disclosure:</strong> Mitothrum is reader-supported. When you buy through links on this site, we may earn an affiliate commission at no extra cost to you. Commissions fund our research and never decide what we cover. As an Amazon Associate I earn from qualifying purchases.</p>
+      <p class="legal">&copy; 2026 Mitothrum. All rights reserved. Educational content — not medical advice. Nothing on this site diagnoses, treats, or prevents any condition; talk to your doctor about health decisions.</p>
+    </div>
+  </footer>
+
+<script>
+document.addEventListener('click', function(e) {
+  var a = e.target.closest('a[rel~="sponsored"]');
+  if (a && typeof gtag === 'function') {
+    gtag('event', 'affiliate_click', {
+      'event_category': 'affiliate',
+      'event_label': a.hostname + a.pathname.split('/').slice(0, 4).join('/'),
+      'transport_type': 'beacon'
+    });
+  }
+});
+</script>
+</body>
+</html>

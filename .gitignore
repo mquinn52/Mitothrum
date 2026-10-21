@@ -1,0 +1,3 @@
+# Large media lives on the server, not in the repo
+media/
+.DS_Store

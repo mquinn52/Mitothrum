@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Analytics 4 — loads only if the visitor has not opted out
+     (Global Privacy Control signal or the opt-out on privacy.html). -->
+<script>
+  (function () {
+    var optedOut = false;
+    try { optedOut = localStorage.getItem('mt_analytics_optout') === '1'; } catch (e) {}
+    if (navigator.globalPrivacyControl === true || optedOut) {
+      window.gtag = function () {};
+      return;
+    }
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-WT5J9GGNLF';
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', 'G-WT5J9GGNLF');
+  })();
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name='impact-site-verification' value='788886a2-dd7c-474f-9dd1-61ce63d17f72'>
+  <meta name="fo-verify" content="0272a5e9-9415-4978-af82-903f28641d34" />
+  <title>Mitothrum — At-Home Spa Rituals, Guided by Honest Science</title>
+  <meta name="description" content="Mitothrum is an evidence-led guide to at-home spa rituals: prestige skincare, beauty devices, infrared heat, bath & body, aromatherapy, and rest & ritual. We read the studies; you enjoy the ritual.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mitothrum — At-Home Spa Rituals, Guided by Honest Science">
+  <meta property="og:description" content="Evidence-led at-home spa rituals: prestige skincare, beauty devices, infrared heat, bath & body, aromatherapy, rest & ritual. The hum of your mitochondria.">
+  <meta property="og:url" content="https://mitothrum.com/">
+  <meta property="og:image" content="https://mitothrum.com/media/hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://mitothrum.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="media/logo/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="media/logo/favicon-64.png">
+  <link rel="apple-touch-icon" href="media/logo/apple-touch-icon-180.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Mitothrum",
+    "slogan": "the hum of your mitochondria",
+    "url": "https://mitothrum.com/",
+    "description": "Evidence-led guide to at-home spa rituals: prestige skincare, beauty devices, infrared heat, bath & body, aromatherapy, and rest & ritual."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Mitothrum",
+    "url": "https://mitothrum.com/",
+    "description": "At-home spa rituals, guided by honest science."
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="wordmark" href="#top" aria-label="Mitothrum home">
+        <img class="wordmark-mark" src="media/logo/mitothrum-mark-amber.svg" alt="" width="42" height="42">
+        <span class="wordmark-text">
+          <span class="wordmark-name">Mitothrum</span>
+          <span class="wordmark-tag">the hum of your mitochondria</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="#rituals">Rituals</a>
+        <a href="#science">Science</a>
+        <a href="#episodes">Episodes</a>
+        <a href="#about">About</a>
+      </nav>
+      <a class="btn btn-gold btn-small" href="#concierge">Ask the concierge</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-bg" role="img" aria-label="Warm abstract glow of a sauna, with smooth stones and soft steam"></div>
+      <div class="hero-content">
+        <p class="eyebrow">At-home spa, guided by evidence</p>
+        <h1>Rituals for the way you want to <em>look</em> and <em>feel</em>.</h1>
+        <p class="lede">Mitothrum curates evidence-led at-home spa rituals — prestige skincare, beauty devices, infrared heat, bath &amp; body, aromatherapy, and rest &amp; ritual — so you can build a routine you trust. We read the studies; you enjoy the ritual.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-gold" href="#rituals">Explore the rituals</a>
+          <a class="btn btn-ghost" href="#compare">See the comparisons</a>
+        </div>
+        <p class="hero-note">Educational content — not medical advice.</p>
+      </div>
+    </section>
+
+    <!-- CONCIERGE -->
+    <section class="section section-cream" id="concierge" aria-label="Ask the concierge">
+      <div class="wrap">
+        <p class="eyebrow">Preview</p>
+        <h2>Ask the Mitothrum concierge</h2>
+        <p class="section-sub">A first taste of our concierge. In this preview it answers from a fixed set of editorial answers — the six rituals, our picks and our science series — and it will never invent a product, a price, or a rating. Please don&rsquo;t enter personal health details.</p>
+        <div class="chat" role="log" aria-live="polite" aria-label="Concierge conversation">
+          <div class="chat-messages" id="chatMessages"></div>
+          <div class="chat-suggest" id="chatSuggest">
+            <button type="button" data-q="What are the six rituals?">What are the six rituals?</button>
+            <button type="button" data-q="What did Episode 1 find about infrared saunas?">What did Episode 1 find?</button>
+            <button type="button" data-q="Which sauna blanket should I buy?">Which sauna blanket should I buy?</button>
+          </div>
+          <form class="chat-input" id="chatForm">
+            <label class="visually-hidden" for="chatText">Ask the concierge</label>
+            <input type="text" id="chatText" placeholder="Ask about a ritual or the science…" autocomplete="off" maxlength="300">
+            <button type="submit" class="btn btn-gold btn-small">Send</button>
+          </form>
+          <form class="chat-email is-hidden" id="emailForm" aria-label="Notify me when the full concierge launches">
+            <p>Get notified when the full concierge — with comparison guides — launches:</p>
+            <label class="visually-hidden" for="emailInput">Email address</label>
+            <input type="email" id="emailInput" placeholder="you@example.com" required>
+            <button type="submit" class="btn btn-gold btn-small">Notify me</button>
+            <p class="email-msg" id="emailMsg" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- RITUALS -->
+    <section class="section section-cream" id="rituals" aria-label="The six rituals">
+      <div class="wrap">
+        <p class="eyebrow">The six rituals</p>
+        <h2>One ritual, six ways in</h2>
+        <p class="section-sub">A bath soak, a prestige serum, and a sauna blanket belong to the same evening. These are the six pillars of the at-home spa — curated picks for each below.</p>
+        <div class="ritual-banner" role="img" aria-label="Smooth dark river stones with warm amber light"></div>
+        <div class="cards">
+          <article class="card">
+            <h3>Prestige skincare</h3>
+            <p>Retinol, vitamin C, peptides and barrier care — chosen for the look of your skin, explained in plain language.</p>
+            <p class="pick-disclosure">Mitothrum may earn a commission if you buy through these links — at no extra cost to you.</p>
+            <ul class="card-picks">
+              <li><a href="https://www.amazon.com/RoC-Retinol-Correxion-Smoothing-Capsules/dp/B088419TZG?crid=EIC8WT83A6K9&dib=eyJ2IjoiMSJ9.hIFgMpuvwZ6K2FVCcJtrvAvGRbBj4qdvSu_qRBvImxvLZbgQdUlb0ppFXlmPIEn1R0ydn0wJaWpA6ZZ25Kfcgn9Yasf6fM1hJse1QEGD-O-lPRJqjqtsA_EmuW8N0DAWOYaDwM8E38obvOysPBhUA8MTxEm-N8QhHqLLNKa_goQdPPfeaUyq8WlNRVPs9YaTD6Bw3i9zXsmOk4vtECa3cRf3HASaHlKKTlCjwGiG5jEKfeHgC6AUN-4zWYK4hcRuDpRP3sNt1FlvFIsYsHAKxIRBLLislRWMlRFu3uS0F-g.FIcFrbz10QWFQMbLdH3EPBLk52egBI8Q5Wx6mAVDtks&dib_tag=se&keywords=RoC%2BRetinol%2BCorrexion%2BLine%2BSmoothing%2BNight%2BSerum%2BCapsules%2B%2830%2Bct%29&nsdOptOutParam=true&qid=1792440159&rdc=1&sprefix=roc%2Bretinol%2Bcorrexion%2Bline%2Bsmoothing%2Bnight%2Bserum%2Bcapsules%2B30%2Bct%2B%2Caps%2C156&sr=8-1&th=1&linkCode=ll2&tag=mitothrum-20&linkId=76cfe18a3e48d226be4d7cee89d144fa&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored" aria-label="RoC Retinol Correxion Night Serum Capsules"><img class="pick-thumb" src="media/products/media-generation-roc-retinol-capsules-0-9dfc5b58-6dfe-450e-bfbd-21acecd043dd.webp" alt="RoC Retinol Correxion Night Serum Capsules" loading="lazy"></a><a href="https://www.amazon.com/RoC-Retinol-Correxion-Smoothing-Capsules/dp/B088419TZG?crid=EIC8WT83A6K9&dib=eyJ2IjoiMSJ9.hIFgMpuvwZ6K2FVCcJtrvAvGRbBj4qdvSu_qRBvImxvLZbgQdUlb0ppFXlmPIEn1R0ydn0wJaWpA6ZZ25Kfcgn9Yasf6fM1hJse1QEGD-O-lPRJqjqtsA_EmuW8N0DAWOYaDwM8E38obvOysPBhUA8MTxEm-N8QhHqLLNKa_goQdPPfeaUyq8WlNRVPs9YaTD6Bw3i9zXsmOk4vtECa3cRf3HASaHlKKTlCjwGiG5jEKfeHgC6AUN-4zWYK4hcRuDpRP3sNt1FlvFIsYsHAKxIRBLLislRWMlRFu3uS0F-g.FIcFrbz10QWFQMbLdH3EPBLk52egBI8Q5Wx6mAVDtks&dib_tag=se&keywords=RoC%2BRetinol%2BCorrexion%2BLine%2BSmoothing%2BNight%2BSerum%2BCapsules%2B%2830%2Bct%29&nsdOptOutParam=true&qid=1792440159&rdc=1&sprefix=roc%2Bretinol%2Bcorrexion%2Bline%2Bsmoothing%2Bnight%2Bserum%2Bcapsules%2B30%2Bct%2B%2Caps%2C156&sr=8-1&th=1&linkCode=ll2&tag=mitothrum-20&linkId=76cfe18a3e48d226be4d7cee89d144fa&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored">RoC Retinol Correxion Night Serum Capsules</a> — Single-dose retinol capsules — retinoids are among the most studied ingredients for the look of fine lines — in packaging that keeps the retinol stable. <span class="price-note"><a href="https://www.amazon.com/RoC-Retinol-Correxion-Smoothing-Capsules/dp/B088419TZG?crid=EIC8WT83A6K9&dib=eyJ2IjoiMSJ9.hIFgMpuvwZ6K2FVCcJtrvAvGRbBj4qdvSu_qRBvImxvLZbgQdUlb0ppFXlmPIEn1R0ydn0wJaWpA6ZZ25Kfcgn9Yasf6fM1hJse1QEGD-O-lPRJqjqtsA_EmuW8N0DAWOYaDwM8E38obvOysPBhUA8MTxEm-N8QhHqLLNKa_goQdPPfeaUyq8WlNRVPs9YaTD6Bw3i9zXsmOk4vtECa3cRf3HASaHlKKTlCjwGiG5jEKfeHgC6AUN-4zWYK4hcRuDpRP3sNt1FlvFIsYsHAKxIRBLLislRWMlRFu3uS0F-g.FIcFrbz10QWFQMbLdH3EPBLk52egBI8Q5Wx6mAVDtks&dib_tag=se&keywords=RoC%2BRetinol%2BCorrexion%2BLine%2BSmoothing%2BNight%2BSerum%2BCapsules%2B%2830%2Bct%29&nsdOptOutParam=true&qid=1792440159&rdc=1&sprefix=roc%2Bretinol%2Bcorrexion%2Bline%2Bsmoothing%2Bnight%2Bserum%2Bcapsules%2B30%2Bct%2B%2Caps%2C156&sr=8-1&th=1&linkCode=ll2&tag=mitothrum-20&linkId=76cfe18a3e48d226be4d7cee89d144fa&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored">See current price</a></span></li>
+              <li><a href="https://www.amazon.com/Drunk-Elephant-C-Firma-Fresh-Serum/dp/B09B4B1ZJQ?crid=1PA6LKJZMUO7F&dib=eyJ2IjoiMSJ9.y-TS1xmEL36Kb8CuyoSHeXq2gW4WMmv4E9CRaId_n0AiDZ_afH4e_Enj-jmW0_mimbp4U2Ya4pVg-i0AHLLE_YK8BrEvYd2LeTf7PXYMXjYnlpgdwAyD3SoaODEe1Xns7qAJB449CJY5W_mj-q0sNolo_tOSBdg6mX4o9tEc9qEUR1LDjjcS_fTEhQo1Y1Yjw8H2RYMijAivGYbAHPJCOYLnUC8bMYctJgE_sG-ICHZTlnAXHyROkpf0HhX4WYigAUm9cq4AeQGcjbS0JtHYtdDGUCtl3MNcnL8-Nc_of0c.eDxDPtwUYbG3skC0XPbWd0-Y4veH0Zq4lCCrPnhmiro&dib_tag=se&keywords=Drunk+Elephant+C-Firma+Fresh+Day+Serum+%2828+ml%29&nsdOptOutParam=true&qid=1792440325&s=beauty&sprefix=drunk+elephant+c-firma+fresh+day+serum+28+ml+%2Cbeauty%2C203&sr=1-1&linkCode=ll2&tag=mitothrum-20&linkId=cdbe581333475395462fec1bd41ec329&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored" aria-label="Drunk Elephant C-Firma Fresh Day Serum"><img class="pick-thumb" src="media/products/media-generation-drunk-elephant-c-firma-0-76cd056a-d45b-4b9c-8b21-c9b520e342b5.webp" alt="Drunk Elephant C-Firma Fresh Day Serum" loading="lazy"></a><a href="https://www.amazon.com/Drunk-Elephant-C-Firma-Fresh-Serum/dp/B09B4B1ZJQ?crid=1PA6LKJZMUO7F&dib=eyJ2IjoiMSJ9.y-TS1xmEL36Kb8CuyoSHeXq2gW4WMmv4E9CRaId_n0AiDZ_afH4e_Enj-jmW0_mimbp4U2Ya4pVg-i0AHLLE_YK8BrEvYd2LeTf7PXYMXjYnlpgdwAyD3SoaODEe1Xns7qAJB449CJY5W_mj-q0sNolo_tOSBdg6mX4o9tEc9qEUR1LDjjcS_fTEhQo1Y1Yjw8H2RYMijAivGYbAHPJCOYLnUC8bMYctJgE_sG-ICHZTlnAXHyROkpf0HhX4WYigAUm9cq4AeQGcjbS0JtHYtdDGUCtl3MNcnL8-Nc_of0c.eDxDPtwUYbG3skC0XPbWd0-Y4veH0Zq4lCCrPnhmiro&dib_tag=se&keywords=Drunk+Elephant+C-Firma+Fresh+Day+Serum+%2828+ml%29&nsdOptOutParam=true&qid=1792440325&s=beauty&sprefix=drunk+elephant+c-firma+fresh+day+serum+28+ml+%2Cbeauty%2C203&sr=1-1&linkCode=ll2&tag=mitothrum-20&linkId=cdbe581333475395462fec1bd41ec329&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored">Drunk Elephant C-Firma Fresh Day Serum</a> — 15% vitamin C with vitamin E and ferulic acid, mixed fresh on first use to beat oxidation. <span class="price-note"><a href="https://www.amazon.com/Drunk-Elephant-C-Firma-Fresh-Serum/dp/B09B4B1ZJQ?crid=1PA6LKJZMUO7F&dib=eyJ2IjoiMSJ9.y-TS1xmEL36Kb8CuyoSHeXq2gW4WMmv4E9CRaId_n0AiDZ_afH4e_Enj-jmW0_mimbp4U2Ya4pVg-i0AHLLE_YK8BrEvYd2LeTf7PXYMXjYnlpgdwAyD3SoaODEe1Xns7qAJB449CJY5W_mj-q0sNolo_tOSBdg6mX4o9tEc9qEUR1LDjjcS_fTEhQo1Y1Yjw8H2RYMijAivGYbAHPJCOYLnUC8bMYctJgE_sG-ICHZTlnAXHyROkpf0HhX4WYigAUm9cq4AeQGcjbS0JtHYtdDGUCtl3MNcnL8-Nc_of0c.eDxDPtwUYbG3skC0XPbWd0-Y4veH0Zq4lCCrPnhmiro&dib_tag=se&keywords=Drunk+Elephant+C-Firma+Fresh+Day+Serum+%2828+ml%29&nsdOptOutParam=true&qid=1792440325&s=beauty&sprefix=drunk+elephant+c-firma+fresh+day+serum+28+ml+%2Cbeauty%2C203&sr=1-1&linkCode=ll2&tag=mitothrum-20&linkId=cdbe581333475395462fec1bd41ec329&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored">See current price</a></span></li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Beauty devices</h3>
+            <p>LED and red-light masks, microcurrent and infusion tools — what the features actually mean before you spend.</p>
+            <p><a href="led-mask-vs-microcurrent.html"><strong>LED mask or microcurrent? Read the comparison &rarr;</strong></a></p>
+            <p class="pick-disclosure">Mitothrum may earn a commission if you buy through these links — at no extra cost to you.</p>
+            <ul class="card-picks">
+              <li><a href="https://www.amazon.com/dp/B00GG5IZWS?&linkCode=ll2&tag=mitothrum-20&linkId=c319ee45ddc635fd5e302a4e51820b0f&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored" aria-label="NuFACE Trinity Starter Kit"><img class="pick-thumb" src="media/products/media-generation-nuface-trinity-0-33cd733f-d71a-46c5-a157-5b855c364698.jpg" alt="NuFACE Trinity Starter Kit" loading="lazy"></a><a href="https://www.amazon.com/dp/B00GG5IZWS?&linkCode=ll2&tag=mitothrum-20&linkId=c319ee45ddc635fd5e302a4e51820b0f&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored">NuFACE Trinity Starter Kit</a> — FDA-cleared microcurrent facial toning from the category leader. Cosmetic use. <span class="price-note"><a href="https://www.amazon.com/dp/B00GG5IZWS?&linkCode=ll2&tag=mitothrum-20&linkId=c319ee45ddc635fd5e302a4e51820b0f&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored">See current price</a></span></li>
+              <li><a href="https://www.amazon.com/dp/B08NCRHNW9?&linkCode=ll2&tag=mitothrum-20&linkId=62ac586ecb1691830c20df595e198be3&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored" aria-label="Dr. Dennis Gross SpectraLite FaceWare Pro"><img class="pick-thumb" src="media/products/media-generation-spectralite-pro-0-41b42ae5-22a7-4b56-babd-48b72534f196.jpg" alt="Dr. Dennis Gross SpectraLite FaceWare Pro" loading="lazy"></a><a href="https://www.amazon.com/dp/B08NCRHNW9?&linkCode=ll2&tag=mitothrum-20&linkId=62ac586ecb1691830c20df595e198be3&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored">Dr. Dennis Gross SpectraLite FaceWare Pro</a> — Red and blue LED mask from a dermatologist-founded brand, FDA-cleared for cosmetic use. <span class="price-note"><a href="https://www.amazon.com/dp/B08NCRHNW9?&linkCode=ll2&tag=mitothrum-20&linkId=62ac586ecb1691830c20df595e198be3&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored">See current price</a></span></li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Infrared &amp; sauna</h3>
+            <p>Blankets, mats and cabins — an honest comparison of heat, space and cost, and what research does and doesn&rsquo;t show.</p>
+            <p><a href="sauna-blanket-comparison.html"><strong>HigherDOSE vs LifePro: read the comparison &rarr;</strong></a></p>
+            <p class="pick-disclosure">Mitothrum may earn a commission if you buy through these links — at no extra cost to you.</p>
+            <ul class="card-picks">
+              <li><a href="https://www.amazon.com/HigherDOSE-Infrared-Sauna-Blanket-Portable/dp/B09M8YQ4KB?crid=1IMLSSC6V1A1U&dib=eyJ2IjoiMSJ9.u8bI_5N4qii-y_s30IaMIh8Ul6IR2SGfXPCKN5iG_1dys3LnK4aZ2z4y1JMPcFjwB9njz9Xv9GM_zy3Q2ZOkLLPRgDyHMu88MoClFyfKHXbXAJXS28kkighxQM6MYKmLWrsFBF9pykmV_kE7rbJnxWWMhggmMZdsvKlQVppmsXFGpPXlpTdsdateAWm1pYHwnf8-sxpgyarCVBLGOX0avro_ciH5J1ikbnFVlm6U-Bo.fZ5yHH3YEMBWOm_w4pj9z4V5aRPC_NkK6mQUkjLnQSs&dib_tag=se&keywords=higherdose+infrared+sauna+blanket&qid=1792440010&sprefix=HigherDOSE+Infrared+Sauna+Blanket%2Caps%2C145&sr=8-1&linkCode=ll2&tag=mitothrum-20&linkId=de0ff5c58b702b472f39dd2571691c56&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored" aria-label="HigherDOSE Infrared Sauna Blanket"><img class="pick-thumb" src="media/products/media-generation-higherdose-sauna-blanket-0-f809e22d-cffb-449b-9360-7dbcaae91c86.webp" alt="HigherDOSE Infrared Sauna Blanket" loading="lazy"></a><a href="https://www.amazon.com/HigherDOSE-Infrared-Sauna-Blanket-Portable/dp/B09M8YQ4KB?crid=1IMLSSC6V1A1U&dib=eyJ2IjoiMSJ9.u8bI_5N4qii-y_s30IaMIh8Ul6IR2SGfXPCKN5iG_1dys3LnK4aZ2z4y1JMPcFjwB9njz9Xv9GM_zy3Q2ZOkLLPRgDyHMu88MoClFyfKHXbXAJXS28kkighxQM6MYKmLWrsFBF9pykmV_kE7rbJnxWWMhggmMZdsvKlQVppmsXFGpPXlpTdsdateAWm1pYHwnf8-sxpgyarCVBLGOX0avro_ciH5J1ikbnFVlm6U-Bo.fZ5yHH3YEMBWOm_w4pj9z4V5aRPC_NkK6mQUkjLnQSs&dib_tag=se&keywords=higherdose+infrared+sauna+blanket&qid=1792440010&sprefix=HigherDOSE+Infrared+Sauna+Blanket%2Caps%2C145&sr=8-1&linkCode=ll2&tag=mitothrum-20&linkId=de0ff5c58b702b472f39dd2571691c56&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored">HigherDOSE Infrared Sauna Blanket</a> — The category-defining infrared blanket — low-EMF, nine heat levels, designed for deep relaxing sweat sessions. <span class="price-note"><a href="https://www.amazon.com/HigherDOSE-Infrared-Sauna-Blanket-Portable/dp/B09M8YQ4KB?crid=1IMLSSC6V1A1U&dib=eyJ2IjoiMSJ9.u8bI_5N4qii-y_s30IaMIh8Ul6IR2SGfXPCKN5iG_1dys3LnK4aZ2z4y1JMPcFjwB9njz9Xv9GM_zy3Q2ZOkLLPRgDyHMu88MoClFyfKHXbXAJXS28kkighxQM6MYKmLWrsFBF9pykmV_kE7rbJnxWWMhggmMZdsvKlQVppmsXFGpPXlpTdsdateAWm1pYHwnf8-sxpgyarCVBLGOX0avro_ciH5J1ikbnFVlm6U-Bo.fZ5yHH3YEMBWOm_w4pj9z4V5aRPC_NkK6mQUkjLnQSs&dib_tag=se&keywords=higherdose+infrared+sauna+blanket&qid=1792440010&sprefix=HigherDOSE+Infrared+Sauna+Blanket%2Caps%2C145&sr=8-1&linkCode=ll2&tag=mitothrum-20&linkId=de0ff5c58b702b472f39dd2571691c56&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored">See current price</a></span></li>
+              <li><a href="https://www.amazon.com/LifePro-Far-Infrared-Sauna-Blanket/dp/B09PSKN6X3?crid=H8IP6UKUSCM&dib=eyJ2IjoiMSJ9.ygX5_n6ac6YhUk2gT8cWyW3QhsvJEio1wOJRIgc9EKpXKGNMBF3MerXU_8yoKA5g1HbVleAEdthwa_wbzbnUEvXqt7Ygwja4ezJbUBLkcoAuOrR-WKL2LwSKh6qKKUY4EouWJL_EX_BAAv2sh38KUiFToL5cQ98WRnbiyWXGXzQNNXcoPXu6U-uzNotZd74GfmL3iZQxZlw4fjCsGfGN0A4EopZyapxJQk2mhJKNQLs.Y9mDLf-uJkjhC00_HIqLLi2DVUzywxp5OMWp5cqfts8&dib_tag=se&keywords=LifePro%2BRejuvaWrap%2BInfrared%2BSauna%2BBlanket&qid=1792440080&sprefix=lifepro%2Brejuvawrap%2Binfrared%2Bsauna%2Bblanket%2Caps%2C240&sr=8-1&th=1&linkCode=ll2&tag=mitothrum-20&linkId=eabb5a66295c99e1bf7f9a6308cdafbe&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored" aria-label="LifePro RejuvaWrap Infrared Sauna Blanket"><img class="pick-thumb" src="media/products/media-generation-lifepro-rejuvawrap-0-305f83d7-1439-4c11-97c5-aca9445766bd.webp" alt="LifePro RejuvaWrap Infrared Sauna Blanket" loading="lazy"></a><a href="https://www.amazon.com/LifePro-Far-Infrared-Sauna-Blanket/dp/B09PSKN6X3?crid=H8IP6UKUSCM&dib=eyJ2IjoiMSJ9.ygX5_n6ac6YhUk2gT8cWyW3QhsvJEio1wOJRIgc9EKpXKGNMBF3MerXU_8yoKA5g1HbVleAEdthwa_wbzbnUEvXqt7Ygwja4ezJbUBLkcoAuOrR-WKL2LwSKh6qKKUY4EouWJL_EX_BAAv2sh38KUiFToL5cQ98WRnbiyWXGXzQNNXcoPXu6U-uzNotZd74GfmL3iZQxZlw4fjCsGfGN0A4EopZyapxJQk2mhJKNQLs.Y9mDLf-uJkjhC00_HIqLLi2DVUzywxp5OMWp5cqfts8&dib_tag=se&keywords=LifePro%2BRejuvaWrap%2BInfrared%2BSauna%2BBlanket&qid=1792440080&sprefix=lifepro%2Brejuvawrap%2Binfrared%2Bsauna%2Bblanket%2Caps%2C240&sr=8-1&th=1&linkCode=ll2&tag=mitothrum-20&linkId=eabb5a66295c99e1bf7f9a6308cdafbe&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored">LifePro RejuvaWrap Infrared Sauna Blanket</a> — The value alternative at roughly a third of the price — our honest premium-vs-budget comparison anchor. <span class="price-note"><a href="https://www.amazon.com/LifePro-Far-Infrared-Sauna-Blanket/dp/B09PSKN6X3?crid=H8IP6UKUSCM&dib=eyJ2IjoiMSJ9.ygX5_n6ac6YhUk2gT8cWyW3QhsvJEio1wOJRIgc9EKpXKGNMBF3MerXU_8yoKA5g1HbVleAEdthwa_wbzbnUEvXqt7Ygwja4ezJbUBLkcoAuOrR-WKL2LwSKh6qKKUY4EouWJL_EX_BAAv2sh38KUiFToL5cQ98WRnbiyWXGXzQNNXcoPXu6U-uzNotZd74GfmL3iZQxZlw4fjCsGfGN0A4EopZyapxJQk2mhJKNQLs.Y9mDLf-uJkjhC00_HIqLLi2DVUzywxp5OMWp5cqfts8&dib_tag=se&keywords=LifePro%2BRejuvaWrap%2BInfrared%2BSauna%2BBlanket&qid=1792440080&sprefix=lifepro%2Brejuvawrap%2Binfrared%2Bsauna%2Bblanket%2Caps%2C240&sr=8-1&th=1&linkCode=ll2&tag=mitothrum-20&linkId=eabb5a66295c99e1bf7f9a6308cdafbe&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored">See current price</a></span></li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Bath &amp; body</h3>
+            <p>Soaks, body oils, scrubs and scalp care — the building blocks of a real Sunday reset.</p>
+            <p class="pick-disclosure">Mitothrum may earn a commission if you buy through these links — at no extra cost to you.</p>
+            <ul class="card-picks">
+              <li><a href="https://www.amazon.com/dp/B098QFFBZT?&linkCode=ll2&tag=mitothrum-20&linkId=d52c294d2826b874ad7021b5099a907d&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored" aria-label="Dr Teal's Epsom Salt Magnesium Soak"><img class="pick-thumb" src="media/products/media-generation-dr-teals-epsom-0-1c30dc2d-c76e-45a9-aa3d-f70492c24d5b.jpg" alt="Dr Teal's Epsom Salt Magnesium Soak" loading="lazy"></a><a href="https://www.amazon.com/dp/B098QFFBZT?&linkCode=ll2&tag=mitothrum-20&linkId=d52c294d2826b874ad7021b5099a907d&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored">Dr Teal's Epsom Salt Magnesium Soak</a> — The mass-market epsom leader for a classic Sunday soak. Always follow the label's cautions. <span class="price-note"><a href="https://www.amazon.com/dp/B098QFFBZT?&linkCode=ll2&tag=mitothrum-20&linkId=d52c294d2826b874ad7021b5099a907d&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored">See current price</a></span></li>
+              <li><a href="https://www.amazon.com/dp/B013FEIAVS?th=1&linkCode=ll2&tag=mitothrum-20&linkId=78147eb56f2801e2586ee1d712c7d2aa&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored" aria-label="L'Occitane Almond Shower Oil"><img class="pick-thumb" src="media/products/media-generation-loccitane-shower-oil-0-1e1eb68e-8d68-4588-b66f-52ab38680811.jpg" alt="L'Occitane Almond Shower Oil" loading="lazy"></a><a href="https://www.amazon.com/dp/B013FEIAVS?th=1&linkCode=ll2&tag=mitothrum-20&linkId=78147eb56f2801e2586ee1d712c7d2aa&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored">L'Occitane Almond Shower Oil</a> — The iconic oil-to-milk shower ritual — a long-standing prestige bath staple. <span class="price-note"><a href="https://www.amazon.com/dp/B013FEIAVS?th=1&linkCode=ll2&tag=mitothrum-20&linkId=78147eb56f2801e2586ee1d712c7d2aa&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored">See current price</a></span></li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Aromatherapy</h3>
+            <p>Diffusers, essential oils, candles and shower steamers — scent as the finishing layer of the ritual.</p>
+            <p class="pick-disclosure">Mitothrum may earn a commission if you buy through these links — at no extra cost to you.</p>
+            <ul class="card-picks">
+              <li><a href="https://www.amazon.com/ASAKUKI-Essential-Ultrasonic-Aromatherapy-Humidifier/dp/B073SWNZC1?dib=eyJ2IjoiMSJ9.2doizZfvR-0IYFCO6Sz16HaOK2mSXYD_valWQwM2VlTrxDOwMBuIlNd1_J-tf93PmI9gtG1Wy8KPXpn0LUXjc5SsvsTn1RAKsSgEBdRzYN3fosGP4txrtlwXF45u1kIoTnAndpZPnZrSxX5IDLlxNnpSQUdRYPLHGaXCV9vI3J_l_fr2YESG3VwBm6_6EWNo_DJGpkvQptLEhbGqCbyNOGu-MiqIkEuznTtP6zTfia9zJxaD8EbVBnRR21p4efVcVjO2fqv8zvYk_NXZXlKvUzIz8HxOSYJnwV-Jy18y6eY.4n0p8AZh4noCOIPq0-XrJeJKzUdj4BuNVUwjq0FRegw&dib_tag=se&keywords=ASAKUKI&qid=1792444687&sr=8-1&th=1&linkCode=ll2&tag=mitothrum-20&linkId=52fa198b14d593f3ca645d9fbbbe081a&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored" aria-label="ASAKUKI 500ml Essential Oil Diffuser"><img class="pick-thumb" src="media/products/media-generation-asakuki-diffuser-0-966139c7-f904-45ee-9700-a30b3e0557c1.webp" alt="ASAKUKI 500ml Essential Oil Diffuser" loading="lazy"></a><a href="https://www.amazon.com/ASAKUKI-Essential-Ultrasonic-Aromatherapy-Humidifier/dp/B073SWNZC1?dib=eyJ2IjoiMSJ9.2doizZfvR-0IYFCO6Sz16HaOK2mSXYD_valWQwM2VlTrxDOwMBuIlNd1_J-tf93PmI9gtG1Wy8KPXpn0LUXjc5SsvsTn1RAKsSgEBdRzYN3fosGP4txrtlwXF45u1kIoTnAndpZPnZrSxX5IDLlxNnpSQUdRYPLHGaXCV9vI3J_l_fr2YESG3VwBm6_6EWNo_DJGpkvQptLEhbGqCbyNOGu-MiqIkEuznTtP6zTfia9zJxaD8EbVBnRR21p4efVcVjO2fqv8zvYk_NXZXlKvUzIz8HxOSYJnwV-Jy18y6eY.4n0p8AZh4noCOIPq0-XrJeJKzUdj4BuNVUwjq0FRegw&dib_tag=se&keywords=ASAKUKI&qid=1792444687&sr=8-1&th=1&linkCode=ll2&tag=mitothrum-20&linkId=52fa198b14d593f3ca645d9fbbbe081a&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored">ASAKUKI 500ml Essential Oil Diffuser</a> — An Amazon-native ultrasonic diffuser — cool mist for scent as the finishing layer. <span class="price-note"><a href="https://www.amazon.com/ASAKUKI-Essential-Ultrasonic-Aromatherapy-Humidifier/dp/B073SWNZC1?dib=eyJ2IjoiMSJ9.2doizZfvR-0IYFCO6Sz16HaOK2mSXYD_valWQwM2VlTrxDOwMBuIlNd1_J-tf93PmI9gtG1Wy8KPXpn0LUXjc5SsvsTn1RAKsSgEBdRzYN3fosGP4txrtlwXF45u1kIoTnAndpZPnZrSxX5IDLlxNnpSQUdRYPLHGaXCV9vI3J_l_fr2YESG3VwBm6_6EWNo_DJGpkvQptLEhbGqCbyNOGu-MiqIkEuznTtP6zTfia9zJxaD8EbVBnRR21p4efVcVjO2fqv8zvYk_NXZXlKvUzIz8HxOSYJnwV-Jy18y6eY.4n0p8AZh4noCOIPq0-XrJeJKzUdj4BuNVUwjq0FRegw&dib_tag=se&keywords=ASAKUKI&qid=1792444687&sr=8-1&th=1&linkCode=ll2&tag=mitothrum-20&linkId=52fa198b14d593f3ca645d9fbbbe081a&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored">See current price</a></span></li>
+              <li><a href="https://www.amazon.com/Plant-Therapy-Certified-Essential-Oils/dp/B00J8O18TQ?crid=2C44E36OASKEF&dib=eyJ2IjoiMSJ9.vh3MIbQEO-57MrWAngmiP_TKBkvQmdax1QrjaedvISec_JDuTHxkmvuIloiSB8QrRubK39CyWT0EuzkeOwv3iY68fjn49c6BkRusmolxTx09PXQ8Y1GfuSt3VPePwExLj1zdp-nbZqA7sp1OpjmxwE_fVTvVkua1nxJuP_eksfv6cTzjHa9HbsHqrzoTAucgv9R1wDQ2W-CUg9deu9YCljU4UXoQWGezxPSjm2c10iMCLnP8om6DIqvNpNeMrH3F7hTvGUxa0cg5K_VtN2WWJOHKqM6-x8N3kMbENsmhuPw.VEjW4BYZwboa3_NfD0FoxGAgl0ny8ftfKqjbewpwkwo&dib_tag=se&keywords=plant+therapy&qid=1792445054&refinements=p_123%3A14428&rnid=85457740011&sprefix=plant+th%2Caps%2C172&sr=8-8&linkCode=ll2&tag=mitothrum-20&linkId=081a3b4bc8de245ecfe6597674ccba12&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored" aria-label="Plant Therapy Top 6 Organic Singles Set"><img class="pick-thumb" src="media/products/media-generation-plant-therapy-oils-0-39d4e5fb-c94f-4c05-83f2-9df5e175b7d0.webp" alt="Plant Therapy Top 6 Organic Singles Set" loading="lazy"></a><a href="https://www.amazon.com/Plant-Therapy-Certified-Essential-Oils/dp/B00J8O18TQ?crid=2C44E36OASKEF&dib=eyJ2IjoiMSJ9.vh3MIbQEO-57MrWAngmiP_TKBkvQmdax1QrjaedvISec_JDuTHxkmvuIloiSB8QrRubK39CyWT0EuzkeOwv3iY68fjn49c6BkRusmolxTx09PXQ8Y1GfuSt3VPePwExLj1zdp-nbZqA7sp1OpjmxwE_fVTvVkua1nxJuP_eksfv6cTzjHa9HbsHqrzoTAucgv9R1wDQ2W-CUg9deu9YCljU4UXoQWGezxPSjm2c10iMCLnP8om6DIqvNpNeMrH3F7hTvGUxa0cg5K_VtN2WWJOHKqM6-x8N3kMbENsmhuPw.VEjW4BYZwboa3_NfD0FoxGAgl0ny8ftfKqjbewpwkwo&dib_tag=se&keywords=plant+therapy&qid=1792445054&refinements=p_123%3A14428&rnid=85457740011&sprefix=plant+th%2Caps%2C172&sr=8-8&linkCode=ll2&tag=mitothrum-20&linkId=081a3b4bc8de245ecfe6597674ccba12&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored">Plant Therapy Top 6 Organic Singles Set</a> — USDA organic, batch-tested oils from the most trust-first mid-market brand. <span class="price-note"><a href="https://www.amazon.com/Plant-Therapy-Certified-Essential-Oils/dp/B00J8O18TQ?crid=2C44E36OASKEF&dib=eyJ2IjoiMSJ9.vh3MIbQEO-57MrWAngmiP_TKBkvQmdax1QrjaedvISec_JDuTHxkmvuIloiSB8QrRubK39CyWT0EuzkeOwv3iY68fjn49c6BkRusmolxTx09PXQ8Y1GfuSt3VPePwExLj1zdp-nbZqA7sp1OpjmxwE_fVTvVkua1nxJuP_eksfv6cTzjHa9HbsHqrzoTAucgv9R1wDQ2W-CUg9deu9YCljU4UXoQWGezxPSjm2c10iMCLnP8om6DIqvNpNeMrH3F7hTvGUxa0cg5K_VtN2WWJOHKqM6-x8N3kMbENsmhuPw.VEjW4BYZwboa3_NfD0FoxGAgl0ny8ftfKqjbewpwkwo&dib_tag=se&keywords=plant+therapy&qid=1792445054&refinements=p_123%3A14428&rnid=85457740011&sprefix=plant+th%2Caps%2C172&sr=8-8&linkCode=ll2&tag=mitothrum-20&linkId=081a3b4bc8de245ecfe6597674ccba12&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored">See current price</a></span></li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Rest &amp; Ritual</h3>
+            <p>Weighted blankets, sunrise clocks, white-noise machines and meditation tools — everything for a calmer evening and deeper rest.</p>
+            <p class="pick-disclosure">Mitothrum may earn a commission if you buy through these links — at no extra cost to you.</p>
+            <ul class="card-picks">
+              <li><a href="https://www.amazon.com/Hatch-Science-Backed-Circadian-screen-free-meditations/dp/B0DLLSCVZW?crid=2IP2ZDSUZEGQY&dib=eyJ2IjoiMSJ9.0oG2WWX8RueWX6StaJh_no7XEyGSX9SQYG9DdGz-IU9uWbAIhCJc_yEUD0zW9eVDhrCtOqjazSM20cBYilBGyclB3FDd_rGp1qxx9I--vc9uENrnw2cmAxMQ920XmRi9UG3vPeG2SVaEqSUM-gQWT1ccjYLyq5h0Hn6J-5bncDiNqXTeuuucRwPeeHcUo9FGISD0H3Org9YsIWmJ2haALcw__6XfYIrcweuqJ1LFTVdeJ8KcZ4LE0_mzIzBG1SbE6mqmifyhNOsubFW7TZAEqADG6e4POpbp5MI2Gs3iEZI.ZJX6jMm5juo-u_dyhkjwgYSIXTjlld3SrcRgzF8Jpis&dib_tag=se&keywords=Hatch%2BRestore%2B2%2B%28Sunrise%2BAlarm%2BClock%2B%2B%2BSound%2BMachine%29&nsdOptOutParam=true&qid=1792440833&s=home-garden&sprefix=hatch%2Brestore%2B2%2Bsunrise%2Balarm%2Bclock%2B%2B%2Bsound%2Bmachine%2B%2Cgarden%2C329&sr=1-1&th=1&linkCode=ll2&tag=mitothrum-20&linkId=2a2706386496b620f9a2f069e30d1ed9&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored" aria-label="Hatch Restore 2"><img class="pick-thumb" src="media/products/media-generation-hatch-restore-0-7dc02686-8e9a-4b1c-b44c-5fa795902fa5.webp" alt="Hatch Restore 2" loading="lazy"></a><a href="https://www.amazon.com/Hatch-Science-Backed-Circadian-screen-free-meditations/dp/B0DLLSCVZW?crid=2IP2ZDSUZEGQY&dib=eyJ2IjoiMSJ9.0oG2WWX8RueWX6StaJh_no7XEyGSX9SQYG9DdGz-IU9uWbAIhCJc_yEUD0zW9eVDhrCtOqjazSM20cBYilBGyclB3FDd_rGp1qxx9I--vc9uENrnw2cmAxMQ920XmRi9UG3vPeG2SVaEqSUM-gQWT1ccjYLyq5h0Hn6J-5bncDiNqXTeuuucRwPeeHcUo9FGISD0H3Org9YsIWmJ2haALcw__6XfYIrcweuqJ1LFTVdeJ8KcZ4LE0_mzIzBG1SbE6mqmifyhNOsubFW7TZAEqADG6e4POpbp5MI2Gs3iEZI.ZJX6jMm5juo-u_dyhkjwgYSIXTjlld3SrcRgzF8Jpis&dib_tag=se&keywords=Hatch%2BRestore%2B2%2B%28Sunrise%2BAlarm%2BClock%2B%2B%2BSound%2BMachine%29&nsdOptOutParam=true&qid=1792440833&s=home-garden&sprefix=hatch%2Brestore%2B2%2Bsunrise%2Balarm%2Bclock%2B%2B%2Bsound%2Bmachine%2B%2Cgarden%2C329&sr=1-1&th=1&linkCode=ll2&tag=mitothrum-20&linkId=2a2706386496b620f9a2f069e30d1ed9&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored">Hatch Restore 2</a> — Sunrise simulation plus sleep sounds and wind-down routines — a bridge to circadian-rhythm science. Core features work without the optional subscription. <span class="price-note"><a href="https://www.amazon.com/Hatch-Science-Backed-Circadian-screen-free-meditations/dp/B0DLLSCVZW?crid=2IP2ZDSUZEGQY&dib=eyJ2IjoiMSJ9.0oG2WWX8RueWX6StaJh_no7XEyGSX9SQYG9DdGz-IU9uWbAIhCJc_yEUD0zW9eVDhrCtOqjazSM20cBYilBGyclB3FDd_rGp1qxx9I--vc9uENrnw2cmAxMQ920XmRi9UG3vPeG2SVaEqSUM-gQWT1ccjYLyq5h0Hn6J-5bncDiNqXTeuuucRwPeeHcUo9FGISD0H3Org9YsIWmJ2haALcw__6XfYIrcweuqJ1LFTVdeJ8KcZ4LE0_mzIzBG1SbE6mqmifyhNOsubFW7TZAEqADG6e4POpbp5MI2Gs3iEZI.ZJX6jMm5juo-u_dyhkjwgYSIXTjlld3SrcRgzF8Jpis&dib_tag=se&keywords=Hatch%2BRestore%2B2%2B%28Sunrise%2BAlarm%2BClock%2B%2B%2BSound%2BMachine%29&nsdOptOutParam=true&qid=1792440833&s=home-garden&sprefix=hatch%2Brestore%2B2%2Bsunrise%2Balarm%2Bclock%2B%2B%2Bsound%2Bmachine%2B%2Cgarden%2C329&sr=1-1&th=1&linkCode=ll2&tag=mitothrum-20&linkId=2a2706386496b620f9a2f069e30d1ed9&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored">See current price</a></span></li>
+              <li><a href="https://www.amazon.com/dp/B0C1FBJGFR?th=1&linkCode=ll2&tag=mitothrum-20&linkId=0beefdc4e8c90c71a552251258f61aad&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored" aria-label="Bearaby Cotton Napper Weighted Blanket"><img class="pick-thumb" src="media/products/media-generation-bearaby-napper-0-3d858517-5b7f-41da-8909-1c5da5ee3774.webp" alt="Bearaby Cotton Napper Weighted Blanket" loading="lazy"></a><a href="https://www.amazon.com/dp/B0C1FBJGFR?th=1&linkCode=ll2&tag=mitothrum-20&linkId=0beefdc4e8c90c71a552251258f61aad&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored">Bearaby Cotton Napper Weighted Blanket</a> — Bead-free, hand-knit organic cotton — the weighted blanket for hot sleepers. Designed for comforting pressure. <span class="price-note"><a href="https://www.amazon.com/dp/B0C1FBJGFR?th=1&linkCode=ll2&tag=mitothrum-20&linkId=0beefdc4e8c90c71a552251258f61aad&language=en_US&gaOptInStatus=true&ref_=as_li_ss_tl" target="_blank" rel="noopener sponsored">See current price</a></span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCIENCE -->
+    <section class="section section-dark" id="science" aria-label="Our approach to science">
+      <div class="wrap">
+        <p class="eyebrow">How we work</p>
+        <h2>We read the studies so you don&rsquo;t have to</h2>
+        <div class="science-grid">
+          <div>
+            <p>Every Mitothrum recommendation starts from peer-reviewed research, not marketing copy. We name each study, state its size and its limits, and never upgrade &ldquo;associated with&rdquo; into &ldquo;proven to.&rdquo;</p>
+            <ul class="science-list">
+              <li>Findings restated in our own words, with the study cited</li>
+              <li>Effect sizes reported honestly — including null results</li>
+              <li>Finnish-sauna evidence never borrowed to sell infrared</li>
+              <li>No detox claims, no disease claims, no transformation promises</li>
+            </ul>
+          </div>
+          <div class="science-accent" role="img" aria-label="Soft beams of golden light through warm darkness"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EPISODES -->
+    <section class="section section-dark" id="episodes" aria-label="Science series episodes">
+      <div class="wrap">
+        <p class="eyebrow">What the Science Actually Says</p>
+        <h2>Episode 1: Infrared saunas</h2>
+        <div class="episode-grid">
+          <div class="video-frame">
+            <video controls preload="metadata" poster="media/episode1-poster.jpg" aria-label="Episode 1: Infrared saunas — what the science actually says">
+              <source src="media/sauna-science-explainer.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="episode-copy">
+            <p class="episode-meta">Episode 1 &middot; ~6 minutes</p>
+            <p>The honest summary: the strongest sauna science we have — twenty years of Finnish data on heart and brain health — comes from traditional hot-air saunas, and it is observational: compelling and dose-responsive, but not proof.</p>
+            <p>Infrared itself has genuine clinical trial data in heart failure through Waon therapy — but that was a supervised medical setting, not a living room. For at-home infrared wellness claims, the evidence is still thin, and no long-term mortality data for infrared exists at all.</p>
+            <p>We include the 2023 randomized trial that found no vascular improvement after eight weeks of sauna — because the null results are part of the story. And we cut every detox claim: there is no peer-reviewed basis for them.</p>
+            <p class="table-note" style="color: rgba(247,241,230,0.7);">Sources: Laukkanen et al., <a href="https://doi.org/10.1001/jamainternmed.2014.8187" target="_blank" rel="noopener">JAMA Internal Medicine, 2015</a> (Finnish cohort); Tei et al., <a href="https://doi.org/10.1253/circj.CJ-16-0051" target="_blank" rel="noopener">Circulation Journal, 2016</a> (WAON-CHF trial); Debray et al., <a href="https://doi.org/10.1152/japplphysiol.00322.2023" target="_blank" rel="noopener">Journal of Applied Physiology, 2023</a> (8-week sauna RCT).</p>
+            <p class="episode-tease"><strong>Next episode:</strong> red light therapy — miracle, or marketing? We&rsquo;ll look at the actual studies.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARISONS -->
+    <section class="section section-cream" id="compare" aria-label="Product comparisons">
+      <div class="wrap">
+        <p class="eyebrow">Comparisons</p>
+        <h2>Settle the choice, not just the search</h2>
+        <p class="section-sub">Comparison is where decisions happen. Our tables use price tiers ($/$$/$$$) and "See current price" links — we never display a price we can’t keep current, and never publish figures from memory. Our first comparisons are live; the rest of the roadmap is below.</p>
+        <div class="table-shell">
+          <table>
+            <caption>Comparisons</caption>
+            <thead>
+              <tr>
+                <th scope="col">Comparison</th>
+                <th scope="col">Ritual</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="sauna-blanket-comparison.html">Infrared sauna blankets compared: HigherDOSE vs LifePro, plus tents &amp; cold plunge</a></td>
+                <td>Infrared &amp; sauna</td>
+                <td><span class="pill pill-live">Live</span></td>
+              </tr>
+              <tr>
+                <td><a href="led-mask-vs-microcurrent.html">LED mask vs microcurrent: SpectraLite FaceWare Pro vs NuFACE Trinity</a></td>
+                <td>Beauty devices</td>
+                <td><span class="pill pill-live">Live</span></td>
+              </tr>
+              <tr>
+                <td>Vitamin C serums by skin type &amp; budget</td>
+                <td>Prestige skincare</td>
+                <td><span class="pill">Launching soon</span></td>
+              </tr>
+              <tr>
+                <td>The Sunday reset: a 90-minute bath ritual</td>
+                <td>Bath &amp; body</td>
+                <td><span class="pill">Launching soon</span></td>
+              </tr>
+              <tr>
+                <td>Diffusers, oils &amp; shower steamers compared</td>
+                <td>Aromatherapy</td>
+                <td><span class="pill">Launching soon</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="table-note">We never publish prices, ratings, or recommendations from memory. A missing price is honest; a stale one is not — so our comparisons point you to the live price instead of printing one.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section section-cream" id="about" aria-label="About Mitothrum">
+      <div class="wrap about-grid">
+        <div>
+          <p class="eyebrow">About</p>
+          <h2>The hum of your mitochondria</h2>
+          <p>Mitothrum is an evidence-led guide to at-home spa rituals. We read peer-reviewed research, compare products honestly, and hand you off to trusted retailers to buy — we never sell or ship anything ourselves.</p>
+          <p>When you purchase through our links, we may earn a commission at no extra cost to you. It helps fund the research, and it never decides what we cover.</p>
+        </div>
+        <div class="about-accent" role="img" aria-label="Warm cream melting into amber and espresso, like candlelight on silk"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <p class="wordmark-name">Mitothrum</p>
+        <p class="footer-tag">the hum of your mitochondria</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#rituals">Rituals</a>
+        <a href="#science">Science</a>
+        <a href="#episodes">Episodes</a>
+        <a href="#about">About</a>
+        <a href="#concierge">Ask the concierge</a>
+        <a href="methodology.html">How we choose</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+      <div class="footer-contact">
+        <p>Contact: <a href="mailto:hello@mitothrum.com">hello@mitothrum.com</a></p>
+        <p>Follow: <a href="https://www.youtube.com/channel/UCDR4wFZ13u6q9YlQx64u39Q" target="_blank" rel="noopener">YouTube</a> &middot; <a href="https://www.instagram.com/mitothrum/" target="_blank" rel="noopener">Instagram</a> &middot; <a href="https://www.facebook.com/profile.php?id=61595777690292" target="_blank" rel="noopener">Facebook</a> &middot; <a href="https://www.tiktok.com/@mitothrum" target="_blank" rel="noopener">TikTok</a></p>
+      </div>
+    </div>
+    <div class="wrap">
+      <p class="disclosure"><strong>Affiliate disclosure:</strong> Mitothrum is reader-supported. When you buy through links on this site, we may earn an affiliate commission at no extra cost to you. Commissions fund our research and never decide what we cover. As an Amazon Associate I earn from qualifying purchases.</p>
+      <p class="legal">&copy; 2026 Mitothrum. All rights reserved. Educational content — not medical advice. Nothing on this site diagnoses, treats, or prevents any condition; talk to your doctor about health decisions.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+<script>
+document.addEventListener('click', function(e) {
+  var a = e.target.closest('a[rel~="sponsored"]');
+  if (a && typeof gtag === 'function') {
+    gtag('event', 'affiliate_click', {
+      'event_category': 'affiliate',
+      'event_label': a.hostname + a.pathname.split('/').slice(0, 4).join('/'),
+      'transport_type': 'beacon'
+    });
+  }
+});
+</script>
+</body>
+</html>
