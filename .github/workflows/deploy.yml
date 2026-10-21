@@ -12,6 +12,7 @@ on:
       - "research/**"
       - "RULES.md"
       - "CLAUDE.md"
+      - "marketing/**"
       - ".github/**"
   workflow_dispatch:
     inputs:
@@ -58,6 +59,7 @@ jobs:
             research/**
             RULES.md
             CLAUDE.md
+            marketing/**
             media/**
             CHANGES.md
             README.md
