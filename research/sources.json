@@ -1,32 +1,74 @@
 {
-  "ignore_lines": ["^Send feedback$", "^Except as otherwise noted", "cookie", "^Skip to main content$"],
+  "ignore_lines": [
+    "^Send feedback$",
+    "^Except as otherwise noted",
+    "cookie",
+    "^Skip to main content$"
+  ],
   "sources": [
-    {"id": "google-spam-policies", "name": "Google Search spam policies",
-     "url": "https://developers.google.com/search/docs/essentials/spam-policies",
-     "why": "Thin affiliation, scaled content abuse and link rules decide whether affiliate pages can rank."},
-    {"id": "google-reviews-guidance", "name": "Google: Write high quality reviews",
-     "url": "https://developers.google.com/search/docs/specialty/ecommerce/write-high-quality-reviews",
-     "why": "Google's standard for product review and comparison pages like ours."},
-    {"id": "google-helpful-content", "name": "Google: Creating helpful, reliable, people-first content",
-     "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
-     "why": "The quality and E-E-A-T guidance behind rankings for health-adjacent content."},
-    {"id": "google-gen-ai-content", "name": "Google: Guidance on using generative AI content",
-     "url": "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content",
-     "why": "Rules for AI-assisted drafting of pages."},
-    {"id": "google-outbound-links", "name": "Google: Qualify your outbound links",
-     "url": "https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links",
-     "why": "How affiliate links must be marked (rel=sponsored)."},
-    {"id": "google-ranking-updates", "name": "Google Search ranking updates (status dashboard)",
-     "url": "https://status.search.google.com/products/rGHU1u87FJnkP6W2GwMi/history",
-     "why": "New core and spam updates; check rankings and traffic when one rolls out."},
-    {"id": "amazon-program-policies", "name": "Amazon Associates Program Policies",
-     "url": "https://affiliate-program.amazon.com/help/operating/policies",
-     "why": "Price display, reviews, disclosure and link rules for every Amazon link."},
-    {"id": "amazon-operating-agreement", "name": "Amazon Associates Operating Agreement",
-     "url": "https://affiliate-program.amazon.com/help/operating/agreement",
-     "why": "The contract governing the Associates account."},
-    {"id": "ftc-endorsement-faq", "name": "FTC Endorsement Guides: What People Are Asking",
-     "url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
-     "why": "How affiliate relationships must be disclosed."}
+    {
+      "id": "google-spam-policies",
+      "name": "Google Search spam policies",
+      "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+      "why": "Thin affiliation, scaled content abuse and link rules decide whether affiliate pages can rank."
+    },
+    {
+      "id": "google-reviews-guidance",
+      "name": "Google: Write high quality reviews",
+      "url": "https://developers.google.com/search/docs/specialty/ecommerce/write-high-quality-reviews",
+      "why": "Google's standard for product review and comparison pages like ours."
+    },
+    {
+      "id": "google-helpful-content",
+      "name": "Google: Creating helpful, reliable, people-first content",
+      "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+      "why": "The quality and E-E-A-T guidance behind rankings for health-adjacent content."
+    },
+    {
+      "id": "google-gen-ai-content",
+      "name": "Google: Guidance on using generative AI content",
+      "url": "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content",
+      "why": "Rules for AI-assisted drafting of pages."
+    },
+    {
+      "id": "google-outbound-links",
+      "name": "Google: Qualify your outbound links",
+      "url": "https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links",
+      "why": "How affiliate links must be marked (rel=sponsored)."
+    },
+    {
+      "id": "google-ranking-updates",
+      "name": "Google Search ranking updates (status dashboard)",
+      "url": "https://status.search.google.com/products/rGHU1u87FJnkP6W2GwMi/history",
+      "why": "New core and spam updates; check rankings and traffic when one rolls out."
+    },
+    {
+      "id": "amazon-program-policies",
+      "name": "Amazon Associates Program Policies",
+      "url": "https://affiliate-program.amazon.com/help/operating/policies",
+      "why": "Price display, reviews, disclosure and link rules for every Amazon link."
+    },
+    {
+      "id": "amazon-operating-agreement",
+      "name": "Amazon Associates Operating Agreement",
+      "url": "https://affiliate-program.amazon.com/help/operating/agreement",
+      "why": "The contract governing the Associates account."
+    },
+    {
+      "id": "fr-ftc-endorsements",
+      "name": "Federal Register: FTC documents on endorsements",
+      "type": "federal_register",
+      "url": "https://www.federalregister.gov/",
+      "query": "conditions%5Bagencies%5D%5B%5D=federal-trade-commission&conditions%5Bterm%5D=%22endorsements%22&order=newest&per_page=20&fields%5B%5D=title&fields%5B%5D=publication_date&fields%5B%5D=type&fields%5B%5D=html_url",
+      "why": "New or amended FTC rules and guidance on endorsements and affiliate disclosure (the FTC's own FAQ page blocks automated checks)."
+    },
+    {
+      "id": "fr-ftc-consumer-reviews",
+      "name": "Federal Register: FTC documents on consumer reviews",
+      "type": "federal_register",
+      "url": "https://www.federalregister.gov/",
+      "query": "conditions%5Bagencies%5D%5B%5D=federal-trade-commission&conditions%5Bterm%5D=%22consumer+reviews%22&order=newest&per_page=20&fields%5B%5D=title&fields%5B%5D=publication_date&fields%5B%5D=type&fields%5B%5D=html_url",
+      "why": "Changes to the FTC rule banning fake reviews and testimonials."
+    }
   ]
 }
