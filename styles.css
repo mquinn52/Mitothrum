@@ -491,3 +491,16 @@ tbody tr:last-child td { border-bottom: none; }
   .wordmark-tag { display: none; }
   .header-inner .btn { padding: 0.5rem 0.9rem; font-size: 0.82rem; }
 }
+
+/* mobile-fixes 2026-10-21: no sideways scroll, readable text, 24px+ tap targets */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+img, video { max-width: 100%; height: auto; }
+.cards-2 { grid-template-columns: 1fr 1fr; }
+.cards > * { min-width: 0; }
+@media (max-width: 720px) {
+  .cards-2 { grid-template-columns: 1fr; }
+  .price-note a, .footer-nav a, .footer-contact a, .site-footer a, .text-link { display: inline-block; padding: 6px 0; }
+  .price-note { font-size: 0.95rem; }
+  .card p, .card-picks li { font-size: 1rem; }
+  .pick-disclosure, .hero-note, td, th { font-size: 0.9rem; }
+}
