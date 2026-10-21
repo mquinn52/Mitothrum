@@ -1,0 +1,29 @@
+# Runs the site rules on every pull request, before anything is deployed.
+# A failing check means the change shouldn't be merged yet (for example,
+# a new page still has SiteStripe link placeholders).
+name: Pull request check
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Check the site rules
+        env:
+          SKIP_LIVE: "1"
+          SITE_URL: https://mitothrum.com
+          REQUIRED_TEXT: "As an Amazon Associate I earn from qualifying purchases||Educational content"
+          AFFILIATE_TAG: "mitothrum-20"
+          FORBIDDEN_TEXT: "SITESTRIPE-LINK-NEEDED"
+        run: |
+          python3 .github/scripts/site_check.py || {
+            echo "::error::Fix the problems above before merging."
+            exit 1
+          }

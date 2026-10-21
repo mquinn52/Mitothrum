@@ -34,6 +34,7 @@ jobs:
           AFFILIATE_TAG: "mitothrum-20"
           ALLOWED_PHONES: ""
           SKIP_FILES: ""
+          FORBIDDEN_TEXT: "SITESTRIPE-LINK-NEEDED"
         run: python3 .github/scripts/site_check.py
 
       - name: Open or update an issue

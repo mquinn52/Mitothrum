@@ -1,5 +1,5 @@
 The daily check of https://mitothrum.com found 1 problem(s):
 
-- Live sitemap could not be read: <urlopen error Tunnel connection failed: 403 Forbidden>
+- `vitamin-c-serums.html` still contains 8 placeholder(s): “SITESTRIPE-LINK-NEEDED”
 
-Checked 5 files in the repository and 0 live URLs from the sitemap.
+Checked 6 files in the repository.
