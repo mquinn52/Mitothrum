@@ -33,7 +33,7 @@ const KB = [
   },
   {
     keys: ['skincare', 'skin care', 'retinol', 'vitamin c', 'peptide', 'serum', 'moisturizer', 'moisturiser', 'spf', 'sunscreen', 'cleanser', 'toner', 'roc', 'drunk elephant', 'c-firma'],
-    answer: 'Prestige skincare is one of our six rituals — think retinol, vitamin C, peptides and barrier creams, explained in plain cosmetic language. We never promise wrinkle removal or any transformation; we talk about the appearance of skin. Our current picks: ' + PICKS.skincare.join(' and ') + ' — see the Prestige skincare card below for details and current-price links.'
+    answer: 'Prestige skincare is one of our six rituals — think retinol, vitamin C, peptides and barrier creams, explained in plain cosmetic language. We never promise wrinkle removal or any transformation; we talk about the appearance of skin. Our current picks: ' + PICKS.skincare.join(' and ') + ' — and our vitamin C comparison (vitamin-c-serums.html) compares five serums by formula, skin type and budget.'
   },
   {
     keys: ['red light therapy', 'redlight', 'photobiomodulation'],
@@ -86,7 +86,7 @@ const PRODUCT_INTENT = [
   'amazon', 'walmart', 'target', 'sephora', 'ulta', 'dermstore'
 ];
 
-const FALLBACK = 'That is beyond what this concierge can answer honestly — more comparison guides are launching soon (our sauna blanket and LED mask vs microcurrent comparisons are already live). ' + PICKS_LINE + ' I would rather say "not yet" than invent an answer.';
+const FALLBACK = 'That is beyond what this concierge can answer honestly — more comparison guides are launching soon (our sauna blanket, LED mask vs microcurrent, and vitamin C serum comparisons are already live). ' + PICKS_LINE + ' I would rather say "not yet" than invent an answer.';
 
 // Keyword matching: short keys (<=3 chars) match on word boundaries only,
 // so "hi" doesn't fire on "think" and "top" doesn't fire on "laptop".

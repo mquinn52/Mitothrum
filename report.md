@@ -1,5 +1,3 @@
-The daily check of https://mitothrum.com found 1 problem(s):
+All checks passed for https://mitothrum.com.
 
-- Live sitemap could not be read: <urlopen error Tunnel connection failed: 403 Forbidden>
-
-Checked 5 files in the repository and 0 live URLs from the sitemap.
+Checked 6 files in the repository.

@@ -13,6 +13,10 @@ Configured by environment variables:
   AFFILIATE_TAG      optional; every amazon.com link must carry tag=<this>
   ALLOWED_PHONES     optional; comma-separated tel: numbers allowed on the site
   SKIP_FILES         optional; comma-separated files exempt from page rules
+  FORBIDDEN_TEXT     optional; '||'-separated strings no page may contain
+                     (for example the SiteStripe link placeholder)
+  SKIP_LIVE          optional; set to 1 to check only the repository files
+                     (used on pull requests, before anything is deployed)
 """
 import glob, os, re, sys, urllib.request, xml.etree.ElementTree as ET
 from html.parser import HTMLParser
@@ -22,6 +26,8 @@ REQUIRED = [s for s in os.environ.get("REQUIRED_TEXT", "").split("||") if s.stri
 TAG = os.environ.get("AFFILIATE_TAG", "").strip()
 PHONES = {p.strip() for p in os.environ.get("ALLOWED_PHONES", "").split(",") if p.strip()}
 SKIP = {s.strip() for s in os.environ.get("SKIP_FILES", "").split(",") if s.strip()}
+FORBIDDEN = [s for s in os.environ.get("FORBIDDEN_TEXT", "").split("||") if s.strip()]
+SKIP_LIVE = os.environ.get("SKIP_LIVE", "") == "1"
 UA = {"User-Agent": "site-monitor (GitHub Actions)"}
 problems, notes = [], []
 
@@ -55,6 +61,10 @@ for f in pages:
         options = [o.strip() for o in req.split("::") if o.strip()]
         if not any(o in text or o in html for o in options):
             problems.append(f"`{f}` is missing required text: “{options[0][:80]}”")
+    for bad in FORBIDDEN:
+        n = html.count(bad)
+        if n:
+            problems.append(f"`{f}` still contains {n} placeholder(s): “{bad}”")
     for a in doc.links:
         href = a.get("href") or ""
         if TAG and "amazon." in href:
@@ -71,9 +81,14 @@ def fetch(url):
     with urllib.request.urlopen(req, timeout=30) as r:
         return r.status, r.read().decode("utf-8", "replace")
 
+urls = []
 try:
+    if SKIP_LIVE:
+        raise LookupError("skipped")
     _, sm = fetch(f"{SITE}/sitemap.xml?monitor=1")
     urls = [e.text.strip() for e in ET.fromstring(sm).iter() if e.tag.endswith("loc")]
+except LookupError:
+    pass
 except Exception as e:
     urls = []; problems.append(f"Live sitemap could not be read: {e}")
 
@@ -97,7 +112,7 @@ for url in urls:
 if stale:
     problems.append("Live pages don't match the repository (deploy didn't run, or a cache is serving old copies): "
                     + ", ".join(stale[:10]) + (" …" if len(stale) > 10 else ""))
-notes.append(f"Checked {len(pages)} files in the repository and {len(urls)} live URLs from the sitemap.")
+notes.append(f"Checked {len(pages)} files in the repository" + ("." if SKIP_LIVE else f" and {len(urls)} live URLs from the sitemap."))
 
 # ---------- Report ----------
 with open("report.md", "w") as out:
