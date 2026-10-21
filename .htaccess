@@ -19,6 +19,6 @@ RewriteRule ^(.*)$ https://mitothrum.com/$1 [R=301,L]
 </IfModule>
 
 # Notes files in the repository are never public
-<FilesMatch "^(CHANGES|RULES|README)\.md$">
+<FilesMatch "^(CHANGES|RULES|README|CLAUDE)\.md$">
   Require all denied
 </FilesMatch>
