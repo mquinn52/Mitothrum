@@ -1,3 +1,9 @@
 # Large media lives on the server, not in the repo
 media/
 .DS_Store
+
+# Research loop scratch files
+research/changes.*
+research/ai_summary.md
+RULES.proposed.md
+__pycache__/
