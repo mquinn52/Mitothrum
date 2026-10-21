@@ -6,7 +6,7 @@ opens an issue, plus a pull request revising this file when an API key is set,
 whenever one of them changes. Rules marked **[auto]** are enforced by the daily
 site monitor (`.github/workflows/monitor.yml`).
 
-**Last reviewed:** October 20, 2026
+**Last reviewed:** October 21, 2026
 **Goal:** earn affiliate revenue from honest, research-led content, without breaking
 copyright law, privacy law, Google's guidelines, affiliate program terms or
 generally accepted ethics. When a revenue idea conflicts with a rule, the rule wins.
@@ -54,5 +54,18 @@ generally accepted ethics. When a revenue idea conflicts with a rule, the rule w
 4. Email list once a provider is connected.
 5. Ads only after about 25,000 monthly pageviews.
 
+## 8. Social video and email (added 2026-10-21)
+- 8.1 Every video carries the affiliate disclosure on screen for its whole length, and in the caption. Spoken disclosure too when a video has a voiceover; disclose in the language of the video. *Source: [FTC Disclosures 101 for social media influencers](https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers); [FTC Endorsement Guides FAQ](https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking).*
+- 8.2 YouTube: tick "includes paid promotion" on every product video. TikTok: turn on the commercial content disclosure for any post with product recommendations or links (undisclosed posts can lose For You eligibility). Platform labels are in addition to our own disclosure, never instead of it. *Sources: [YouTube paid promotion](https://support.google.com/youtube/answer/154235?hl=en); [TikTok content disclosure](https://ads.tiktok.com/resources/help/article/about-the-content-disclosure-setting-for-creators).*
+- 8.3 "Affiliate link", "commissionable link" or a bare "Buy now" don't count as a disclosure on their own; a plain sentence near the link does, and "(paid link)" beside a link is acceptable. *Source: FTC Endorsement Guides FAQ.*
+- 8.4 Email list: accurate sender and subject, identified as an ad where it is one, a postal address (a PO box or registered private mailbox is allowed), and opt-outs honored within 10 business days. *Source: [FTC CAN-SPAM guide](https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business).*
+- 8.5 Never buy followers, views or reviews. *Source: FTC fake reviews rule (2024).*
+
+## 9. Search in the AI era (added 2026-10-21)
+- 9.1 Original, point-of-view pages (evidence tables, who should skip it, a verdict) are the long-term lever; mass-produced pages are scaled content abuse. *Source: [Google: optimizing for generative AI search](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide).*
+- 9.2 No special markup or "AI optimization" tricks are needed for AI Overviews or AI Mode: pages must be indexed, eligible for a snippet, findable through internal links, with structured data that matches visible text. *Source: [Google: AI features and your website](https://developers.google.com/search/docs/appearance/ai-features).*
+- 9.3 Build hub pages per ritual that link to every comparison in it; track AI visibility in Search Console's reports, not third-party tools claiming Google data.
+
 ## Changelog
+- 2026-10-21: Added social video, email and AI-search rules from verified research.
 - 2026-10-20: First version, distilled from the October 2026 audit and research.

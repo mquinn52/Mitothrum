@@ -69,6 +69,30 @@
       "url": "https://www.federalregister.gov/",
       "query": "conditions%5Bagencies%5D%5B%5D=federal-trade-commission&conditions%5Bterm%5D=%22consumer+reviews%22&order=newest&per_page=20&fields%5B%5D=title&fields%5B%5D=publication_date&fields%5B%5D=type&fields%5B%5D=html_url",
       "why": "Changes to the FTC rule banning fake reviews and testimonials."
+    },
+    {
+      "id": "google-ai-optimization",
+      "name": "Google: Optimizing for generative AI search",
+      "url": "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+      "why": "Google's list of what matters and what to ignore for AI Overviews and AI Mode."
+    },
+    {
+      "id": "google-ai-features",
+      "name": "Google: AI features and your website",
+      "url": "https://developers.google.com/search/docs/appearance/ai-features",
+      "why": "Eligibility and controls for AI Overviews and AI Mode."
+    },
+    {
+      "id": "youtube-paid-promotion",
+      "name": "YouTube: paid product placements and endorsements",
+      "url": "https://support.google.com/youtube/answer/154235?hl=en",
+      "why": "When product videos must tick 'includes paid promotion'."
+    },
+    {
+      "id": "tiktok-content-disclosure",
+      "name": "TikTok: content disclosure setting",
+      "url": "https://ads.tiktok.com/resources/help/article/about-the-content-disclosure-setting-for-creators",
+      "why": "When TikTok posts must use the commercial content toggle."
     }
   ]
 }
