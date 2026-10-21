@@ -1,8 +1,0 @@
----
-# cPanel Git deployment for mitothrum.com.
-# Copies the site files into public_html. It never deletes anything,
-# so the media/ folder already on the server is left untouched.
-deployment:
-  tasks:
-    - export DEPLOYPATH=$HOME/public_html/
-    - /bin/cp -f *.html *.css *.js *.xml robots.txt llms.txt $DEPLOYPATH

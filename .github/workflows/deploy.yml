@@ -1,0 +1,33 @@
+# Uploads the site to GoDaddy over FTPS whenever main changes.
+# Needs three repository secrets: FTP_SERVER, FTP_USERNAME, FTP_PASSWORD.
+# Only files this workflow uploaded are ever updated or removed on the
+# server, so the media/ folder already on GoDaddy is left alone.
+name: Deploy to GoDaddy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the site
+        uses: actions/checkout@v4
+
+      - name: Upload to public_html
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          server-dir: ./
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            media/**
+            CHANGES.md
+            README.md
