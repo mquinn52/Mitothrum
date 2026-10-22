@@ -1,6 +1,6 @@
-# mitothrum.com — this folder (public_html) also contains the
-# waterdamagegwinnett.com folder, so every rewrite here is limited to
-# mitothrum hostnames. That site has its own .htaccess.
+# mitothrum.com — this is the site's own folder, public_html/mitothrum.com.
+# The parent public_html belongs to waterdamagegwinnett.com, which has its own
+# .htaccess; nothing here touches it.
 RewriteEngine On
 
 # One canonical address: https://mitothrum.com
@@ -8,7 +8,15 @@ RewriteCond %{HTTP_HOST} ^www\.mitothrum\.com$ [NC]
 RewriteRule ^(.*)$ https://mitothrum.com/$1 [R=301,L]
 RewriteCond %{HTTP_HOST} ^mitothrum\.com$ [NC]
 RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
 RewriteRule ^(.*)$ https://mitothrum.com/$1 [R=301,L]
+
+# Only mitothrum.com serves this folder. It sits inside the parent public_html,
+# so waterdamagegwinnett.com/mitothrum.com/ would otherwise show a second copy
+# of this site. Any other hostname gets a 404, which keeps the two live sites
+# separate.
+RewriteCond %{HTTP_HOST} !^(www\.)?mitothrum\.com(:[0-9]+)?$ [NC]
+RewriteRule ^ - [R=404,L]
 
 # Pages and feeds must be revalidated, so a deploy shows up immediately
 # instead of an old cached copy. Images keep normal caching.
