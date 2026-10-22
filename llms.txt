@@ -1,5 +1,6 @@
-# Mitothrum — llms.txt
-# The hum of your mitochondria.
+# Mitothrum
+
+> Mitothrum is an evidence-led guide to at-home spa rituals — "the hum of your mitochondria." It is an editorial publication, not a store: it never sells, ships, or fulfills anything. Product links are affiliate links (Amazon Associates and, where noted, brand programs), and prices are never printed.
 
 Mitothrum (https://mitothrum.com/) is an evidence-led guide to at-home spa
 rituals. It is an editorial publication, not a store: it never sells, ships,
@@ -63,6 +64,14 @@ but never states prices, ratings, or personalized purchase recommendations.
 - Affiliate disclosure shown next to every group of product links and in the
   footer. "As an Amazon Associate I earn from qualifying purchases."
 - "Educational content — not medical advice" on every page.
+
+## Social
+
+- YouTube: https://www.youtube.com/channel/UCDR4wFZ13u6q9YlQx64u39Q
+- Instagram: https://www.instagram.com/mitothrum/
+- Facebook: https://www.facebook.com/profile.php?id=61595777690292
+- TikTok: https://www.tiktok.com/@mitothrum
+- Threads: https://www.threads.com/@mitothrum
 
 ## Contact
 
