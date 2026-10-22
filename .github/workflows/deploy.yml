@@ -51,7 +51,7 @@ jobs:
           port: 21
           timeout: 60000
           log-level: verbose
-          server-dir: ./
+          server-dir: ./mitothrum.com
           exclude: |
             **/.git*
             **/.git*/**
