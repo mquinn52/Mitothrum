@@ -1,5 +1,10 @@
 # Uploads the site to GoDaddy whenever main changes.
 # Needs three repository secrets: FTP_SERVER, FTP_USERNAME, FTP_PASSWORD.
+# The FTP account must be rooted at public_html/mitothrum.com (the site's own
+# folder, where mitothrum.com is served from). public_html itself belongs to
+# waterdamagegwinnett.com, so nothing here may ever deploy into it. The
+# "Check the FTP target" step refuses to upload unless the FTP root looks like
+# the mitothrum.com folder.
 # Only files this workflow uploaded are ever updated or removed on the
 # server, so the media/ folder already on GoDaddy is left alone.
 name: Deploy to GoDaddy
@@ -41,7 +46,14 @@ jobs:
             echo "::warning::Could not open port 21 on the FTP server within 15 seconds. The address may be wrong, behind a CDN/firewall, or GoDaddy may be blocking GitHub's servers."
           fi
 
-      - name: Upload to public_html
+      - name: Check the FTP target is the mitothrum.com site folder
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: python3 -I .github/scripts/check_ftp_target.py
+
+      - name: Upload to public_html/mitothrum.com
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -51,7 +63,7 @@ jobs:
           port: 21
           timeout: 60000
           log-level: verbose
-          server-dir: ./mitothrum.com/
+          server-dir: ./
           exclude: |
             **/.git*
             **/.git*/**

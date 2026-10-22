@@ -10,12 +10,17 @@ Owner: Matthew Quinn. Static HTML/CSS/JS, no build step.
 
 ## How changes go live
 - Push to `main` → `.github/workflows/deploy.yml` uploads to GoDaddy over FTPS
-  (secrets FTP_SERVER = cPanel shared IP, FTP_USERNAME, FTP_PASSWORD) into
-  `public_html`. Commits touching only research/, RULES.md, CLAUDE.md or
-  .github/ don't deploy.
-- `public_html` also contains the separate `waterdamagegwinnett.com` folder
-  (its own repo: mquinn52/Water-Damage-Gwinnett). Never deploy or rewrite
-  anything that would touch it.
+  (secrets FTP_SERVER = cPanel shared IP, FTP_USERNAME, FTP_PASSWORD) into the
+  site's own folder, `public_html/mitothrum.com`. The FTP account's Directory is
+  that folder, so `server-dir` stays `./`. Commits touching only research/,
+  RULES.md, CLAUDE.md or .github/ don't deploy.
+- `public_html` itself belongs to waterdamagegwinnett.com (its own repo:
+  mquinn52/Water-Damage-Gwinnett). Never deploy or rewrite anything outside
+  `public_html/mitothrum.com`. The deploy's "Check the FTP target" step refuses
+  to upload if the FTP root holds WDG site files or lacks `media/`.
+- Never point `server-dir` at a subfolder to "fix" a wrong FTP root. An earlier
+  account rooted at `public_html/mitothrum.com/deploy` silently published to
+  `mitothrum.com/deploy/` for days. Fix the FTP account's Directory instead.
 - New pages: work on a branch and open a pull request; `pr-check.yml` runs the
   site rules (affiliate tag, rel=sponsored, disclosures, no
   SITESTRIPE-LINK-NEEDED placeholders). The owner merges.
