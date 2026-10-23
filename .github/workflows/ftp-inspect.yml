@@ -15,6 +15,14 @@ on:
         description: "Move old upload zips into _to_delete/ (for deletion in cPanel)"
         type: boolean
         default: false
+      recurse:
+        description: "List every subfolder's files too"
+        type: boolean
+        default: false
+      move_paths:
+        description: "Paths to move into _to_delete/ (comma-separated)"
+        type: string
+        default: ""
 
 permissions:
   contents: read
@@ -32,7 +40,11 @@ jobs:
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
           FIX: ${{ inputs.fix && '1' || '0' }}
           ARCHIVE_ZIPS: ${{ inputs.archive_zips && '1' || '0' }}
-        run: python3 -I .github/scripts/ftp_inspect.py
+          RECURSE: ${{ inputs.recurse && '1' || '0' }}
+          MOVE_PATHS_CSV: ${{ inputs.move_paths }}
+        run: |
+          export MOVE_PATHS="$(printf '%s' "$MOVE_PATHS_CSV" | tr ',' '\n')"
+          python3 -I .github/scripts/ftp_inspect.py
       - name: Post the report
         env:
           GH_TOKEN: ${{ github.token }}

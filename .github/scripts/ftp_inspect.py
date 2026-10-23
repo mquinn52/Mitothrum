@@ -33,6 +33,48 @@ for name, f in sorted(ftp.mlsd("/", facts=["type", "size", "modify", "unix.mode"
     entries.append((name, f.get("type"), f.get("unix.mode", "")))
     lines.append(f"| {name} | {f.get('type')} | {f.get('unix.mode', '?')} | {f.get('size', '')} | {f.get('modify', '')} |")
 
+# Recursive listing of subfolders (RECURSE=1): one line per file.
+tree = []
+def walk(path, depth=0):
+    if depth > 6:
+        return
+    try:
+        items = sorted(ftp.mlsd(path, facts=["type", "size", "modify"]))
+    except ftplib.all_errors as e:
+        tree.append(f"{path}: cannot list ({e})")
+        return
+    for n, f in items:
+        if f.get("type") in ("cdir", "pdir"):
+            continue
+        full = f"{path.rstrip('/')}/{n}"
+        if f.get("type") == "dir":
+            tree.append(f"{full}/")
+            walk(full, depth + 1)
+        else:
+            tree.append(f"{full}  {f.get('size', '')}  {f.get('modify', '')[:8]}")
+if os.environ.get("RECURSE") == "1":
+    for name, kind, _ in entries:
+        if kind == "dir":
+            tree.append(f"/{name}/")
+            walk(f"/{name}")
+
+# Explicit move list (MOVE_PATHS, one path per line): owner-approved garbage
+# goes to /_to_delete/ (keeping its relative path) for deletion in cPanel.
+for raw in os.environ.get("MOVE_PATHS", "").splitlines():
+    src = raw.strip()
+    if not src:
+        continue
+    dst = "/_to_delete/" + src.lstrip("/").replace("/", "__")
+    try:
+        try:
+            ftp.mkd("/_to_delete")
+        except ftplib.all_errors:
+            pass
+        ftp.rename(src, dst)
+        tree.append(f"MOVED {src} -> {dst}")
+    except ftplib.all_errors as e:
+        tree.append(f"MOVE FAILED {src}: {e}")
+
 changes = []
 if fix:
     for name, kind, mode in entries:
@@ -80,6 +122,16 @@ if os.environ.get("BRIEF") != "1":
 if fix:
     report.append("Permission changes: " + ("; ".join(changes) if changes else "none needed"))
     report.append("")
+if tree:
+    # GitHub comments cap at 65,536 characters
+    budget, kept = 55000, []
+    for t in tree:
+        budget -= len(t) + 1
+        if budget < 0:
+            kept.append(f"... {len(tree) - len(kept)} more lines truncated")
+            break
+        kept.append(t)
+    report += ["```"] + kept + ["```", ""]
 if moved:
     report.append(f"Moved {len(moved)} zip(s) to _to_delete/: " + "; ".join(moved))
     report.append("")
