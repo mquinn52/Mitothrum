@@ -36,3 +36,10 @@ RewriteRule ^ - [R=404,L]
 # An old copy of the site sits in a "mitothrum" subfolder from earlier manual
 # uploads; don't serve it as duplicate content.
 RedirectMatch 404 ^/mitothrum(/.*)?$
+
+# _to_delete/ holds server files queued for the owner to delete in cPanel.
+# Scripts and generator metadata never belong on the public site either.
+RedirectMatch 404 ^/_to_delete(/.*)?$
+<FilesMatch "\.(py|sh)$">
+  Require all denied
+</FilesMatch>
