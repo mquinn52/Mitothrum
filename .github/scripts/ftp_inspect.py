@@ -45,6 +45,21 @@ if fix:
             changes.append(f"{name}: {mode or '?'} -> 0644")
         except ftplib.all_errors as e:
             changes.append(f"{name}: chmod failed ({e})")
+moved = []
+if os.environ.get("ARCHIVE_ZIPS") == "1":
+    # Owner approved removing the old upload zips (Oct 23, 2026). Claude can't
+    # hard-delete, so they are moved into _to_delete/ for the owner to delete
+    # in cPanel. .htaccess already blocks *.zip from the web.
+    names = {n for n, _, _ in entries}
+    if "_to_delete" not in names:
+        ftp.mkd("/_to_delete")
+    for name, kind, _ in entries:
+        if kind == "file" and name.lower().endswith(".zip"):
+            try:
+                ftp.rename(f"/{name}", f"/_to_delete/{name}")
+                moved.append(name)
+            except ftplib.all_errors as e:
+                moved.append(f"{name} (move failed: {e})")
 ftp.quit()
 
 status = []
@@ -64,6 +79,9 @@ if os.environ.get("BRIEF") != "1":
     report += lines + [""]
 if fix:
     report.append("Permission changes: " + ("; ".join(changes) if changes else "none needed"))
+    report.append("")
+if moved:
+    report.append(f"Moved {len(moved)} zip(s) to _to_delete/: " + "; ".join(moved))
     report.append("")
 report.append("Live status: " + ", ".join(status))
 text = "\n".join(report) + "\n"

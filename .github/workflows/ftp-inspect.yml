@@ -11,6 +11,10 @@ on:
         description: "Reset unreadable site files to 644"
         type: boolean
         default: false
+      archive_zips:
+        description: "Move old upload zips into _to_delete/ (for deletion in cPanel)"
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -27,6 +31,7 @@ jobs:
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
           FIX: ${{ inputs.fix && '1' || '0' }}
+          ARCHIVE_ZIPS: ${{ inputs.archive_zips && '1' || '0' }}
         run: python3 -I .github/scripts/ftp_inspect.py
       - name: Post the report
         env:
