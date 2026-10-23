@@ -75,3 +75,15 @@ jobs:
             media/**
             CHANGES.md
             README.md
+
+      # FTP uploads keep a file's existing mode. A zip extracted on the server
+      # on Oct 23, 2026 left pages at 0660 (unreadable to Apache: site-wide
+      # 403), and deploys alone didn't repair it. Reset web files to 644.
+      - name: Make site files readable (644)
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FIX: "1"
+          BRIEF: "1"
+        run: python3 -I .github/scripts/ftp_inspect.py

@@ -1,10 +1,14 @@
-"""Temporary diagnostic for the Oct 23, 2026 403s on mitothrum.com.
+"""Inspect (and optionally repair) file permissions in the mitothrum.com folder.
 
-Lists the FTP root (public_html/mitothrum.com) with each entry's permissions,
-size and modify time, and the live HTTP status of each page. With FIX=1 it
-resets *only* site files that are unreadable to 644 (directories to 755).
-Never prints credentials or the server address. Writes its report to
-report.txt for the workflow to post as an issue comment.
+Why: on Oct 23, 2026 a zip extracted on the server left every page at mode
+0660, which Apache can't read, so the whole site returned 403. FTP deploys
+overwrite file contents but keep a file's existing mode, so a bad mode
+survives later deploys. The deploy now runs this with FIX=1 after uploading.
+
+Lists the FTP root (public_html/mitothrum.com) with each entry's mode, size
+and modify time. With FIX=1, resets web files (html, txt, xml, css, js,
+.htaccess) to 644 when they aren't. Read-only otherwise. Never prints
+credentials or the server address. Writes report.txt.
 """
 import os
 import ftplib
@@ -13,10 +17,7 @@ import urllib.request
 host = os.environ["FTP_SERVER"].strip()
 fix = os.environ.get("FIX") == "1"
 SITE = "https://mitothrum.com"
-SITE_FILES = {".htaccess", "index.html", "privacy.html", "methodology.html",
-              "sauna-blanket-comparison.html", "led-mask-vs-microcurrent.html",
-              "vitamin-c-serums.html", "llms.txt", "robots.txt", "sitemap.xml",
-              "styles.css", "script.js"}
+WEB_EXT = (".html", ".txt", ".xml", ".css", ".js")
 
 ftp = ftplib.FTP_TLS(timeout=60)
 ftp.connect(host, 21)
@@ -25,32 +26,32 @@ ftp.login(os.environ["FTP_USERNAME"], os.environ["FTP_PASSWORD"])
 ftp.prot_p()
 
 lines = ["| name | type | mode | size | modified (UTC) |", "|---|---|---|---|---|"]
-modes = {}
-for name, f in sorted(ftp.mlsd("/", facts=["type", "size", "modify", "unix.mode", "perm"])):
+entries = []
+for name, f in sorted(ftp.mlsd("/", facts=["type", "size", "modify", "unix.mode"])):
     if f.get("type") in ("cdir", "pdir"):
         continue
-    mode = f.get("unix.mode", "?")
-    modes[name] = (f.get("type"), mode)
-    lines.append(f"| {name} | {f.get('type')} | {mode} | {f.get('size','')} | {f.get('modify','')} |")
+    entries.append((name, f.get("type"), f.get("unix.mode", "")))
+    lines.append(f"| {name} | {f.get('type')} | {f.get('unix.mode', '?')} | {f.get('size', '')} | {f.get('modify', '')} |")
 
-fixed = []
+changes = []
 if fix:
-    for name, (kind, mode) in modes.items():
-        if name not in SITE_FILES and kind != "dir":
+    for name, kind, mode in entries:
+        if kind != "file" or not (name.endswith(WEB_EXT) or name == ".htaccess"):
             continue
-        want = "0755" if kind == "dir" else "0644"
-        if mode not in (want, want.lstrip("0")) and name in SITE_FILES | {"media"}:
-            try:
-                ftp.sendcmd(f"SITE CHMOD {want[1:]} /{name}")
-                fixed.append(f"{name}: {mode} -> {want}")
-            except ftplib.all_errors as e:
-                fixed.append(f"{name}: chmod failed ({e})")
+        if mode.lstrip("0") == "644":
+            continue
+        try:
+            ftp.sendcmd(f"SITE CHMOD 644 /{name}")
+            changes.append(f"{name}: {mode or '?'} -> 0644")
+        except ftplib.all_errors as e:
+            changes.append(f"{name}: chmod failed ({e})")
 ftp.quit()
 
 status = []
-for p in ["/", "/privacy.html", "/llms.txt", "/robots.txt", "/styles.css"]:
+for p in ["/", "/privacy.html", "/llms.txt", "/robots.txt"]:
     try:
-        req = urllib.request.Request(SITE + p + "?inspect=1", headers={"User-Agent": "site-monitor (GitHub Actions)"})
+        req = urllib.request.Request(SITE + p + "?inspect=1",
+                                     headers={"User-Agent": "site-monitor (GitHub Actions)"})
         with urllib.request.urlopen(req, timeout=30) as r:
             status.append(f"{p} {r.status}")
     except urllib.error.HTTPError as e:
@@ -58,9 +59,13 @@ for p in ["/", "/privacy.html", "/llms.txt", "/robots.txt", "/styles.css"]:
     except Exception as e:
         status.append(f"{p} error {type(e).__name__}")
 
-with open("report.txt", "w") as out:
-    out.write("**FTP inspect" + (" + fix" if fix else " (read-only)") + "**\n\n")
-    out.write("\n".join(lines) + "\n\n")
-    if fix:
-        out.write("Permission changes: " + ("; ".join(fixed) if fixed else "none needed") + "\n\n")
-    out.write("Live status after: " + ", ".join(status) + "\n")
+report = ["**FTP inspect" + (" + permission fix" if fix else " (read-only)") + "**", ""]
+if os.environ.get("BRIEF") != "1":
+    report += lines + [""]
+if fix:
+    report.append("Permission changes: " + ("; ".join(changes) if changes else "none needed"))
+    report.append("")
+report.append("Live status: " + ", ".join(status))
+text = "\n".join(report) + "\n"
+open("report.txt", "w").write(text)
+print(text)

@@ -26,7 +26,13 @@ RewriteRule ^ - [R=404,L]
   </FilesMatch>
 </IfModule>
 
-# Notes files in the repository are never public
-<FilesMatch "^(CHANGES|RULES|README|CLAUDE)\.md$">
+# Notes, archives, backups and deploy state are never public. The server folder
+# holds old upload zips (~1 GB), index backups and notes from manual uploads;
+# this keeps them from being downloadable without deleting anything.
+<FilesMatch "(\.(md|zip)|-backup-.*\.html|^\.ftp-deploy-sync-state\.json)$">
   Require all denied
 </FilesMatch>
+
+# An old copy of the site sits in a "mitothrum" subfolder from earlier manual
+# uploads; don't serve it as duplicate content.
+RedirectMatch 404 ^/mitothrum(/.*)?$

@@ -29,3 +29,10 @@
 ## Before publishing
 - Check the new page's specs against the current Amazon listings (kit contents vary).
 - In Associates Central, create a separate tracking ID per page (for example one for each comparison page) and swap it into that page's links, so you can see which pages earn.
+
+# Incident and fixes — October 23, 2026
+
+- **Site-wide 403 (≈1:01–1:30 PM ET).** A zip (`mitothrum-pinterest-update-20261023-v2.zip`) was extracted on the server outside the GitHub deploy. Its pages landed with mode 0660, which Apache can't read, so every page and llms.txt returned 403. FTP deploys keep a file's existing mode, so deploying didn't repair it. Fix: the deploy now resets web files to 644 after every upload (`.github/scripts/ftp_inspect.py`); `FTP inspect` (manual workflow) lists the server folder with modes.
+- **Pinterest:** domain-verification meta tag on the homepage; Pinterest profile added to every page's Organization `sameAs`, footer "Follow" links, and llms.txt (same content the zip carried, now in the repo so deploys don't undo it).
+- **Public exposure closed:** the server folder holds ~1 GB of old upload zips, index backups, notes (.md) and an old `mitothrum/` copy of the site, all downloadable. `.htaccess` now denies *.zip, *.md, *-backup-*.html and the deploy state file, and 404s `/mitothrum/`. Nothing was deleted — the owner can remove them in cPanel File Manager.
+- **Rule going forward:** change the site through the repo only. Files uploaded or extracted by hand are overwritten by the next deploy and can break permissions.

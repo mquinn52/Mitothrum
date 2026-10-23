@@ -1,7 +1,8 @@
-# TEMPORARY — diagnoses the Oct 23, 2026 403s. Delete once the site is fixed.
-# Run manually. fix=false is read-only; fix=true resets unreadable site files
-# to 644. Posts its report as a comment on the open site-monitor issue.
-name: FTP inspect (temporary)
+# Manual diagnostic: lists the server folder with file modes, sizes and times.
+# fix=false is read-only; fix=true resets web files to 644 (the deploy also
+# does this). Posts its report as a comment on issue #3 (the Oct 23, 2026 403
+# incident) — change the number if you reuse this for a later incident.
+name: FTP inspect
 
 on:
   workflow_dispatch:
