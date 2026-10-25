@@ -11,6 +11,12 @@ RewriteCond %{HTTPS} off
 RewriteCond %{HTTP:X-Forwarded-Proto} !https [NC]
 RewriteRule ^(.*)$ https://mitothrum.com/$1 [R=301,L]
 
+# /index.html goes to / (matched on the original request so the server's
+# own DirectoryIndex lookup never loops)
+RewriteCond %{HTTP_HOST} ^mitothrum\.com$ [NC]
+RewriteCond %{THE_REQUEST} \s/+((?:[^/\s?]+/)*)index\.html[\s?] [NC]
+RewriteRule ^ https://mitothrum.com/%1 [R=301,L]
+
 # Only mitothrum.com serves this folder. It sits inside the parent public_html,
 # so waterdamagegwinnett.com/mitothrum.com/ would otherwise show a second copy
 # of this site. Any other hostname gets a 404, which keeps the two live sites
