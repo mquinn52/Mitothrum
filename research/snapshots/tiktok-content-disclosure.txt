@@ -1,0 +1,32 @@
+About the Commercial Content Disclosure setting for creators
+About the Commercial Content Disclosure setting for creators
+Last updated: April 2026
+When posting content that promotes a brand, product, or service on TikTok, you must turn on the commercial content disclosure setting. This ensures that you're transparent about the type of content you're posting and helps build and maintain trust between the TikTok community and advertisers.
+TikTok's Community Guidelines have been in place since 2021. Exact legal requirements may vary by country.
+Note: In the United States, the Federal Trade Commission (FTC) has clear legal requirements through the Endorsement Guides pursuant to Section 5 of the FTC Act.
+Benefits of content disclosure
+Using the Paid partnership and Commercial content disclosures allows all viewers to clearly see which posts are organic and which are commercial content. TikTok's branded content requirements are aimed at creating a better experience for everyone as part of our long-term commitment to:
+Transparency: Requiring branded content disclosure helps create a more transparent ecosystem for creators, advertisers, and viewers.
+Safety: Protecting viewers from misinformation, misrepresentation, and false advertising.
+Accountability: Standardizing disclosure on TikTok helps create a fair branded content ecosystem that focuses on TikTok's effort to drive greater accountability among creators, advertisers, and viewers.
+Easy collaboration: Tag a specific brand partner for easy discovery and proactive authorization of the video for ad usage. Share video and performance analytics through TikTok, allowing brand partners to track and manage content in one place. Learn about the brand partner tag in the content disclosure settings.
+How TikTok determines commercial content
+TikTok flags videos as commercial content when it shows clear marketing intent based on three factors:
+Financial incentives: This includes any money or benefits received for promoting something. This could include URLs, promo codes, hashtags, collaboration mentions, QR codes, or overlay ads.
+Brand mentions: When a brand’s name appears as a hashtag (#brand), a tag (@brand), or a logo is shown.
+Product recommendations: Showing or talking about a product or service, such as demos, tutorials. This could also include calls to actions, such as buy now or shop today.
+Impact on performance
+Turning on the content disclosure setting and labelling your post as a Paid partnership will not affect the way TikTok recommends content to users. TikTok ran an internal study comparing nearly 2 million TikTok videos with and without proper branded content disclosure and there was no performance difference (2023 TikTok Marketing Science: Tested in ID and PK).
+Note: If commercial content isn't properly disclosed, the video may not be eligible for distribution in the For You feed and will impact organic performance.
+What happens if you don't properly use the content disclosure setting
+You'll receive a notification if your video potentially contains branded content but is not following proper disclosure. Then you'll have the opportunity to respond to suspected branded content system notifications within 24 hours before the video is ineligible for the For You Feed.
+Note: Only the original video poster can appeal flagged videos. The appeal process will be directly linked with the TikTok in-app system notification.
+When responding to a suspected branded content system notification, you'll be able to:
+Turn on the proper branded content disclosure. Learn how to turn on the content disclosure setting in TikTok.
+Submit an appeal if the post does not include branded content. Before submitting an appeal, it's recommended that you review TikTok's Branded Content Policy to ensure the video does not contain branded content according to the policy.
+For successful appeals, your videos will resume eligibility for organic distribution in the For You feed.
+Learn how to turn on content disclosure for your videos in TikTok One
+Creators who collaborate with TikTok for brand opportunities through the TikTok One platform will automatically have the content disclosure setting managed through the platform. All TikTok One projects automatically activate the Branded Content disclosure. Learn more about TikTok One for creators.
+If creating commercial content outside of the TikTok One platform, learn how to turn on the commercial content disclosure setting for your videos.
+Log in for a personalized experience
+Sign up
