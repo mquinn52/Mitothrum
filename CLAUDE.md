@@ -7,6 +7,9 @@ Owner: Matthew Quinn. Static HTML/CSS/JS, no build step.
 - `RULES.md` — compliance and growth rules, each tied to a source. Follow it;
   when a revenue idea conflicts with a rule, the rule wins.
 - `CHANGES.md` — history of the October 2026 revisions.
+- `marketing/SOCIAL.md` — social playbook (YouTube, Instagram, TikTok,
+  Facebook, Threads, Pinterest): disclosure stack, destinations, UTM tags,
+  one-master workflow, cadence. Read before drafting any post or video.
 
 ## How changes go live
 - Push to `main` → `.github/workflows/deploy.yml` uploads to GoDaddy over FTPS
