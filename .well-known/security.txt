@@ -1,0 +1,4 @@
+Contact: mailto:hello@mitothrum.com
+Expires: 2027-10-28T00:00:00Z
+Preferred-Languages: en
+Canonical: https://mitothrum.com/.well-known/security.txt
