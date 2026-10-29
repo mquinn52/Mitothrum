@@ -1,63 +1,66 @@
-######## https://waterdamagegwinnett.com/
-code=200 size=44590
-content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
-cross-origin-opener-policy: same-origin
-content-type: text/html
-######## https://waterdamagegwinnett.com/es/
-code=200 size=46990
-content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
-cross-origin-opener-policy: same-origin
-content-type: text/html
-######## https://waterdamagegwinnett.com/privacy.html
-code=200 size=13928
-content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
-cross-origin-opener-policy: same-origin
-content-type: text/html
-######## https://waterdamagegwinnett.com/.well-known/security.txt
-code=200 size=174
-content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
-cross-origin-opener-policy: same-origin
-content-type: text/plain
-Contact: mailto:contact@waterdamagegwinnett.com
-Expires: 2027-10-28T00:00:00Z
-Preferred-Languages: en, es
-Canonical: https://waterdamagegwinnett.com/.well-known/security.txt
-######## https://waterdamagegwinnett.com/.ftp-deploy-sync-state.json
-code=403 size=13
-content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
-cross-origin-opener-policy: same-origin
-content-type: text/html; charset=iso-8859-1
-######## https://waterdamagegwinnett.com/RULES.md
-code=403 size=13
-content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
-cross-origin-opener-policy: same-origin
-content-type: text/html; charset=iso-8859-1
-######## https://mitothrum.com/
-code=200 size=45511
-content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
-cross-origin-opener-policy: same-origin
-content-type: text/html
-######## https://mitothrum.com/privacy.html
-code=200 size=11200
-content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
-cross-origin-opener-policy: same-origin
-content-type: text/html
-######## https://mitothrum.com/.well-known/security.txt
-code=200 size=148
-content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
-cross-origin-opener-policy: same-origin
-content-type: text/plain
-Contact: mailto:hello@mitothrum.com
-Expires: 2027-10-28T00:00:00Z
-Preferred-Languages: en
-Canonical: https://mitothrum.com/.well-known/security.txt
-######## https://mitothrum.com/.ftp-deploy-sync-state.json
-code=403 size=13
-content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
-cross-origin-opener-policy: same-origin
-content-type: text/html; charset=iso-8859-1
-######## https://mitothrum.com/RULES.md
-code=403 size=13
-content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
-cross-origin-opener-policy: same-origin
-content-type: text/html; charset=iso-8859-1
+######## try 1 UA=site-monitor (GitHub Actions)
+code=200 size=1326 type=application/xml
+cache-control: no-cache
+content-type: application/xml
+server: Apache
+XML OK
+-- lines:
+45
+-- start:
+<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">   <url>     <loc>https://mitothrum.com/</loc>     <lastmod>2026-10-20</lastmod>     <changefreq>weekly</changefreq>     <priority>1.0</priority>   </url>   <url>     <loc>https://mitothrum.com/methodo
+-- around line 93:
+######## try 1 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/130.0 Safari/537.36
+code=200 size=1326 type=application/xml
+cache-control: no-cache
+content-type: application/xml
+server: Apache
+XML OK
+-- lines:
+45
+-- start:
+<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">   <url>     <loc>https://mitothrum.com/</loc>     <lastmod>2026-10-20</lastmod>     <changefreq>weekly</changefreq>     <priority>1.0</priority>   </url>   <url>     <loc>https://mitothrum.com/methodo
+-- around line 93:
+######## try 2 UA=site-monitor (GitHub Actions)
+code=200 size=1326 type=application/xml
+cache-control: no-cache
+content-type: application/xml
+server: Apache
+XML OK
+-- lines:
+45
+-- start:
+<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">   <url>     <loc>https://mitothrum.com/</loc>     <lastmod>2026-10-20</lastmod>     <changefreq>weekly</changefreq>     <priority>1.0</priority>   </url>   <url>     <loc>https://mitothrum.com/methodo
+-- around line 93:
+######## try 2 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/130.0 Safari/537.36
+code=200 size=1326 type=application/xml
+cache-control: no-cache
+content-type: application/xml
+server: Apache
+XML OK
+-- lines:
+45
+-- start:
+<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">   <url>     <loc>https://mitothrum.com/</loc>     <lastmod>2026-10-20</lastmod>     <changefreq>weekly</changefreq>     <priority>1.0</priority>   </url>   <url>     <loc>https://mitothrum.com/methodo
+-- around line 93:
+######## try 3 UA=site-monitor (GitHub Actions)
+code=200 size=1326 type=application/xml
+cache-control: no-cache
+content-type: application/xml
+server: Apache
+XML OK
+-- lines:
+45
+-- start:
+<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">   <url>     <loc>https://mitothrum.com/</loc>     <lastmod>2026-10-20</lastmod>     <changefreq>weekly</changefreq>     <priority>1.0</priority>   </url>   <url>     <loc>https://mitothrum.com/methodo
+-- around line 93:
+######## try 3 UA=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/130.0 Safari/537.36
+code=200 size=1326 type=application/xml
+cache-control: no-cache
+content-type: application/xml
+server: Apache
+XML OK
+-- lines:
+45
+-- start:
+<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">   <url>     <loc>https://mitothrum.com/</loc>     <lastmod>2026-10-20</lastmod>     <changefreq>weekly</changefreq>     <priority>1.0</priority>   </url>   <url>     <loc>https://mitothrum.com/methodo
+-- around line 93:
