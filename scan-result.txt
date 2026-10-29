@@ -1,136 +1,63 @@
 ######## https://waterdamagegwinnett.com/
 code=200 size=44590
-HTTP/2 200 
-strict-transport-security: max-age=31536000
-x-content-type-options: nosniff
-x-frame-options: SAMEORIGIN
-content-security-policy: frame-ancestors 'self'
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
+cross-origin-opener-policy: same-origin
 content-type: text/html
-server: Apache
--- body start:
-<!doctype html> <html lang="en"> <head> <!-- Google tag (gtag.js) --> <script>   // Google Analytics 4 loads only if the visitor hasn't opted out   // (Global Privacy Control signal or the opt-out on privacy.html).   (function () {     var optedOut = false;     try { optedOut = localStorage.getItem('wdg_analytics_optout') === '1'; } catch (e) {}     if (navigator.globalPrivacyControl === true || optedOut) {       window.gtag = function () {};       return;     }     var s = document.createElement('script');     s.async = true;     s.src = 'https://www.googletagmanager.com/gtag/js?id=G-YBEBBTKP
+######## https://waterdamagegwinnett.com/es/
+code=200 size=46990
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
+cross-origin-opener-policy: same-origin
+content-type: text/html
+######## https://waterdamagegwinnett.com/privacy.html
+code=200 size=13928
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
+cross-origin-opener-policy: same-origin
+content-type: text/html
+######## https://waterdamagegwinnett.com/.well-known/security.txt
+code=200 size=174
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
+cross-origin-opener-policy: same-origin
+content-type: text/plain
+Contact: mailto:contact@waterdamagegwinnett.com
+Expires: 2027-10-28T00:00:00Z
+Preferred-Languages: en, es
+Canonical: https://waterdamagegwinnett.com/.well-known/security.txt
+######## https://waterdamagegwinnett.com/.ftp-deploy-sync-state.json
+code=403 size=13
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
+cross-origin-opener-policy: same-origin
+content-type: text/html; charset=iso-8859-1
 ######## https://waterdamagegwinnett.com/RULES.md
 code=403 size=13
-HTTP/2 403 
-strict-transport-security: max-age=31536000
-x-content-type-options: nosniff
-x-frame-options: SAMEORIGIN
-content-security-policy: frame-ancestors 'self'
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
+cross-origin-opener-policy: same-origin
 content-type: text/html; charset=iso-8859-1
-server: Apache
--- body start:
-403 Forbidden
-######## https://waterdamagegwinnett.com/CLAUDE.md
-code=403 size=13
-HTTP/2 403 
-strict-transport-security: max-age=31536000
-x-content-type-options: nosniff
-x-frame-options: SAMEORIGIN
-content-security-policy: frame-ancestors 'self'
-content-type: text/html; charset=iso-8859-1
-server: Apache
--- body start:
-403 Forbidden
-######## https://waterdamagegwinnett.com/.ftp-deploy-sync-state.json
-code=200 size=16300
-HTTP/2 200 
-strict-transport-security: max-age=31536000
-x-content-type-options: nosniff
-x-frame-options: SAMEORIGIN
-content-security-policy: frame-ancestors 'self'
-content-type: application/json
-server: Apache
--- body start:
-{     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",     "version": "1.0.0",     "generatedTime": 1793238084165,     "data": [         {             "type": "file",             "name": ".htaccess",             "size": 2395,             "hash": "f562716fcd89ee910b76826b4d7aa326bdccf21380ce119c2511fac226381fd5"         },         {             "type": "file",         
-######## https://waterdamagegwinnett.com/.well-known/security.txt
-code=404 size=1699
-HTTP/2 404 
-strict-transport-security: max-age=31536000
-x-content-type-options: nosniff
-x-frame-options: SAMEORIGIN
-content-security-policy: frame-ancestors 'self'
-content-type: text/html
-server: Apache
--- body start:
-<!DOCTYPE html> <html> <head> <title>File Not Found</title> <meta http-equiv="content-type" content="text/html; charset=utf-8" > <meta name="viewport" content="width=device-width, initial-scale=1.0"> <style type="text/css"> body {   background-color: #eee; }  body, h1, p {   font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;   font-weight: normal;   margin: 0;   padding: 0;   text-align: center; }  .container {   margin-left:  auto;   margin-right:  auto;   margin-top: 177px;   max-width: 1170px;   padding-right: 15px;   padding-left: 15px; }  .row
-######## https://waterdamagegwinnett.com/README.md
-code=403 size=13
-HTTP/2 403 
-strict-transport-security: max-age=31536000
-x-content-type-options: nosniff
-x-frame-options: SAMEORIGIN
-content-security-policy: frame-ancestors 'self'
-content-type: text/html; charset=iso-8859-1
-server: Apache
--- body start:
-403 Forbidden
-######## http://waterdamagegwinnett.com/ (no https)
-code=301 -> https://waterdamagegwinnett.com/
 ######## https://mitothrum.com/
 code=200 size=45511
-HTTP/2 200 
-strict-transport-security: max-age=31536000
-x-content-type-options: nosniff
-x-frame-options: SAMEORIGIN
-content-security-policy: frame-ancestors 'self'
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
+cross-origin-opener-policy: same-origin
 content-type: text/html
-server: Apache
--- body start:
-<!DOCTYPE html> <html lang="en"> <head> <!-- Google Analytics 4 — loads only if the visitor has not opted out      (Global Privacy Control signal or the opt-out on privacy.html). --> <script>   (function () {     var optedOut = false;     try { optedOut = localStorage.getItem('mt_analytics_optout') === '1'; } catch (e) {}     if (navigator.globalPrivacyControl === true || optedOut) {       window.gtag = function () {};       return;     }     var s = document.createElement('script');     s.async = true;     s.src = 'https://www.googletagmanager.com/gtag/js?id=G-WT5J9GGNLF';     document.head
-######## https://mitothrum.com/RULES.md
-code=403 size=13
-HTTP/2 403 
-strict-transport-security: max-age=31536000
-x-content-type-options: nosniff
-x-frame-options: SAMEORIGIN
-content-security-policy: frame-ancestors 'self'
-content-type: text/html; charset=iso-8859-1
-server: Apache
--- body start:
-403 Forbidden
-######## https://mitothrum.com/CLAUDE.md
-code=403 size=13
-HTTP/2 403 
-strict-transport-security: max-age=31536000
-x-content-type-options: nosniff
-x-frame-options: SAMEORIGIN
-content-security-policy: frame-ancestors 'self'
-content-type: text/html; charset=iso-8859-1
-server: Apache
--- body start:
-403 Forbidden
+######## https://mitothrum.com/privacy.html
+code=200 size=11200
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
+cross-origin-opener-policy: same-origin
+content-type: text/html
+######## https://mitothrum.com/.well-known/security.txt
+code=200 size=148
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
+cross-origin-opener-policy: same-origin
+content-type: text/plain
+Contact: mailto:hello@mitothrum.com
+Expires: 2027-10-28T00:00:00Z
+Preferred-Languages: en
+Canonical: https://mitothrum.com/.well-known/security.txt
 ######## https://mitothrum.com/.ftp-deploy-sync-state.json
 code=403 size=13
-HTTP/2 403 
-strict-transport-security: max-age=31536000
-x-content-type-options: nosniff
-x-frame-options: SAMEORIGIN
-content-security-policy: frame-ancestors 'self'
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
+cross-origin-opener-policy: same-origin
 content-type: text/html; charset=iso-8859-1
-server: Apache
--- body start:
-403 Forbidden
-######## https://mitothrum.com/.well-known/security.txt
-code=404 size=13
-HTTP/2 404 
-strict-transport-security: max-age=31536000
-x-content-type-options: nosniff
-x-frame-options: SAMEORIGIN
-content-security-policy: frame-ancestors 'self'
-content-type: text/html; charset=iso-8859-1
-server: Apache
--- body start:
-404 Not Found
-######## https://mitothrum.com/README.md
+######## https://mitothrum.com/RULES.md
 code=403 size=13
-HTTP/2 403 
-strict-transport-security: max-age=31536000
-x-content-type-options: nosniff
-x-frame-options: SAMEORIGIN
-content-security-policy: frame-ancestors 'self'
+content-security-policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
+cross-origin-opener-policy: same-origin
 content-type: text/html; charset=iso-8859-1
-server: Apache
--- body start:
-403 Forbidden
-######## http://mitothrum.com/ (no https)
-code=301 -> https://mitothrum.com/
