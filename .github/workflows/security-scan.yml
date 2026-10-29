@@ -9,19 +9,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Slow re-check with bodies
+      - name: Post-merge verification
         run: |
           exec > scan-result.txt 2>&1
           UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
           for h in waterdamagegwinnett.com mitothrum.com; do
-            for path in / /RULES.md /CLAUDE.md /.ftp-deploy-sync-state.json /.well-known/security.txt /README.md; do
+            for path in / /es/ /privacy.html /.well-known/security.txt /.ftp-deploy-sync-state.json /RULES.md; do
+              [ "$h" = mitothrum.com ] && [ "$path" = /es/ ] && continue
               sleep 6
               echo "######## https://$h$path"
               curl -sS -A "$UA" -D hdr.txt -o body.txt -w 'code=%{http_code} size=%{size_download}\n' "https://$h$path"
-              tr -d '\r' < hdr.txt | grep -i -E "^(HTTP|server|content-type|strict|content-security|x-frame|cf-|x-|set-cookie|location)" 
-              echo "-- body start:"; head -c 600 body.txt | tr '\n' ' '; echo
+              tr -d '\r' < hdr.txt | grep -i -E "^(content-security-policy|cross-origin-opener-policy|strict-transport|x-frame|content-type):"
+              case "$path" in /.well-known/security.txt) cat body.txt;; esac
             done
-            sleep 6; echo "######## http://$h/ (no https)"; curl -sS -A "$UA" -o /dev/null -w 'code=%{http_code} -> %{redirect_url}\n' "http://$h/"
           done
       - name: Save result to this branch
         run: |
