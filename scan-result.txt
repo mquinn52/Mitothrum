@@ -1,90 +1,136 @@
-################ mitothrum.com
-== https headers
+######## https://waterdamagegwinnett.com/
+code=200 size=44590
 HTTP/2 200 
 strict-transport-security: max-age=31536000
 x-content-type-options: nosniff
 x-frame-options: SAMEORIGIN
 content-security-policy: frame-ancestors 'self'
-referrer-policy: strict-origin-when-cross-origin
-permissions-policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
-last-modified: Thu, 29 Oct 2026 01:41:12 GMT
-etag: "2340e9a-b1c7-65ef0c64b380e"
-accept-ranges: bytes
-content-length: 45511
-vary: Accept-Encoding
-cache-control: no-cache
 content-type: text/html
-date: Thu, 29 Oct 2026 11:45:35 GMT
 server: Apache
-
-== http -> ?
-301 https://mitothrum.com/
-== www -> ?
-301 https://mitothrum.com/
-== cert
-subject=CN = mail.mitothrum.com
-issuer=C = US, O = Let's Encrypt, CN = YR1
-notBefore=Oct 18 22:42:30 2026 GMT
-notAfter=Jan 16 22:42:29 2027 GMT
-X509v3 Subject Alternative Name: 
-    DNS:cpanel.mitothrum.com, DNS:mail.mitothrum.com, DNS:mitothrum.com, DNS:webdisk.mitothrum.com, DNS:www.mitothrum.com
-tls1: REFUSED
-tls1_1: REFUSED
-tls1_2:  Protocol : TLSv1.2  Cipher : ECDHE-RSA-AES256-GCM-SHA384 
-tls1_3: REFUSED
-== DNS
-107.180.115.5
-"v=spf1 include:secureserver.net -all"
-"NETORGFT21235283.onmicrosoft.com"
-"google-site-verification=xiOKgirJzBkEbxJGKB7600n6SVAcN94N2pfq8FdUmmY"
-0 mitothrum-com.mail.protection.outlook.com.
-== security.txt
-404
-== exposed files
-.git/config 403
-.env 403
-README.md 403
-RULES.md 200
-CLAUDE.md 200
-.ftp-deploy-sync-state.json 200
-################ waterdamagegwinnett.com
-== https headers
+-- body start:
+<!doctype html> <html lang="en"> <head> <!-- Google tag (gtag.js) --> <script>   // Google Analytics 4 loads only if the visitor hasn't opted out   // (Global Privacy Control signal or the opt-out on privacy.html).   (function () {     var optedOut = false;     try { optedOut = localStorage.getItem('wdg_analytics_optout') === '1'; } catch (e) {}     if (navigator.globalPrivacyControl === true || optedOut) {       window.gtag = function () {};       return;     }     var s = document.createElement('script');     s.async = true;     s.src = 'https://www.googletagmanager.com/gtag/js?id=G-YBEBBTKP
+######## https://waterdamagegwinnett.com/RULES.md
+code=403 size=13
+HTTP/2 403 
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+content-security-policy: frame-ancestors 'self'
+content-type: text/html; charset=iso-8859-1
+server: Apache
+-- body start:
+403 Forbidden
+######## https://waterdamagegwinnett.com/CLAUDE.md
+code=403 size=13
+HTTP/2 403 
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+content-security-policy: frame-ancestors 'self'
+content-type: text/html; charset=iso-8859-1
+server: Apache
+-- body start:
+403 Forbidden
+######## https://waterdamagegwinnett.com/.ftp-deploy-sync-state.json
+code=200 size=16300
 HTTP/2 200 
-content-type: text/html; charset=utf-8
-cache-control: private, no-cache, no-store, must-revalidate, max-age=0
-cf-edge-cache: no-cache
-content-length: 7166
-date: Thu, 29 Oct 2026 11:45:39 GMT
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+content-security-policy: frame-ancestors 'self'
+content-type: application/json
 server: Apache
-
-== http -> ?
-200 
-== www -> ?
-200 
-== cert
-subject=CN = waterdamagegwinnett.com
-issuer=C = US, O = GoDaddy.com, CN = GoDaddy TLS Intermediate CA DV - R1v1
-notBefore=Oct  8 04:33:43 2026 GMT
-notAfter=Apr 24 04:33:43 2027 GMT
-X509v3 Subject Alternative Name: 
-    DNS:waterdamagegwinnett.com, DNS:www.waterdamagegwinnett.com
-tls1: REFUSED
-tls1_1: REFUSED
-tls1_2:  Protocol : TLSv1.2  Cipher : ECDHE-RSA-AES256-GCM-SHA384 
-tls1_3: REFUSED
-== DNS
-107.180.115.5
-"NETORGFT21207941.onmicrosoft.com"
-"v=spf1 include:secureserver.net -all"
-0 waterdamagegwinnett-com.mail.protection.outlook.com.
-== security.txt
-200
-== exposed files
-.git/config 403
-.env 403
-README.md 200
-RULES.md 200
-CLAUDE.md 200
-.ftp-deploy-sync-state.json 200
-== mitothrum.com via WDG folder
-200
+-- body start:
+{     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",     "version": "1.0.0",     "generatedTime": 1793238084165,     "data": [         {             "type": "file",             "name": ".htaccess",             "size": 2395,             "hash": "f562716fcd89ee910b76826b4d7aa326bdccf21380ce119c2511fac226381fd5"         },         {             "type": "file",         
+######## https://waterdamagegwinnett.com/.well-known/security.txt
+code=404 size=1699
+HTTP/2 404 
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+content-security-policy: frame-ancestors 'self'
+content-type: text/html
+server: Apache
+-- body start:
+<!DOCTYPE html> <html> <head> <title>File Not Found</title> <meta http-equiv="content-type" content="text/html; charset=utf-8" > <meta name="viewport" content="width=device-width, initial-scale=1.0"> <style type="text/css"> body {   background-color: #eee; }  body, h1, p {   font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;   font-weight: normal;   margin: 0;   padding: 0;   text-align: center; }  .container {   margin-left:  auto;   margin-right:  auto;   margin-top: 177px;   max-width: 1170px;   padding-right: 15px;   padding-left: 15px; }  .row
+######## https://waterdamagegwinnett.com/README.md
+code=403 size=13
+HTTP/2 403 
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+content-security-policy: frame-ancestors 'self'
+content-type: text/html; charset=iso-8859-1
+server: Apache
+-- body start:
+403 Forbidden
+######## http://waterdamagegwinnett.com/ (no https)
+code=301 -> https://waterdamagegwinnett.com/
+######## https://mitothrum.com/
+code=200 size=45511
+HTTP/2 200 
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+content-security-policy: frame-ancestors 'self'
+content-type: text/html
+server: Apache
+-- body start:
+<!DOCTYPE html> <html lang="en"> <head> <!-- Google Analytics 4 — loads only if the visitor has not opted out      (Global Privacy Control signal or the opt-out on privacy.html). --> <script>   (function () {     var optedOut = false;     try { optedOut = localStorage.getItem('mt_analytics_optout') === '1'; } catch (e) {}     if (navigator.globalPrivacyControl === true || optedOut) {       window.gtag = function () {};       return;     }     var s = document.createElement('script');     s.async = true;     s.src = 'https://www.googletagmanager.com/gtag/js?id=G-WT5J9GGNLF';     document.head
+######## https://mitothrum.com/RULES.md
+code=403 size=13
+HTTP/2 403 
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+content-security-policy: frame-ancestors 'self'
+content-type: text/html; charset=iso-8859-1
+server: Apache
+-- body start:
+403 Forbidden
+######## https://mitothrum.com/CLAUDE.md
+code=403 size=13
+HTTP/2 403 
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+content-security-policy: frame-ancestors 'self'
+content-type: text/html; charset=iso-8859-1
+server: Apache
+-- body start:
+403 Forbidden
+######## https://mitothrum.com/.ftp-deploy-sync-state.json
+code=403 size=13
+HTTP/2 403 
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+content-security-policy: frame-ancestors 'self'
+content-type: text/html; charset=iso-8859-1
+server: Apache
+-- body start:
+403 Forbidden
+######## https://mitothrum.com/.well-known/security.txt
+code=404 size=13
+HTTP/2 404 
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+content-security-policy: frame-ancestors 'self'
+content-type: text/html; charset=iso-8859-1
+server: Apache
+-- body start:
+404 Not Found
+######## https://mitothrum.com/README.md
+code=403 size=13
+HTTP/2 403 
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+content-security-policy: frame-ancestors 'self'
+content-type: text/html; charset=iso-8859-1
+server: Apache
+-- body start:
+403 Forbidden
+######## http://mitothrum.com/ (no https)
+code=301 -> https://mitothrum.com/
