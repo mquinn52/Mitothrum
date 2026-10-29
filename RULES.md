@@ -6,7 +6,7 @@ opens an issue, plus a pull request revising this file when an API key is set,
 whenever one of them changes. Rules marked **[auto]** are enforced by the daily
 site monitor (`.github/workflows/monitor.yml`).
 
-**Last reviewed:** October 21, 2026
+**Last reviewed:** October 29, 2026
 **Goal:** earn affiliate revenue from honest, research-led content, without breaking
 copyright law, privacy law, Google's guidelines, affiliate program terms or
 generally accepted ethics. When a revenue idea conflicts with a rule, the rule wins.
@@ -71,7 +71,21 @@ generally accepted ethics. When a revenue idea conflicts with a rule, the rule w
 - 10.2 Keep "ritual" only as brand voice: the category name "Rest & Ritual", the tagline "We read the studies; you enjoy the ritual.", the homepage H2 "One ritual, six ways in", and occasional editorial lines in body copy (e.g. "contrast completes the ritual"). Never in a title, H1 or meta description lead.
 - 10.3 Keep the `#rituals` anchor, CSS class names and code identifiers unchanged so existing links don't break.
 
+## 11. Promotion hygiene (added 2026-10-29, adapted from Marketcall's affiliate rules)
+Mitothrum has no Marketcall offer; these are the network-agnostic practices from
+its rules that tighten what sections 1–4 already require. *Sources: [Marketcall Creative Submission Rules](https://help.marketcall.com/en/article/creative-submission-rules-1rj093s/); [Marketcall Sanctions](https://help.marketcall.com/en/article/sanctions-i1y27p/).*
+- 11.1 Promote only what each program pays for. Read every program's terms (allowed traffic, excluded products, prohibited keywords) before linking, and the program's own page wins over general guidance.
+- 11.2 Never present the site as the brand or an official store: no brand logos as our branding, no "official site" wording, no bidding on brand names if ads ever start (rule 7.5).
+- 11.3 No discounts, coupons, rebates, cash-back, financing or "free" offers unless the merchant's program provides them and they're current.
+- 11.4 No fake urgency: no countdown timers, "only 3 left", "today only" or fabricated screenshots, and no made-up badges or certifications (extends 2.3).
+- 11.5 Warranty or guarantee mentions add "Terms set by the brand" and link the brand's own policy.
+- 11.6 Superlatives in moderation; a page stacked with "best / cheapest / #1" fails review even when each one is sourced (extends 3.3).
+- 11.7 Proofread before publishing: no unfilled placeholders (`{product}`, `{city}`), broken characters or cut-off text in images or pins.
+- 11.8 Run your own landing pages on mitothrum.com only, never a free builder subdomain.
+- 11.9 One account per program; never use incentivized clicks, bought traffic or third-party resold traffic.
+- 11.10 Keep traffic records (Search Console, GA4, UTM-tagged social) able to show where clicks come from; programs can ask, and failing to answer is grounds for removal.
 ## Changelog
+- 2026-10-29: Added section 11 (promotion hygiene adapted from Marketcall's rules).
 - 2026-10-28: Added brand vocabulary rule (routine vs ritual).
 - 2026-10-21: Added social video, email and AI-search rules from verified research.
 - 2026-10-20: First version, distilled from the October 2026 audit and research.
