@@ -9,18 +9,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Post-merge verification
+      - name: Sitemap as the monitor sees it
         run: |
           exec > scan-result.txt 2>&1
-          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
-          for h in waterdamagegwinnett.com mitothrum.com; do
-            for path in / /es/ /privacy.html /.well-known/security.txt /.ftp-deploy-sync-state.json /RULES.md; do
-              [ "$h" = mitothrum.com ] && [ "$path" = /es/ ] && continue
-              sleep 6
-              echo "######## https://$h$path"
-              curl -sS -A "$UA" -D hdr.txt -o body.txt -w 'code=%{http_code} size=%{size_download}\n' "https://$h$path"
-              tr -d '\r' < hdr.txt | grep -i -E "^(content-security-policy|cross-origin-opener-policy|strict-transport|x-frame|content-type):"
-              case "$path" in /.well-known/security.txt) cat body.txt;; esac
+          for i in 1 2 3; do
+            for UA in "site-monitor (GitHub Actions)" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/130.0 Safari/537.36"; do
+              sleep 8
+              echo "######## try $i UA=$UA"
+              curl -sS -A "$UA" -D hdr.txt -o body.txt -w 'code=%{http_code} size=%{size_download} type=%{content_type}\n' "https://mitothrum.com/sitemap.xml?monitor=1"
+              tr -d '\r' < hdr.txt | grep -i -E "^(server|cf-|x-|set-cookie|cache-control|content-type):"
+              python3 -c "import xml.dom.minidom as m;m.parse('body.txt');print('XML OK')" 2>&1 | tail -1
+              echo "-- lines:"; wc -l < body.txt; echo "-- start:"; head -c 300 body.txt | tr '\n' ' '; echo; echo "-- around line 93:"; sed -n '88,95p' body.txt | cut -c1-200
             done
           done
       - name: Save result to this branch
