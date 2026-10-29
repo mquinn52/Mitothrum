@@ -1,0 +1,90 @@
+################ mitothrum.com
+== https headers
+HTTP/2 200 
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+content-security-policy: frame-ancestors 'self'
+referrer-policy: strict-origin-when-cross-origin
+permissions-policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+last-modified: Thu, 29 Oct 2026 01:41:12 GMT
+etag: "2340e9a-b1c7-65ef0c64b380e"
+accept-ranges: bytes
+content-length: 45511
+vary: Accept-Encoding
+cache-control: no-cache
+content-type: text/html
+date: Thu, 29 Oct 2026 11:45:35 GMT
+server: Apache
+
+== http -> ?
+301 https://mitothrum.com/
+== www -> ?
+301 https://mitothrum.com/
+== cert
+subject=CN = mail.mitothrum.com
+issuer=C = US, O = Let's Encrypt, CN = YR1
+notBefore=Oct 18 22:42:30 2026 GMT
+notAfter=Jan 16 22:42:29 2027 GMT
+X509v3 Subject Alternative Name: 
+    DNS:cpanel.mitothrum.com, DNS:mail.mitothrum.com, DNS:mitothrum.com, DNS:webdisk.mitothrum.com, DNS:www.mitothrum.com
+tls1: REFUSED
+tls1_1: REFUSED
+tls1_2:  Protocol : TLSv1.2  Cipher : ECDHE-RSA-AES256-GCM-SHA384 
+tls1_3: REFUSED
+== DNS
+107.180.115.5
+"v=spf1 include:secureserver.net -all"
+"NETORGFT21235283.onmicrosoft.com"
+"google-site-verification=xiOKgirJzBkEbxJGKB7600n6SVAcN94N2pfq8FdUmmY"
+0 mitothrum-com.mail.protection.outlook.com.
+== security.txt
+404
+== exposed files
+.git/config 403
+.env 403
+README.md 403
+RULES.md 200
+CLAUDE.md 200
+.ftp-deploy-sync-state.json 200
+################ waterdamagegwinnett.com
+== https headers
+HTTP/2 200 
+content-type: text/html; charset=utf-8
+cache-control: private, no-cache, no-store, must-revalidate, max-age=0
+cf-edge-cache: no-cache
+content-length: 7166
+date: Thu, 29 Oct 2026 11:45:39 GMT
+server: Apache
+
+== http -> ?
+200 
+== www -> ?
+200 
+== cert
+subject=CN = waterdamagegwinnett.com
+issuer=C = US, O = GoDaddy.com, CN = GoDaddy TLS Intermediate CA DV - R1v1
+notBefore=Oct  8 04:33:43 2026 GMT
+notAfter=Apr 24 04:33:43 2027 GMT
+X509v3 Subject Alternative Name: 
+    DNS:waterdamagegwinnett.com, DNS:www.waterdamagegwinnett.com
+tls1: REFUSED
+tls1_1: REFUSED
+tls1_2:  Protocol : TLSv1.2  Cipher : ECDHE-RSA-AES256-GCM-SHA384 
+tls1_3: REFUSED
+== DNS
+107.180.115.5
+"NETORGFT21207941.onmicrosoft.com"
+"v=spf1 include:secureserver.net -all"
+0 waterdamagegwinnett-com.mail.protection.outlook.com.
+== security.txt
+200
+== exposed files
+.git/config 403
+.env 403
+README.md 200
+RULES.md 200
+CLAUDE.md 200
+.ftp-deploy-sync-state.json 200
+== mitothrum.com via WDG folder
+200
