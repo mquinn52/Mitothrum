@@ -9,24 +9,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Headers, TLS and redirects
+      - name: Slow re-check with bodies
         run: |
           exec > scan-result.txt 2>&1
-          for h in mitothrum.com waterdamagegwinnett.com; do
-            echo "################ $h"
-            echo "== https headers"; curl -sS -D - -o /dev/null "https://$h/" | tr -d '\r'
-            echo "== http -> ?"; curl -sS -o /dev/null -w '%{http_code} %{redirect_url}\n' "http://$h/"
-            echo "== www -> ?"; curl -sS -o /dev/null -w '%{http_code} %{redirect_url}\n' "https://www.$h/"
-            echo "== cert"; echo | openssl s_client -connect $h:443 -servername $h 2>/dev/null | openssl x509 -noout -subject -issuer -dates -ext subjectAltName
-            for v in tls1 tls1_1 tls1_2 tls1_3; do
-              r=$(echo | timeout 10 openssl s_client -connect $h:443 -servername $h -$v 2>&1 | grep -E "^ *(Protocol|Cipher) *:" | tr -s ' ' | tr '\n' ' ')
-              echo "$v: ${r:-REFUSED}"
+          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
+          for h in waterdamagegwinnett.com mitothrum.com; do
+            for path in / /RULES.md /CLAUDE.md /.ftp-deploy-sync-state.json /.well-known/security.txt /README.md; do
+              sleep 6
+              echo "######## https://$h$path"
+              curl -sS -A "$UA" -D hdr.txt -o body.txt -w 'code=%{http_code} size=%{size_download}\n' "https://$h$path"
+              tr -d '\r' < hdr.txt | grep -i -E "^(HTTP|server|content-type|strict|content-security|x-frame|cf-|x-|set-cookie|location)" 
+              echo "-- body start:"; head -c 600 body.txt | tr '\n' ' '; echo
             done
-            echo "== DNS"; dig +short A $h; dig +short CAA $h; dig +short TXT $h | head -5; dig +short MX $h
-            echo "== security.txt"; curl -sS -o /dev/null -w '%{http_code}\n' "https://$h/.well-known/security.txt"
-            echo "== exposed files"; for f in .git/config .env README.md RULES.md CLAUDE.md .ftp-deploy-sync-state.json; do echo "$f $(curl -sS -o /dev/null -w '%{http_code}' https://$h/$f)"; done
+            sleep 6; echo "######## http://$h/ (no https)"; curl -sS -A "$UA" -o /dev/null -w 'code=%{http_code} -> %{redirect_url}\n' "http://$h/"
           done
-          echo "== mitothrum.com via WDG folder"; curl -sS -o /dev/null -w '%{http_code}\n' https://waterdamagegwinnett.com/mitothrum.com/
       - name: Save result to this branch
         run: |
           git config user.name "scan-bot"; git config user.email "scan-bot@users.noreply.github.com"
