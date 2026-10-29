@@ -70,6 +70,7 @@ generally accepted ethics. When a revenue idea conflicts with a rule, the rule w
 - 10.1 Use "routine" wherever readers search, scan or navigate: page titles, H1s, meta and og descriptions, structured-data descriptions, nav labels, section labels, buttons, Pinterest pin titles, how-to headings, the concierge's category answers, and llms.txt. The six categories are "the six routines."
 - 10.2 Keep "ritual" only as brand voice: the category name "Rest & Ritual", the tagline "We read the studies; you enjoy the ritual.", the homepage H2 "One ritual, six ways in", and occasional editorial lines in body copy (e.g. "contrast completes the ritual"). Never in a title, H1 or meta description lead.
 - 10.3 Keep the `#rituals` anchor, CSS class names and code identifiers unchanged so existing links don't break.
+- 10.4 Social profile board and playlist names follow "routine" too (owner decision 2026-10-29): Pinterest boards read "Bath & Body Routines" and "Rest & Routines". The on-site category name "Rest & Ritual" (10.2) is unchanged; the board name deliberately differs from it.
 
 ## 11. Promotion hygiene (added 2026-10-29, adapted from Marketcall's affiliate rules)
 Mitothrum has no Marketcall offer; these are the network-agnostic practices from
@@ -85,6 +86,7 @@ its rules that tighten what sections 1–4 already require. *Sources: [Marketcal
 - 11.9 One account per program; never use incentivized clicks, bought traffic or third-party resold traffic.
 - 11.10 Keep traffic records (Search Console, GA4, UTM-tagged social) able to show where clicks come from; programs can ask, and failing to answer is grounds for removal.
 ## Changelog
+- 2026-10-29: Added 10.4 (social board names follow "routine").
 - 2026-10-29: Added section 11 (promotion hygiene adapted from Marketcall's rules).
 - 2026-10-28: Added brand vocabulary rule (routine vs ritual).
 - 2026-10-21: Added social video, email and AI-search rules from verified research.
