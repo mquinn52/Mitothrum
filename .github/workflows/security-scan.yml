@@ -2,12 +2,16 @@ name: Security scan (temporary, read-only)
 on:
   push:
     branches: [security-scan]
+permissions:
+  contents: write
 jobs:
   scan:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Headers, TLS and redirects
         run: |
+          exec > scan-result.txt 2>&1
           for h in mitothrum.com waterdamagegwinnett.com; do
             echo "################ $h"
             echo "== https headers"; curl -sS -D - -o /dev/null "https://$h/" | tr -d '\r'
@@ -23,3 +27,7 @@ jobs:
             echo "== exposed files"; for f in .git/config .env README.md RULES.md CLAUDE.md .ftp-deploy-sync-state.json; do echo "$f $(curl -sS -o /dev/null -w '%{http_code}' https://$h/$f)"; done
           done
           echo "== mitothrum.com via WDG folder"; curl -sS -o /dev/null -w '%{http_code}\n' https://waterdamagegwinnett.com/mitothrum.com/
+      - name: Save result to this branch
+        run: |
+          git config user.name "scan-bot"; git config user.email "scan-bot@users.noreply.github.com"
+          git add scan-result.txt && git commit -m "scan result [skip ci]" && git push
