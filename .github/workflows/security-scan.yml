@@ -1,0 +1,25 @@
+name: Security scan (temporary, read-only)
+on:
+  push:
+    branches: [security-scan]
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Headers, TLS and redirects
+        run: |
+          for h in mitothrum.com waterdamagegwinnett.com; do
+            echo "################ $h"
+            echo "== https headers"; curl -sS -D - -o /dev/null "https://$h/" | tr -d '\r'
+            echo "== http -> ?"; curl -sS -o /dev/null -w '%{http_code} %{redirect_url}\n' "http://$h/"
+            echo "== www -> ?"; curl -sS -o /dev/null -w '%{http_code} %{redirect_url}\n' "https://www.$h/"
+            echo "== cert"; echo | openssl s_client -connect $h:443 -servername $h 2>/dev/null | openssl x509 -noout -subject -issuer -dates -ext subjectAltName
+            for v in tls1 tls1_1 tls1_2 tls1_3; do
+              r=$(echo | timeout 10 openssl s_client -connect $h:443 -servername $h -$v 2>&1 | grep -E "^ *(Protocol|Cipher) *:" | tr -s ' ' | tr '\n' ' ')
+              echo "$v: ${r:-REFUSED}"
+            done
+            echo "== DNS"; dig +short A $h; dig +short CAA $h; dig +short TXT $h | head -5; dig +short MX $h
+            echo "== security.txt"; curl -sS -o /dev/null -w '%{http_code}\n' "https://$h/.well-known/security.txt"
+            echo "== exposed files"; for f in .git/config .env README.md RULES.md CLAUDE.md .ftp-deploy-sync-state.json; do echo "$f $(curl -sS -o /dev/null -w '%{http_code}' https://$h/$f)"; done
+          done
+          echo "== mitothrum.com via WDG folder"; curl -sS -o /dev/null -w '%{http_code}\n' https://waterdamagegwinnett.com/mitothrum.com/
