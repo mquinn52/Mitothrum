@@ -24,16 +24,16 @@ const PICKS = {
   rest: ['Hatch Restore 2', 'Bearaby Cotton Napper Weighted Blanket']
 };
 
-const PICKS_LINE = 'Our current editorial picks are live in the rituals section below — each card names two picks with links to check the current price.';
+const PICKS_LINE = 'Our current editorial picks are live in the routines section below — each card names two picks with links to check the current price.';
 
 const KB = [
   {
     keys: ['ritual', 'six', 'pillar', 'category', 'categories', 'what do you cover', 'what is mitothrum'],
-    answer: 'Mitothrum covers six at-home spa rituals: (1) Prestige skincare — serums and barrier care for the look of your skin; (2) Beauty devices — LED, red-light and microcurrent tools; (3) Infrared & sauna — blankets, mats and cabins; (4) Bath & body — soaks, oils and scrubs; (5) Aromatherapy — diffusers, oils and steamers; (6) Rest & Ritual — weighted blankets, sunrise clocks, white-noise machines and meditation tools. ' + PICKS_LINE
+    answer: 'Mitothrum covers six at-home spa routines: (1) Prestige skincare — serums and barrier care for the look of your skin; (2) Beauty devices — LED, red-light and microcurrent tools; (3) Infrared & sauna — blankets, mats and cabins; (4) Bath & body — soaks, oils and scrubs; (5) Aromatherapy — diffusers, oils and steamers; (6) Rest & Ritual — weighted blankets, sunrise clocks, white-noise machines and meditation tools. ' + PICKS_LINE
   },
   {
     keys: ['skincare', 'skin care', 'retinol', 'vitamin c', 'peptide', 'serum', 'moisturizer', 'moisturiser', 'spf', 'sunscreen', 'cleanser', 'toner', 'roc', 'drunk elephant', 'c-firma'],
-    answer: 'Prestige skincare is one of our six rituals — think retinol, vitamin C, peptides and barrier creams, explained in plain cosmetic language. We never promise wrinkle removal or any transformation; we talk about the appearance of skin. Our current picks: ' + PICKS.skincare.join(' and ') + ' — and our vitamin C comparison (vitamin-c-serums.html) compares five serums by formula, skin type and budget.'
+    answer: 'Prestige skincare is one of our six routines — think retinol, vitamin C, peptides and barrier creams, explained in plain cosmetic language. We never promise wrinkle removal or any transformation; we talk about the appearance of skin. Our current picks: ' + PICKS.skincare.join(' and ') + ' — and our vitamin C comparison (vitamin-c-serums.html) compares five serums by formula, skin type and budget.'
   },
   {
     keys: ['red light therapy', 'redlight', 'photobiomodulation'],
@@ -41,11 +41,11 @@ const KB = [
   },
   {
     keys: ['device', 'led', 'red light', 'red-light', 'microcurrent', 'mask', 'infusion', 'cleansing brush', 'gadget', 'nuface', 'spectralite', 'dr. dennis gross'],
-    answer: 'Beauty devices is one of our six rituals — LED and red-light masks, microcurrent devices, and cleansing or infusion tools. Our current picks: ' + PICKS.devices.join(' and ') + ' — and our LED mask vs microcurrent comparison (led-mask-vs-microcurrent.html) explains how they differ, who should skip each, and what the evidence shows.'
+    answer: 'Beauty devices is one of our six routines — LED and red-light masks, microcurrent devices, and cleansing or infusion tools. Our current picks: ' + PICKS.devices.join(' and ') + ' — and our LED mask vs microcurrent comparison (led-mask-vs-microcurrent.html) explains how they differ, who should skip each, and what the evidence shows.'
   },
   {
     keys: ['sauna', 'infrared', 'infra-red', 'blanket', 'cabin', 'heat', 'waon', 'pemf', 'emf', 'higherdose', 'rejuvawrap', 'lifepro'],
-    answer: 'Infrared & sauna is our flagship ritual. Episode 1 of our science series covers it honestly: the strongest evidence (20 years of Finnish data on heart and brain health) comes from traditional hot-air saunas and is observational — compelling, but not proof. Infrared itself has real clinical trial data in heart failure through Waon therapy, but that was a supervised medical setting, not a living room. For at-home infrared claims, the evidence is still thin — and no long-term mortality data for infrared exists. Our current picks: ' + PICKS.sauna.join(' and ') + ' — see the Infrared & sauna card below, or our full sauna blanket comparison (sauna-blanket-comparison.html), which also covers a portable tent and a cold plunge.'
+    answer: 'Infrared & sauna is our flagship routine. Episode 1 of our science series covers it honestly: the strongest evidence (20 years of Finnish data on heart and brain health) comes from traditional hot-air saunas and is observational — compelling, but not proof. Infrared itself has real clinical trial data in heart failure through Waon therapy, but that was a supervised medical setting, not a living room. For at-home infrared claims, the evidence is still thin — and no long-term mortality data for infrared exists. Our current picks: ' + PICKS.sauna.join(' and ') + ' — see the Infrared & sauna card below, or our full sauna blanket comparison (sauna-blanket-comparison.html), which also covers a portable tent and a cold plunge.'
   },
   {
     keys: ['episode 1', 'episode1', 'episode one', 'video', 'science series', 'study', 'studies', 'research', 'evidence', 'detox'],
@@ -53,15 +53,15 @@ const KB = [
   },
   {
     keys: ['bath', 'soak', 'body oil', 'scrub', 'shower', 'scalp', 'sunday reset', 'dr teal', "l'occitane", 'epsom'],
-    answer: 'Bath & body is one of our six rituals — soaks, body oils, scrubs and scalp care, the building blocks of a real Sunday reset. Our current picks: ' + PICKS.bath.join(' and ') + ' — see the Bath & body card below for details and current-price links. Basket-building guides for this ritual are launching soon.'
+    answer: 'Bath & body is one of our six routines — soaks, body oils, scrubs and scalp care, the building blocks of a real Sunday reset. Our current picks: ' + PICKS.bath.join(' and ') + ' — see the Bath & body card below for details and current-price links. Basket-building guides for this routine are launching soon.'
   },
   {
     keys: ['aroma', 'diffuser', 'essential oil', 'candle', 'steamer', 'lavender', 'scent', 'fragrance', 'asakuki', 'plant therapy', 'vitruvi'],
-    answer: 'Aromatherapy is one of our six rituals — diffusers, essential oils, candles and shower steamers, the finishing layer of the ritual. Our current picks: ' + PICKS.aroma.join(' and ') + ' — see the Aromatherapy card below for details and current-price links. Comparisons across these are launching soon.'
+    answer: 'Aromatherapy is one of our six routines — diffusers, essential oils, candles and shower steamers, the finishing layer of the ritual. Our current picks: ' + PICKS.aroma.join(' and ') + ' — see the Aromatherapy card below for details and current-price links. Comparisons across these are launching soon.'
   },
   {
     keys: ['rest', 'sleep', 'weighted blanket', 'white noise', 'sunrise clock', 'sad lamp', 'light therapy', 'meditation', 'mindfulness', 'journal', 'unwind', 'calmer', 'bedtime', 'hatch', 'bearaby'],
-    answer: 'Rest & Ritual is our sixth ritual — weighted blankets, sunrise clocks, white-noise machines, light-therapy lamps and meditation tools, everything for a calmer evening and deeper rest. We talk about relaxation and routine, never about treating conditions. Our current picks: ' + PICKS.rest.join(' and ') + ' — see the Rest & Ritual card below for details and current-price links.'
+    answer: 'Rest & Ritual is our sixth routine — weighted blankets, sunrise clocks, white-noise machines, light-therapy lamps and meditation tools, everything for a calmer evening and deeper rest. We talk about relaxation and routine, never about treating conditions. Our current picks: ' + PICKS.rest.join(' and ') + ' — see the Rest & Ritual card below for details and current-price links.'
   },
   {
     keys: ['mitochondria', 'mito', 'name', 'mean'],
@@ -69,11 +69,11 @@ const KB = [
   },
   {
     keys: ['commission', 'affiliate', 'earn', 'disclosure', 'trust', 'honest', 'bias'],
-    answer: 'Fair question. Mitothrum is reader-supported: when you buy through our links, we may earn a commission at no extra cost to you. Commissions fund our research and never decide what we cover. The 12 products named on this page are our current editorial picks — the concierge can tell you which ritual each belongs to, but it never makes personalized purchase recommendations.'
+    answer: 'Fair question. Mitothrum is reader-supported: when you buy through our links, we may earn a commission at no extra cost to you. Commissions fund our research and never decide what we cover. The 12 products named on this page are our current editorial picks — the concierge can tell you which routine each belongs to, but it never makes personalized purchase recommendations.'
   },
   {
     keys: ['hello', 'hi', 'hey', 'good morning', 'good evening'],
-    answer: 'Hello — welcome to the Mitothrum concierge. Ask me about our six rituals, our 12 editorial product picks, or Episode 1 of the science series. I answer only from our editorial research — never from invented products or prices.'
+    answer: 'Hello — welcome to the Mitothrum concierge. Ask me about our six routines, our 12 editorial product picks, or Episode 1 of the science series. I answer only from our editorial research — never from invented products or prices.'
   }
 ];
 
@@ -142,7 +142,7 @@ function findAnswer(q) {
     if (r) {
       return { text: 'Our current ' + r.label + ' picks are ' + PICKS[r.picks].join(' and ') + ' — see the ' + r.label + ' card below for details and current-price links. I can\u2019t say which is right for you or quote prices; the links go to Amazon where the current price lives.', email: false };
     }
-    return { text: PICKS_LINE + ' Tell me which ritual you\u2019re curious about — skincare, beauty devices, infrared & sauna, bath & body, aromatherapy, or rest & ritual — and I\u2019ll name its picks.', email: false };
+    return { text: PICKS_LINE + ' Tell me which routine you\u2019re curious about — skincare, beauty devices, infrared & sauna, bath & body, aromatherapy, or rest & ritual — and I\u2019ll name its picks.', email: false };
   }
   for (const entry of KB) {
     if (entry.keys.some(k => keyHit(query, k))) {
@@ -200,4 +200,4 @@ emailForm.addEventListener('submit', e => {
 });
 
 // Greeting on load
-addMsg('Welcome to the Mitothrum concierge. Ask me about our six rituals, our 12 editorial product picks, or Episode 1 of the science series — I answer only from our editorial research, never from invented products or prices. Please don\u2019t enter personal health details; I\u2019m a shopping guide, not a medical advisor.', 'bot');
+addMsg('Welcome to the Mitothrum concierge. Ask me about our six routines, our 12 editorial product picks, or Episode 1 of the science series — I answer only from our editorial research, never from invented products or prices. Please don\u2019t enter personal health details; I\u2019m a shopping guide, not a medical advisor.', 'bot');

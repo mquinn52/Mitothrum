@@ -66,6 +66,12 @@ generally accepted ethics. When a revenue idea conflicts with a rule, the rule w
 - 9.2 No special markup or "AI optimization" tricks are needed for AI Overviews or AI Mode: pages must be indexed, eligible for a snippet, findable through internal links, with structured data that matches visible text. *Source: [Google: AI features and your website](https://developers.google.com/search/docs/appearance/ai-features).*
 - 9.3 Build hub pages per ritual that link to every comparison in it; track AI visibility in Search Console's reports, not third-party tools claiming Google data.
 
+## 10. Brand vocabulary: "routine" vs "ritual" (added 2026-10-28, owner decision)
+- 10.1 Use "routine" wherever readers search, scan or navigate: page titles, H1s, meta and og descriptions, structured-data descriptions, nav labels, section labels, buttons, Pinterest pin titles, how-to headings, the concierge's category answers, and llms.txt. The six categories are "the six routines."
+- 10.2 Keep "ritual" only as brand voice: the category name "Rest & Ritual", the tagline "We read the studies; you enjoy the ritual.", the homepage H2 "One ritual, six ways in", and occasional editorial lines in body copy (e.g. "contrast completes the ritual"). Never in a title, H1 or meta description lead.
+- 10.3 Keep the `#rituals` anchor, CSS class names and code identifiers unchanged so existing links don't break.
+
 ## Changelog
+- 2026-10-28: Added brand vocabulary rule (routine vs ritual).
 - 2026-10-21: Added social video, email and AI-search rules from verified research.
 - 2026-10-20: First version, distilled from the October 2026 audit and research.
