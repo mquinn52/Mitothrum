@@ -67,3 +67,10 @@ RedirectMatch 404 ^/_to_delete(/.*)?$
 <FilesMatch "\.(py|sh)$">
   Require all denied
 </FilesMatch>
+
+# Caption files: browsers (Firefox especially) only accept <track> files served
+# as text/vtt, and nosniff above stops them guessing. Added Oct 30, 2026.
+<IfModule mod_mime.c>
+  AddType text/vtt .vtt
+  AddCharset utf-8 .vtt
+</IfModule>
