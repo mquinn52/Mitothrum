@@ -21,6 +21,11 @@ on:
       - ".github/**"
   workflow_dispatch:
 
+# Never run alongside the Media upload workflow (same FTP account)
+concurrency:
+  group: ftp-mitothrum
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest

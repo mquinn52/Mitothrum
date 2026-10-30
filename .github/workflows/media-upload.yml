@@ -1,0 +1,68 @@
+# Manual, owner-run: puts ONE file from a GitHub release into the server's media/
+# folder (media/ isn't in the repo and the deploy skips it). This replaces hand
+# uploads, which are banned after the Oct 23, 2026 403 incident.
+#
+# How to use:
+# 1. Create a release on this repo (any tag, e.g. media-2026-10-31) and attach
+#    the file, e.g. sauna-science-explainer-v2.mp4.
+# 2. Actions > Media upload > Run workflow: enter the release tag, the attached
+#    file's name, and the name it should have on the server.
+# 3. The run's summary says whether the file is live, with its public URL.
+# Then link it from a page through a normal pull request.
+name: Media upload
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: "Release tag the file is attached to"
+        type: string
+        required: true
+      asset_name:
+        description: "File name as attached to the release"
+        type: string
+        required: true
+      target_name:
+        description: "File name on the server, inside media/ (prefer a new name, e.g. -v2)"
+        type: string
+        required: true
+      overwrite:
+        description: "Replace an existing media file with the same name (old copy is kept aside)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+# Never run alongside a deploy (both talk to the same FTP account)
+concurrency:
+  group: ftp-mitothrum
+  cancel-in-progress: false
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0 (pinned)
+      - name: Download the release file
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.release_tag }}
+          ASSET: ${{ inputs.asset_name }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/upload"
+          gh release download "$TAG" -R "$GITHUB_REPOSITORY" --pattern "$ASSET" --dir "$RUNNER_TEMP/upload"
+          ls -l "$RUNNER_TEMP/upload"
+      - name: Upload into media/ and verify
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          LOCAL_FILE: ${{ runner.temp }}/upload/${{ inputs.asset_name }}
+          TARGET_NAME: ${{ inputs.target_name }}
+          OVERWRITE: ${{ inputs.overwrite && '1' || '0' }}
+        run: python3 -I .github/scripts/media_upload.py
+      - name: Run summary
+        if: always()
+        run: test -f report.md && cat report.md >> "$GITHUB_STEP_SUMMARY" || true
