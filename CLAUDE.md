@@ -24,6 +24,13 @@ Owner: Matthew Quinn. Static HTML/CSS/JS, no build step.
 - Never point `server-dir` at a subfolder to "fix" a wrong FTP root. An earlier
   account rooted at `public_html/mitothrum.com/deploy` silently published to
   `mitothrum.com/deploy/` for days. Fix the FTP account's Directory instead.
+- Media (videos, large images) lives only in the server's `media/` folder,
+  outside the repo and skipped by the deploy. To add one, the owner attaches
+  the file to a GitHub release and runs the manual "Media upload" workflow
+  (`.github/workflows/media-upload.yml`): one file, into media/ only, new
+  name preferred (e.g. -v2), 644 permissions, public URL verified. Then link
+  it from a page by pull request. Small text assets like captions go in
+  `captions/`, which deploys normally.
 - New pages: work on a branch and open a pull request; `pr-check.yml` runs the
   site rules (affiliate tag, rel=sponsored, disclosures, no
   SITESTRIPE-LINK-NEEDED placeholders). The owner merges.
