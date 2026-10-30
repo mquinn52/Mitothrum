@@ -30,6 +30,24 @@ after review: what was kept, changed or rejected is recorded at the bottom.
 - Music and footage licensed or our own (RULES 6.2). Never buy followers,
   views or comments (RULES 8.5).
 
+## Accessibility (added Oct 30, 2026)
+- **Alt text on every image post and pin**, written by us, never the
+  platform's automatic guess ("May be an image of…"). Say what the image
+  shows and include any words printed on it; keep it to about two sentences
+  (~125 characters where possible). Don't paste the caption in as alt text.
+- **Videos:** the on-screen text isn't read aloud, so the caption must carry
+  the video's key point in plain words. Any video with speech gets reviewed
+  captions (YouTube Studio > Subtitles; TikTok auto captions, edited).
+- **Hashtags in capitalised words** (#SaunaBlanket, not #saunablanket) so
+  screen readers can split the words. Up to three, at the end of the caption.
+  The video generator's tags already follow this.
+- **No all-caps sentences**; use sentence case and let the first line do the
+  work. **Emoji:** sparingly, never as bullets, never as the first character
+  of the caption, never repeated in a row.
+- Sources: [Mass.gov social media accessibility](https://accessibility.mass.gov/training/social),
+  [CUNY: hashtags](https://guides.cuny.edu/accessibility/hashtags),
+  [University of Houston: social media accessibility](https://www.uh.edu/marcom/guidelines-policies/social-media/accessibility/).
+
 ## Where posts send people
 - To the matching comparison or hub page on mitothrum.com, not straight to a
   retailer. The page carries the full disclosure, who should skip a product and
