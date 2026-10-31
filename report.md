@@ -1,3 +1,3 @@
 All checks passed for https://mitothrum.com.
 
-Checked 7 files in the repository.
+Checked 8 files in the repository.
