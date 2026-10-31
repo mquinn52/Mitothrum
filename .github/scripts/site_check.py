@@ -114,15 +114,26 @@ sm = ""
 try:
     if SKIP_LIVE:
         raise LookupError("skipped")
-    _, sm = fetch(f"{SITE}/sitemap.xml?monitor=1", ok=is_xml)
-    urls = [e.text.strip() for e in ET.fromstring(sm).iter() if e.tag.endswith("loc")]
+    _, sm = fetch(f"{SITE}/sitemap.xml?monitor=1", ok=lambda b: is_xml(b) and ET.fromstring(b).tag.endswith("urlset"))
+    root = ET.fromstring(sm)
+    if not root.tag.endswith("urlset"):
+        raise ET.ParseError("the response is not a sitemap")
+    urls = [e.text.strip() for e in root.iter() if e.tag.endswith("loc")]
 except LookupError:
     pass
 except Exception as e:
-    hint = ""
-    if isinstance(e, ET.ParseError) and "<html" in sm.lower():
-        hint = " (the host served an HTML page instead of the sitemap, usually its bot protection; if the next run passes, nothing is wrong)"
-    urls = []; problems.append(f"Live sitemap could not be read: {e}{hint}")
+    if isinstance(e, ET.ParseError) and "<html" in sm.lower() and os.path.exists("sitemap.xml"):
+        # The host's bot protection sometimes answers the sitemap with a stand-in
+        # HTML page (Oct 29 and twice on Oct 31, 2026, each right after a deploy),
+        # even after four tries. Don't alarm on that alone: check every page in
+        # the repository's sitemap instead. If those pages load and match the
+        # repo, the site is fine; if they don't, the page checks below report it.
+        stand_in = parse(sm).title or "untitled page"
+        urls = [el.text.strip() for el in ET.parse("sitemap.xml").iter() if el.tag.endswith("loc")]
+        notes.append(f"The live sitemap came back as an HTML page (\"{stand_in[:80]}\"), "
+                     "most likely the host's bot protection, so the pages listed in the repository's sitemap were checked instead.")
+    else:
+        urls = []; problems.append(f"Live sitemap could not be read: {e}")
 
 def local_file_for(url):
     path = url.replace(SITE, "").lstrip("/")
