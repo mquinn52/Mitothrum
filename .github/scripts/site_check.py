@@ -77,18 +77,19 @@ for f in pages:
             problems.append(f"`{f}`: unexpected phone number {href[4:]}")
 
 # ---------- 2. Live site ----------
-def fetch(url, ok=None, tries=3, wait=20):
+def fetch(url, ok=None, tries=4, wait=20):
     """Fetch a URL, retrying on errors or on a response that fails `ok`.
 
     The shared host's bot protection sometimes answers automated requests
     with a stand-in HTML page (seen Oct 29, 2026: the sitemap came back as
-    HTML right after a deploy). One bad response is not a site problem, so
-    try up to three times, 20 seconds apart, before reporting it.
+    HTML right after a deploy; again Oct 31, 2026 for three tries in a row).
+    One bad response is not a site problem, so try up to four times with a
+    growing wait (20, 40, 60 s) before reporting it.
     """
     last = None
     for attempt in range(tries):
         if attempt:
-            time.sleep(wait)
+            time.sleep(wait * attempt)
         try:
             req = urllib.request.Request(url, headers=UA)
             with urllib.request.urlopen(req, timeout=30) as r:
@@ -109,6 +110,7 @@ def is_xml(body):
         return False
 
 urls = []
+sm = ""
 try:
     if SKIP_LIVE:
         raise LookupError("skipped")
@@ -117,7 +119,10 @@ try:
 except LookupError:
     pass
 except Exception as e:
-    urls = []; problems.append(f"Live sitemap could not be read: {e}")
+    hint = ""
+    if isinstance(e, ET.ParseError) and "<html" in sm.lower():
+        hint = " (the host served an HTML page instead of the sitemap, usually its bot protection; if the next run passes, nothing is wrong)"
+    urls = []; problems.append(f"Live sitemap could not be read: {e}{hint}")
 
 def local_file_for(url):
     path = url.replace(SITE, "").lstrip("/")
