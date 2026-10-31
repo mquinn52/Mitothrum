@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Analytics 4 — loads only if the visitor has not opted out
+     (Global Privacy Control signal or the opt-out on privacy.html). -->
+<script>
+  (function () {
+    var optedOut = false;
+    try { optedOut = localStorage.getItem('mt_analytics_optout') === '1'; } catch (e) {}
+    if (navigator.globalPrivacyControl === true || optedOut) {
+      window.gtag = function () {};
+      return;
+    }
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-WT5J9GGNLF';
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', 'G-WT5J9GGNLF');
+  })();
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Science Glossary — Mitothrum</title>
+  <meta name="description" content="Plain-language definitions of the science terms in our light-therapy and infrared sauna guides: wavelength, irradiance, EMF units and reference levels, far infrared, and radiant heat. Every claim cited.">
+  <link rel="canonical" href="https://mitothrum.com/glossary.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="media/logo/favicon.svg">
+  <link rel="icon" type="image/png" sizes="64x64" href="media/logo/favicon-64.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","@id":"https://mitothrum.com/#organization","name":"Mitothrum","url":"https://mitothrum.com/","logo":"https://mitothrum.com/media/logo/mitothrum-mark-amber-1024.png","email":"hello@mitothrum.com","sameAs":["https://www.youtube.com/channel/UCDR4wFZ13u6q9YlQx64u39Q", "https://www.instagram.com/mitothrum/", "https://www.facebook.com/profile.php?id=61595777690292", "https://www.tiktok.com/@mitothrum", "https://www.threads.com/@mitothrum", "https://www.pinterest.com/Mitothrum/"]}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="wordmark" href="/" aria-label="Mitothrum home">
+        <img class="wordmark-mark" src="media/logo/mitothrum-mark-amber.svg" alt="" width="42" height="42">
+        <span class="wordmark-text">
+          <span class="wordmark-name">Mitothrum</span>
+          <span class="wordmark-tag">the hum of your mitochondria</span>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="index.html#rituals">Routines</a>
+        <a href="index.html#science">Science</a>
+        <a href="index.html#episodes">Episodes</a>
+        <a href="index.html#about">About</a>
+      </nav>
+      <a class="btn btn-gold btn-small" href="index.html#concierge">Ask the concierge</a>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="section">
+      <div class="wrap glossary" style="max-width: 46rem;">
+        <p class="eyebrow">Science glossary</p>
+        <h1>The science terms in our guides, defined</h1>
+        <p class="section-sub">Short definitions of the terms you&rsquo;ll meet in light-therapy and infrared-sauna product pages, with the source for every claim. Numbers that come from a brand are labelled as the brand&rsquo;s.</p>
+
+        <h2 id="light">Light therapy (photobiomodulation)</h2>
+        <h3>Wavelength</h3>
+        <p>The color of light a device emits, measured in nanometres (nm). Red light sits at roughly 600&ndash;700&nbsp;nm; near-infrared starts just above 700&nbsp;nm and can&rsquo;t be seen. In one 2014 controlled trial of 136 volunteers, twice-weekly red light (611&ndash;650&nbsp;nm) improved measured skin roughness and collagen density compared with untreated controls, and adding near-infrared showed no extra benefit<sup class="cite"><a href="#ref-1" id="cite-1a">[1]</a></sup>. That trial used clinical light units rather than a home mask, so treat home results as gentler and slower.</p>
+        <h3>Irradiance</h3>
+        <p>How much light power reaches each square centimetre of skin, measured in milliwatts per square centimetre (mW/cm&sup2;). When a product page lists it, the number is the manufacturer&rsquo;s, measured at a distance the manufacturer chose.</p>
+        <p class="note"><strong>Before you use light therapy:</strong> talk to your doctor or dermatologist first if you take medication that makes you sensitive to light, have a light-sensitive condition, or have an eye condition. Compare devices in our <a href="led-mask-vs-microcurrent.html">LED mask vs. microcurrent guide</a>.</p>
+
+        <h2 id="emf">Electromagnetic fields (EMF)</h2>
+        <h3>Magnetic field (mG, &micro;T)</h3>
+        <p>Magnetic field strength is given in milligauss (mG) or microtesla (&micro;T); 1&nbsp;&micro;T equals 10&nbsp;mG. The international guideline body ICNIRP sets a reference level of 200&nbsp;&micro;T (2,000&nbsp;mG) for general-public exposure to 50 and 60&nbsp;Hz magnetic fields<sup class="cite"><a href="#ref-2" id="cite-2a">[2]</a></sup>.</p>
+        <h3>Electric field (V/m)</h3>
+        <p>The strength of the electric field around a plugged-in or operating device, measured in volts per metre (V/m). ICNIRP&rsquo;s general-public reference level is 5&nbsp;kV/m at 50&nbsp;Hz and about 4.2&nbsp;kV/m at 60&nbsp;Hz, the US mains frequency<sup class="cite"><a href="#ref-2" id="cite-2b">[2]</a></sup>.</p>
+        <h3>Reading an EMF claim</h3>
+        <p>When a brand advertises &ldquo;low EMF,&rdquo; look for a test report that names the lab, the meter, and the distance each reading was taken at. A number with no distance can&rsquo;t be compared with anything. We report brand figures as the brand&rsquo;s, and we don&rsquo;t call any device &ldquo;safe.&rdquo;</p>
+
+        <h2 id="heat">Infrared heat and saunas</h2>
+        <h3>Far infrared (IR-C)</h3>
+        <p>ICNIRP classes infrared from 3&nbsp;&micro;m to 1&nbsp;mm as IR-C, or far infrared. In far-infrared cabins, heat exchange with the body is almost purely radiative, and the cabin air may be about 40&nbsp;&deg;C or less<sup class="cite"><a href="#ref-3" id="cite-3a">[3]</a></sup>.</p>
+        <h3>Radiant vs. convective heat</h3>
+        <p>Radiant heat travels as infrared and warms the skin it reaches; convective heat warms the air, which then warms you, as in a traditional hot-air sauna. Because far-infrared cabins add almost no hot-air heating, they have to deliver more radiant heat to warm the body as much as a conventional sauna<sup class="cite"><a href="#ref-3" id="cite-3b">[3]</a></sup>.</p>
+        <p class="note"><strong>Before you use one:</strong> don&rsquo;t use an infrared sauna or sauna blanket if you&rsquo;re pregnant, have cardiovascular conditions or heat sensitivity, or have implanted devices &mdash; talk to your doctor first. Compare options in our <a href="sauna-blanket-comparison.html">sauna blanket comparison</a>.</p>
+
+        <section class="references" aria-labelledby="refs-h">
+          <h2 id="refs-h">Sources</h2>
+          <ol>
+            <li id="ref-1"><a href="https://doi.org/10.1089/pho.2013.3616" target="_blank" rel="noopener">Wunsch &amp; Matuschka, 2014</a>, <em>Photomedicine and Laser Surgery</em> 32(2):93&ndash;100. Controlled trial of red and broadband light in 136 volunteers. <a href="#cite-1a" aria-label="Back to text for source 1">&#8617;</a></li>
+            <li id="ref-2"><a href="https://doi.org/10.1097/HP.0b013e3181f06c86" target="_blank" rel="noopener">ICNIRP, 2010</a>, &ldquo;Guidelines for limiting exposure to time-varying electric and magnetic fields (1&nbsp;Hz to 100&nbsp;kHz),&rdquo; <em>Health Physics</em> 99(6):818&ndash;836, Table 4. <a href="#cite-2a" aria-label="Back to first mention of source 2">&#8617;</a> <a href="#cite-2b" aria-label="Back to second mention of source 2">&#8617;</a></li>
+            <li id="ref-3"><a href="https://www.icnirp.org/cms/upload/publications/ICNIRPinfrared.pdf" target="_blank" rel="noopener">ICNIRP, 2006</a>, &ldquo;Statement on far infrared radiation exposure,&rdquo; <em>Health Physics</em> 91(6):630&ndash;645. <a href="#cite-3a" aria-label="Back to first mention of source 3">&#8617;</a> <a href="#cite-3b" aria-label="Back to second mention of source 3">&#8617;</a></li>
+          </ol>
+        </section>
+
+        <p>Spotted an error? Write to <a href="mailto:hello@mitothrum.com">hello@mitothrum.com</a> and we&rsquo;ll check it against the evidence and correct it openly. Educational content, not medical advice. Nothing on this site diagnoses, treats, or prevents any condition.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <p class="wordmark-name">Mitothrum</p>
+        <p class="footer-tag">the hum of your mitochondria</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html#rituals">Routines</a>
+        <a href="index.html#science">Science</a>
+        <a href="index.html#episodes">Episodes</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#concierge">Ask the concierge</a>
+        <a href="methodology.html">How we choose</a>
+        <a href="glossary.html">Science glossary</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+      <div class="footer-contact">
+        <p>Contact: <a href="mailto:hello@mitothrum.com">hello@mitothrum.com</a></p>
+        <p>Follow: <a href="https://www.youtube.com/channel/UCDR4wFZ13u6q9YlQx64u39Q" target="_blank" rel="noopener">YouTube</a> &middot; <a href="https://www.instagram.com/mitothrum/" target="_blank" rel="noopener">Instagram</a> &middot; <a href="https://www.facebook.com/profile.php?id=61595777690292" target="_blank" rel="noopener">Facebook</a> &middot; <a href="https://www.tiktok.com/@mitothrum" target="_blank" rel="noopener">TikTok</a> &middot; <a href="https://www.threads.com/@mitothrum" target="_blank" rel="noopener">Threads</a> &middot; <a href="https://www.pinterest.com/Mitothrum/" target="_blank" rel="noopener">Pinterest</a></p>
+      </div>
+    </div>
+    <div class="wrap">
+      <p class="disclosure"><strong>Affiliate disclosure:</strong> Mitothrum is reader-supported. When you buy through links on this site, we may earn an affiliate commission at no extra cost to you. Commissions fund our research and never decide what we cover. As an Amazon Associate I earn from qualifying purchases.</p>
+      <p class="legal">&copy; 2026 Mitothrum. All rights reserved. Educational content — not medical advice. Nothing on this site diagnoses, treats, or prevents any condition; talk to your doctor about health decisions.</p>
+    </div>
+  </footer>
+
+<script>
+document.addEventListener('click', function(e) {
+  var a = e.target.closest('a[rel~="sponsored"]');
+  if (a && typeof gtag === 'function') {
+    gtag('event', 'affiliate_click', {
+      'event_category': 'affiliate',
+      'event_label': a.hostname + a.pathname.split('/').slice(0, 4).join('/'),
+      'transport_type': 'beacon'
+    });
+  }
+});
+</script>
+</body>
+</html>

@@ -519,3 +519,13 @@ main:focus { outline: none; }
   .wordmark-name { font-size: 1.35rem; }
   .header-inner .btn { white-space: normal; text-align: center; line-height: 1.2; padding: 0.45rem 0.75rem; }
 }
+
+/* Science glossary and numbered citations (Oct 31, 2026) */
+sup.cite{font-size:.75em;line-height:0}
+sup.cite a{padding:0 .1em}
+.references{margin-top:2.5rem;border-top:1px solid currentColor;padding-top:1rem}
+.references ol{padding-left:1.4rem}
+.references li{margin-bottom:.6rem}
+.note{padding:.9rem 1rem;border-left:3px solid var(--amber-ink, #7d5f27);margin:1.2rem 0}
+.glossary h2{margin-top:2.6rem}
+.glossary h3{margin-top:1.4rem;margin-bottom:.3rem}
