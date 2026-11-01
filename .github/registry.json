@@ -46,5 +46,28 @@
       "rule": "RULES.md 11.5"
     }
   },
-  "allowed_price_tiers": ["$", "$$", "$$$"]
+  "allowed_price_tiers": [
+    "$",
+    "$$",
+    "$$$"
+  ],
+  "social": {
+    "_about": "Social pre-check (social_check.py) strings, from marketing/SOCIAL.md. Exact text; change here and in SOCIAL.md together.",
+    "site": "mitothrum",
+    "domain": "mitothrum.com",
+    "other_domain": "waterdamagegwinnett.com",
+    "platforms": [
+      "youtube",
+      "instagram",
+      "tiktok",
+      "facebook",
+      "threads",
+      "pinterest"
+    ],
+    "SOCIAL_DISCLOSURE_FIRST_LINE": {
+      "text": "I earn commissions on purchases made through links in this post.",
+      "where": "First line of every post that mentions a product or links product pages, plus #ad",
+      "rule": "SOC-MITO-DISCLOSURE (SOCIAL.md ground rules, RULES 8.1–8.3)"
+    }
+  }
 }
