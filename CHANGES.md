@@ -50,3 +50,11 @@ From the ChatGPT SEO audit, reviewed against the repo. Every change and delibera
 7. Article structured data: added to the sauna comparison (it had only FAQPage); added datePublished to the LED, vitamin C and gift-guide Article blocks. Dates are each file's first commit; dateModified matches each page's visible "Last reviewed" date. Author stays the Organization to match the visible "Mitothrum editors" byline — switch both together once the owner picks a named author.
 
 Not changed: meta descriptions, H1s, body copy, URLs, canonicals. rel="sponsored" was already on all 86 affiliate links.
+
+# Restore PR #23 titles on two comparison pages — October 31, 2026
+
+PR #26 added "| Mitothrum" to the sauna and LED titles and reordered the LED title, partly undoing PR #23, which had shortened both to 54–55 characters so the brand names fit before Google's ~60-character cutoff. Matthew approved restoring PR #23's titles:
+- sauna-blanket-comparison.html → "HigherDOSE vs LifePro Infrared Sauna Blankets Compared" (54)
+- led-mask-vs-microcurrent.html → "LED Mask vs NuFACE Microcurrent: SpectraLite vs Trinity" (55); "LED Mask vs NuFACE" matches the query "led mask vs nuface"
+
+Not changed: the other five PR #26 titles, all Article schema, descriptions.
