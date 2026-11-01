@@ -48,6 +48,28 @@ after review: what was kept, changed or rejected is recorded at the bottom.
   [CUNY: hashtags](https://guides.cuny.edu/accessibility/hashtags),
   [University of Houston: social media accessibility](https://www.uh.edu/marcom/guidelines-policies/social-media/accessibility/).
 
+## Pre-check before scheduling (added Nov 1, 2026)
+Run every queued post through `.github/scripts/social_check.py` before it's
+scheduled. It reads the same `.github/registry.json` the site's registry check
+uses, so exact strings live in one place.
+
+```
+python3 social_check.py --registry registry.json posts.json --strict
+```
+
+`posts.json` lists each post's id, platform, lang, text, and where relevant
+title, image_text, alt, link, promotes, has_image, has_video, ai_imagery,
+ai_label and platform_label (see the script's header;
+`.github/tests/social_posts_example.json` shows clean and failing posts).
+It checks the disclosure as the exact first line plus #ad, the platform paid-promotion label, the pin description carrying the disclosure, prices, review or star counts, "we tested," detox, cure and treatment claims, "FDA-approved," bare Amazon links, AI imagery without the AI label, more than three hashtags, and UTM tags, plus alt text, sentence case, emoji and capitalised hashtags.
+
+- **violation:** fix it before scheduling.
+- **review:** a person decides (for example, whether "fast" describes the service).
+- **exception:** allowed as written.
+
+A clean run means the detectable rules passed. It never replaces reading the
+post, and it doesn't replace Matthew's approval where a post needs it.
+
 ## Where posts send people
 - To the matching comparison or hub page on mitothrum.com, not straight to a
   retailer. The page carries the full disclosure, who should skip a product and

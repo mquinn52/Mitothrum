@@ -1,0 +1,17 @@
+[
+  {"id": "good-pin", "platform": "pinterest", "promotes": true, "has_image": true,
+   "title": "Infrared sauna blanket vs sauna tent: what the studies say",
+   "text": "I earn commissions on purchases made through links in this post. #ad\nWe compared two infrared sauna blankets on published specs and the research, including who should skip them. #SaunaBlanket #HeatTherapy",
+   "alt": "Rolled infrared sauna blanket on a wooden bench beside a folded towel.",
+   "link": "https://mitothrum.com/sauna-blanket-comparison.html?utm_source=pinterest&utm_medium=social&utm_campaign=sauna-blanket"},
+  {"id": "good-tiktok", "platform": "tiktok", "promotes": true, "platform_label": true, "has_video": true, "ai_imagery": true, "ai_label": true,
+   "text": "I earn commissions on purchases made through links in this post. #ad\nWhat one study found about LED masks, and who should skip one. No detox claims here. #LEDMask",
+   "link": "https://mitothrum.com/led-mask-vs-microcurrent.html?utm_source=tiktok&utm_medium=social&utm_campaign=led-mask"},
+  {"id": "bad-1", "platform": "instagram", "promotes": true, "has_image": true, "ai_imagery": true,
+   "text": "We tested this blanket for a month! Only $199, 4.8 stars from 2,000 reviews. Helps you detox. https://amzn.to/abc #sauna #wellness #selfcare #spa",
+   "alt": "May be an image of a sauna blanket",
+   "link": "https://waterdamagegwinnett.com/?utm_source=instagram&utm_medium=social&utm_campaign=x"},
+  {"id": "bad-2", "platform": "youtube", "promotes": true,
+   "text": "Our favorite FDA-approved mask. I earn commissions on purchases made through links in this post.",
+   "link": "https://mitothrum.com/led-mask-vs-microcurrent.html?utm_source=tiktok&utm_medium=social&utm_campaign=led"}
+]
