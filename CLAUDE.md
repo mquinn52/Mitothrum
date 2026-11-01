@@ -43,8 +43,9 @@ Owner: Matthew Quinn. Static HTML/CSS/JS, no build step.
 - `monitor.yml` daily 7 a.m. ET and after each deploy: repo rules + every live
   sitemap URL loads and matches the repo; opens/closes `site-monitor` issues.
 - `research.yml` Mondays: snapshots policy sources in `research/sources.json`
-  (Google, Amazon Associates, Federal Register FTC feeds), opens a `research`
-  issue on change; AI review needs an ANTHROPIC_API_KEY secret (on hold).
+  (Google, Amazon Associates, Federal Register FTC feeds), saves snapshots on the
+  `research-snapshots` branch (main requires the Registry check, which blocks
+  the bot's direct pushes), opens a `research` issue on change; AI review needs an ANTHROPIC_API_KEY secret (on hold).
 
 ## Hard rules (details in RULES.md)
 - Amazon links: SiteStripe links with `tag=mitothrum-20` and `rel="noopener sponsored"`;
