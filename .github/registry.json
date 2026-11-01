@@ -1,0 +1,50 @@
+{
+  "_about": "Canonical strings for mitothrum.com (RULES.md 0.4, MITO-REGISTRY). This file owns the exact approved text; RULES.md owns the policy and conditions. Pages, templates and checks read these values, and any mismatch fails validation (from PR 3). Change a string here and in the pages in the same PR. Lives under .github/ so it is never deployed or served.",
+  "_last_reviewed": "2026-10-31",
+  "links": {
+    "AMAZON_TAG": {
+      "value": "tag=mitothrum-20",
+      "note": "Or a page-specific tracking ID created in Associates Central (RULES.md 1.1)",
+      "rule": "MITO-LINKS (RULES.md 1.1)"
+    },
+    "AMAZON_REL": {
+      "value": "noopener sponsored",
+      "rule": "MITO-LINKS (RULES.md 1.1)"
+    }
+  },
+  "strings": {
+    "AMAZON_ASSOCIATE_LINE": {
+      "text": "As an Amazon Associate I earn from qualifying purchases.",
+      "where": "Every page",
+      "source": "https://affiliate-program.amazon.com/help/operating/policies",
+      "rule": "MITO-DISCLOSURE (RULES.md 1.2)"
+    },
+    "NOT_MEDICAL_ADVICE": {
+      "text": "Educational content — not medical advice.",
+      "where": "Every page; the footer may continue with the longer sentence below",
+      "footer_continuation": "Nothing on this site diagnoses, treats, or prevents any condition; talk to your doctor about health decisions.",
+      "rule": "MITO-CLAIMS (RULES.md 4.5)"
+    },
+    "GROUP_DISCLOSURE_PLURAL": {
+      "text": "Mitothrum may earn a commission if you buy through these links — at no extra cost to you.",
+      "where": "Directly above each group of two or more affiliate links",
+      "rule": "MITO-DISCLOSURE (RULES.md 1.3)"
+    },
+    "GROUP_DISCLOSURE_SINGULAR": {
+      "text": "Mitothrum may earn a commission if you buy through this link — at no extra cost to you.",
+      "where": "Directly above a single affiliate link",
+      "rule": "MITO-DISCLOSURE (RULES.md 1.3)"
+    },
+    "PRICE_LINK_TEXT": {
+      "text": "See current price",
+      "where": "Affiliate link text; never a printed price",
+      "rule": "MITO-PRICES (RULES.md 2.1)"
+    },
+    "WARRANTY_NOTE": {
+      "text": "Terms set by the brand",
+      "where": "Beside any warranty or guarantee mention, linking the brand's policy",
+      "rule": "RULES.md 11.5"
+    }
+  },
+  "allowed_price_tiers": ["$", "$$", "$$$"]
+}
