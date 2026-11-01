@@ -6,36 +6,54 @@ opens an issue, plus a pull request revising this file when an API key is set,
 whenever one of them changes. Rules marked **[auto]** are enforced by the daily
 site monitor (`.github/workflows/monitor.yml`).
 
-**Last reviewed:** October 29, 2026
+**Last reviewed:** October 31, 2026 (v2.3 structure)
 **Goal:** earn affiliate revenue from honest, research-led content, without breaking
 copyright law, privacy law, Google's guidelines, affiliate program terms or
 generally accepted ethics. When a revenue idea conflicts with a rule, the rule wins.
 
-## 1. Affiliate links and disclosure
-- 1.1 **[auto]** Every Amazon link carries `tag=mitothrum-20` (or a page-specific tracking ID created in Associates Central) and `rel="sponsored"`. *Sources: Google outbound links; Google spam policies (link spam).*
+## 0. Authority, rule language and records (added 2026-10-31, v2.3)
+Matthew approved this structure on Oct 31, 2026 (Project Guidelines v2.3). Section
+numbers below are unchanged; rule IDs sit beside them so existing citations still resolve.
+
+- 0.1 `GLOBAL-AUTHORITY` Order of authority, highest first: (1) law, signed agreements, affiliate program terms and platform policies; (2) this file, as amended by Matthew's decisions; (3) `marketing/SOCIAL.md`; (4) the Project Guidelines; (5) `CLAUDE.md`, Muse briefs and workflows; (6) outside AI advice. A lower source never weakens a higher one. Matthew's explicit task-specific decisions take effect immediately when they're compatible with law and binding external obligations; an un-updated file is never a reason to refuse one. One-time approvals are recorded in the relevant task, issue or PR and don't amend a standing rule. When Matthew changes a standing rule or business policy, Claude logs it in the handoff doc and opens a PR amending this file the same day. On a conflict: stop the affected action, quote both rules, propose the smallest fix, and wait for Matthew when it touches compliance, money, publishing or a contract.
+- 0.2 Rule language: **MUST** (required), **MUST NOT** (prohibited), **SHOULD** (default; an exception needs a stated reason), **MAY** (permitted, subject to every other rule).
+- 0.3 Evidence labels: [VERIFIED] (checked against a primary source or this repo, source named), [VENDOR] (supplied by a brand or program, not independently checked), [ESTIMATE] (stated assumptions), [OPINION], [UNVERIFIED] (never published or asserted as fact).
+- 0.4 `MITO-REGISTRY` Exact disclosure lines, the affiliate tag and rel value, and link text live in `.github/registry.json`. Ownership: this file owns the policy and conditions; the registry owns the exact approved text; pages, templates and checks use the registry's strings, and any mismatch fails validation (enforced from PR 3). A wording change updates the registry and every page in the same PR.
+- 0.5 `GLOBAL-RECORDS` Sales and commissions: Associates Central and each network's dashboard. Clicks: GA4 `affiliate_click` and Pinterest outbound clicks. Search Console measures visibility, not money. Success is judged by commissions, conversion and revenue per maintenance hour; impressions and clicks are diagnostic only.
+- 0.6 `GLOBAL-PR` Every change: inspect (this file, the pages, their recent PRs, open monitor issues) → propose scope → Matthew approves → smallest change → run checks → review the whole diff → open the PR → after Matthew merges, verify production. Approving a scope is not approving the merge.
+- 0.7 `GLOBAL-RETIRE` Retiring a public URL needs Matthew's approval, a link check, a 301 or 410 and a sitemap update. Never by deleting files on the server.
+- 0.8 `GLOBAL-DATES` Populate `datePublished` only from reliable publication or deployment records; a Git commit date alone never establishes it, and an unknown date is omitted, never invented. `dateModified` changes only with a material revision; "Last reviewed" is the date the evidence and content were last checked. Never change a date to look fresher.
+- 0.9 `GLOBAL-LINKS` This site MUST NOT link to waterdamagegwinnett.com or receive links from it.
+
+## 1. Affiliate links and disclosure `MITO-LINKS` `MITO-DISCLOSURE`
+- 1.1 **[auto]** Every Amazon link carries `tag=mitothrum-20` (or a page-specific tracking ID created in Associates Central) and `rel="noopener sponsored"` (registry `AMAZON_TAG`, `AMAZON_REL`). *Sources: Google outbound links; Google spam policies (link spam).*
 - 1.2 **[auto]** Every page shows "As an Amazon Associate I earn from qualifying purchases." *Source: Amazon Associates Program Policies.*
-- 1.3 A plain-language disclosure sits directly above each group of affiliate links, visible at the same time as the links, not only in the footer. *Source: FTC Endorsement Guides FAQ.*
+- 1.3 A plain-language disclosure sits directly above each group of affiliate links, visible at the same time as the links, not only in the footer (registry `GROUP_DISCLOSURE_PLURAL` / `GROUP_DISCLOSURE_SINGULAR`). Restyling may never lower its position or visibility. *Source: FTC Endorsement Guides FAQ.*
 - 1.4 Never put an Amazon tag on another network's link, and never earn twice on the same traffic. *Source: Amazon operating agreement (multiple programs).*
 - 1.5 Generate links with SiteStripe or the API; never buy through our own links or ask friends to. *Source: Amazon operating agreement.*
 
-## 2. Prices, ratings and reviews
+## 2. Prices, ratings and reviews `MITO-PRICES`
 - 2.1 Never print a product price. Use "See current price" links and relative tiers ($ / $$ / $$$). Amazon allows prices only from Amazon-served links or its API, with a timestamp if refreshed less than hourly. *Source: Amazon Program Policies.*
+- 2.1a `MITO-PRODUCT-PRESENTATION` Price tiers MAY appear in comparisons when they help. A tier is accurate relative positioning among the products on that page, never a price and never an implied price; review tiers whenever the page is reviewed. A tier never substitutes for, obscures or visually merges with the affiliate disclosure, which stays plainly above each group of links. Amazon's Program Policies (updated Apr 14, 2026, checked Oct 31) restrict where prices may come from and ban misleading claims about prices; they don't address tiers, so the misleading-claims rule governs them. *Source: [Amazon Associates Program Policies](https://affiliate-program.amazon.com/help/operating/policies).*
 - 2.2 Never quote, count or summarize Amazon customer reviews or star ratings ("thousands of reviews"). *Source: Amazon Program Policies.*
 - 2.3 Never write or imply "we tested it" unless we did. Never publish invented, AI-generated or paid reviews or testimonials. *Sources: FTC rule on fake reviews; methodology page.*
 
-## 3. Content quality (Google)
+## 3. Content quality and search `MITO-PAGES`
 - 3.1 Every product page adds original value: comparison, evidence, who should skip it, trade-offs. No pages that only restate merchant copy. *Source: Google spam policies (thin affiliation); Google reviews guidance.*
 - 3.2 AI may help draft, but a person reviews every page before it publishes. No bulk-generated pages. *Sources: Google spam policies (scaled content abuse); Google gen-AI guidance.*
 - 3.3 Specs come from brand pages, manuals or listings and are labeled as such; anything unverified says so. Superlatives ("hottest", "best", "most-cited") need a source or get cut.
 - 3.4 Comparison pages carry a byline and a "Last reviewed" date, link to the methodology page, and link to other comparisons. *Source: Google helpful content (who, how, why).*
 - 3.5 Offer more than one seller when practical (brand-direct affiliate links next to Amazon). *Source: Google reviews guidance.*
+- 3.6 Comparisons use one framework, in this order: technology and specs, published evidence, potential benefits, limitations, who should skip it, safety, practical trade-offs, product differences.
+- 3.7 `MITO-COMMERCIAL-PRIORITY` Within the three clusters (infrared and recovery, beauty devices, evidence-based skincare), prioritize comparisons by search demand and purchase intent, cluster fit, evidence and safety, expected revenue per visitor, and upkeep. Commission or price MAY inform priority but MUST NOT decide rankings, recommendations or conclusions. The 3-sale Amazon deadline is a transaction count, not a reason to favor expensive products.
+- 3.8 `SEO-THRESHOLDS` A CTR-based title or meta rewrite starts only after 50 impressions over a rolling 90 days, read at the URL and query-group level against the previous period. That is a review trigger, not proof. Diagnose by query: average position blends many queries, so never read it as a page number. A title that is inaccurate, misleading or breaks a rule is fixed regardless of volume. New pages need a distinct search intent, a content gap, a parent hub and an internal-link path.
 
-## 4. Health and safety claims
+## 4. Health and safety claims `MITO-CLAIMS`
 - 4.1 Cosmetic and wellness language only: no disease, treatment, cure, detox or guaranteed-outcome claims.
-- 4.2 Cite the study behind every evidence claim, report null results, and never upgrade "associated with" to "proven".
+- 4.2 Cite the study behind every evidence claim, report null results, and never upgrade "associated with" to "proven". Each material claim names the source, study type, population or conditions, result, limitations, and whether the study tested this product or only a related ingredient or technology. An ingredient or technology study MUST NOT be presented as proof that a specific product works.
 - 4.3 Include who should skip a device (contraindications from the manual) and a safety note for heat and cold exposure.
-- 4.4 "FDA-cleared" is stated only as the brand describes it, with the cleared use, and never as "FDA-approved".
-- 4.5 **[auto]** Every page carries "Educational content — not medical advice."
+- 4.4 "FDA-cleared" is stated only as the brand describes it, with the cleared use, **and** only when the clearance is traceable in FDA's own database; never "FDA-approved". Brand wording alone is not verification.
+- 4.5 **[auto]** Every page carries "Educational content — not medical advice." (registry `NOT_MEDICAL_ADVICE`).
 
 ## 5. Privacy
 - 5.1 The privacy policy names every tracker the site loads (currently Google Analytics 4) and is updated before a new one is added.
@@ -86,6 +104,7 @@ its rules that tighten what sections 1–4 already require. *Sources: [Marketcal
 - 11.9 One account per program; never use incentivized clicks, bought traffic or third-party resold traffic.
 - 11.10 Keep traffic records (Search Console, GA4, UTM-tagged social) able to show where clicks come from; programs can ask, and failing to answer is grounds for removal.
 ## Changelog
+- 2026-10-31: v2.3 structure (Project Guidelines approved by Matthew): added section 0 (authority, rule language, evidence labels, registry, records, PR workflow, page retirement, dates, cross-site ban); rule IDs beside section headings; 1.1 rel value aligned with the live pages (`noopener sponsored`); 1.3 tied to the registry; 2.1a price tiers; 3.6 comparison framework, 3.7 commercial priority, 3.8 SEO thresholds; 4.2 evidence fields; 4.4 FDA traceability. New `.github/registry.json`. No live page changes.
 - 2026-10-29: Added 10.4 (social board names follow "routine").
 - 2026-10-29: Added section 11 (promotion hygiene adapted from Marketcall's rules).
 - 2026-10-28: Added brand vocabulary rule (routine vs ritual).
